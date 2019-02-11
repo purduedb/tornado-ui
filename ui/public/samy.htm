@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+     <script type="text/javascript" src="js/jquery.json.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/portal.min.js"></script>
+    <script type="text/javascript" src="js/randomColor.js"></script>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUTsGEgrknzPi1xdS1NxH5quGucPmpZoA&v=3.exp&libraries=drawing"></script>
+
+    <script type="text/javascript">
+
+
+    
+   	var gmap = null;
+
+    var beforeColor = '#CF5656';
+    var afterColor = '#9BC150';
+
+    var polylines = [];
+
+    var drawingContext = {
+      rectangles:[],
+      rectangleMaxCount:3
+    };
+    var drawingManager = null;
+
+    var beforeRectOptions = {
+      clickable: true,
+      draggable:true,
+      editable:true,
+      fillColor: beforeColor, 
+      fillOpacity: 0.5,
+      strokeWeight: 5
+    };
+
+    // place holder object for the request
+    var request = {
+        mbr:null
+      };
+
+    var drawingOptions = {
+      drawingMode: google.maps.drawing.OverlayType.RECTANGLE,
+      drawingControl: true,
+      drawingControlOptions: {
+        position: google.maps.ControlPosition.TOP_CENTER,
+        drawingModes: [
+          // google.maps.drawing.OverlayType.CIRCLE,
+          // google.maps.drawing.OverlayType.POLYGON,
+          google.maps.drawing.OverlayType.RECTANGLE
+        ]
+      },
+      rectangleOptions:beforeRectOptions
+    };
+
+
+var es; // event stream handle
+
+    
+      function initialize() {
+
+        var mapOptions = {
+
+          // US 
+          // 39.730255, -98.018183
+        		//24.507052, 45.371521
+
+        		// berlin
+        		// 52.520190250694526&west=13.405380249023438&south=52.51914570999911&east=13.407440185546875 
+            // makkah : 22.473878, 40.121263
+          center: new google.maps.LatLng(39.730255, -98.018183),
+          zoom: 5
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        gmap = map;
+
+        drawingOptions.rectangleOptions = beforeRectOptions;
+
+      drawingManager = new google.maps.drawing.DrawingManager(drawingOptions);
+      drawingManager.addListener("rectanglecomplete",function(e){
+        // console.log("a rectangle is completed");
+        // console.log(e.getBounds());
+        // console.log("current count = "+drawingContext.rectangles.length);
+        if ((drawingContext.rectangles.length) == drawingContext.rectangleMaxCount){
+          // console.log("max count has reached which is "+drawingContext.rectangleMaxCount);
+          e.setMap(null);
+        }
+        else{
+          var qid = drawingContext.rectangles.length+1;
+          drawingContext.rectangles.push(e);  
+          e.addListener("bounds_changed",function(){
+            updateMBR(qid, this);  
+          });
+          updateMBR(qid,e);  
+        }
+
+      });
+
+      drawingManager.setMap(map);
+
+      }
+
+      function createMBR(rect){
+        return {
+          north:rect.getBounds().getNorthEast().lat(),
+          east:rect.getBounds().getNorthEast().lng(),
+          south:rect.getBounds().getSouthWest().lat(),
+          west:rect.getBounds().getSouthWest().lng()
+        };
+      }
+
+      // This function creates the MBR (spatial predicate) for the query
+      function updateMBR(id, rect){
+        request.mbr = {
+          qid: id,
+          north:rect.getBounds().getNorthEast().lat(),
+          west:rect.getBounds().getSouthWest().lng(),
+          south:rect.getBounds().getSouthWest().lat(),
+          east:rect.getBounds().getNorthEast().lng()
+        };        
+        console.log($.param(request.mbr));
+        $.get('/new-range-query?'+$.param(request.mbr), function(data) {
+          console.log($.param(request.mbr)+data);
+        });
+
+      }
+
+      var queries = [];
+      var inputpoints =[];
+      var trips =[];
+      var lines = [];
+
+      var eventsources = [];
+
+      $(document).ready(function() {
+        // Intialize google maps
+    	  google.maps.event.addDomListener(window, 'load', initialize);
+
+        
+    	$("#openStream").click(function(event) {
+    		
+		 es = new EventSource("/output-stream");
+
+    	 es.onmessage = function(e) {
+    	 	var sse = $.parseJSON(e.data);
+
+    	 	console.log("received an sse : "+$.toJSON(e.data));
+
+        // "{\"type\":\"output\",\"data\":{\"id2\":279685001954603008,\"text2\":\" Stuff like that makes me scared to go to school.\",\"mdetails\":\"Spatial Distance=3.619832161933222 Keyword Matches= I, \",\"id1\":279685001954603008,\"lat1\":-85.15944128,\"text1\":\" I see no benefit with the production of weapons.\",\"lat2\":-85.82421958,\"lng2\":37.647178649902344,\"lng1\":41.2054443359375}} " 
+
+                
+    	 	if (sse.type === "output"){
+          // console.log("modify vis");
+          var color = randomColor().slice(1).toUpperCase();
+          var iconUrl = createColoredMarker(color);
+          console.log("generated color : "+color);
+
+          var myLatlng1 = new google.maps.LatLng(sse.data.lat1,sse.data.lng1);
+         var marker1 = new google.maps.Marker({
+              position: myLatlng1,
+              map: gmap,
+              icon: iconUrl,
+              title:sse.data.text1
+          });
+
+         var myLatlng2 = new google.maps.LatLng(sse.data.lat2,sse.data.lng2);
+         var marker2 = new google.maps.Marker({
+              position: myLatlng2,
+              map: gmap,
+              icon: iconUrl,
+              title:sse.data.text2
+          });
+
+         var infowindow1 = new google.maps.InfoWindow({
+              content: "<p>"+sse.data.text1+"</p>"
+          });
+
+         
+
+         var infowindow2 = new google.maps.InfoWindow({
+              content: "<p>"+sse.data.text2+"</p>"
+          });
+
+         google.maps.event.addListener(marker2,'click',function(){
+            infowindow1.open(gmap,marker2);
+         });
+
+         var labelLat = (sse.data.lat1 + sse.data.lat2)/2
+         var labelLng = (sse.data.lng1 + sse.data.lng2)/2
+         var labelLatLng = new google.maps.LatLng(labelLat,labelLng);
+
+         var infowindowLabel = new google.maps.InfoWindow({
+              content: "<p>"+sse.data.mdetails+"</p>",
+              position: labelLatLng
+          });
+
+         google.maps.event.addListener(marker2,'click',function(){
+            infowindow1.open(gmap,marker2);
+            infowindowLabel.open(gmap,marker2);
+         });
+
+         google.maps.event.addListener(marker1,'click',function(){
+            infowindow1.open(gmap,marker1);
+            infowindowLabel.open(gmap,marker1);
+         });
+
+         var lineCoord = [myLatlng1,myLatlng2];
+         var connectingLine = new google.maps.Polyline({
+            path: lineCoord,
+            geodesic: true,
+            strokeColor: '#000000',
+            strokeOpacity: 1.0,
+            strokeWeight: 2
+          });
+
+         connectingLine.setMap(gmap);
+
+         setTimeout(function(){
+          connectingLine.setMap(null);
+          marker1.setMap(null);
+          marker2.setMap(null);
+        }, 10000);
+
+         // lines.push(connectingLine);
+         //  markers.push(marker1); 
+         //  markers.push(marker2);		
+
+    	 	}
+        else{
+          console.log("type is not correct for vis : "+sse.type);
+        }
+
+		 };
+
+		 eventsources.push(es);
+
+    	});
+
+// $("#streamSwitch").click(function(event) {
+//   var sw = $("#streamSwitch");
+//   if (sw.attr("class") == "openStream"){
+//     sw.removeClass('openStream');
+//     sw.addClass('closeStream');
+//   }
+//   else{
+//    sw.removeClass('closeStream');
+//     sw.addClass('openStream'); 
+//   }
+
+// });
+
+    	$("#closeStream").click(function(event) {
+
+    		for (var i = eventsources.length - 1; i >= 0; i--) {
+    			var es = eventsources.pop();
+    			es.close();
+    		};
+    		//es.close();
+    	});
+
+        $("#clearDrawings").click(function(event) {
+          clearMap();
+        });
+
+   		});
+
+      var markers = [];
+
+      function clearMap(){
+        while (drawingContext.rectangles.length > 0){
+          drawingContext.rectangles.pop().setMap(null);
+        }
+        drawingOptions.rectangleOptions = beforeRectOptions;
+        drawingManager.setOptions(drawingOptions);
+        drawingManager.setMap(gmap);
+
+        // remove all polylines
+
+        while (polylines.length > 0){
+          polylines.pop().setMap(null);
+        }
+
+
+      }
+      
+
+
+      function createColoredMarker(pinColor){
+        // var pinColor = "FE7569";
+
+
+    var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0,0),
+        new google.maps.Point(10, 34));
+        return pinImage.url;
+      }
+    </script>
+    <style type="text/css">
+    button {
+      position: relative;
+      display: block;
+      float: left;
+    }
+
+    .closeStream {
+  -moz-box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+  box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fc8d83), color-stop(1, #e4685d));
+  background:-moz-linear-gradient(top, #fc8d83 5%, #e4685d 100%);
+  background:-webkit-linear-gradient(top, #fc8d83 5%, #e4685d 100%);
+  background:-o-linear-gradient(top, #fc8d83 5%, #e4685d 100%);
+  background:-ms-linear-gradient(top, #fc8d83 5%, #e4685d 100%);
+  background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc8d83', endColorstr='#e4685d',GradientType=0);
+  background-color:#fc8d83;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #d83526;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #b23e35;
+}
+.closeStream:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e4685d), color-stop(1, #fc8d83));
+  background:-moz-linear-gradient(top, #e4685d 5%, #fc8d83 100%);
+  background:-webkit-linear-gradient(top, #e4685d 5%, #fc8d83 100%);
+  background:-o-linear-gradient(top, #e4685d 5%, #fc8d83 100%);
+  background:-ms-linear-gradient(top, #e4685d 5%, #fc8d83 100%);
+  background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4685d', endColorstr='#fc8d83',GradientType=0);
+  background-color:#e4685d;
+}
+.closeStream:active {
+  position:relative;
+  top:1px;
+}
+
+.openStream {
+  -moz-box-shadow:inset 0px 1px 0px 0px #3dc21b;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #3dc21b;
+  box-shadow:inset 0px 1px 0px 0px #3dc21b;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #44c767), color-stop(1, #5cbf2a));
+  background:-moz-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+  background:-webkit-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+  background:-o-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+  background:-ms-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
+  background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#44c767', endColorstr='#5cbf2a',GradientType=0);
+  background-color:#44c767;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  border:1px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+}
+.openStream:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cbf2a), color-stop(1, #44c767));
+  background:-moz-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+  background:-webkit-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+  background:-o-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+  background:-ms-linear-gradient(top, #5cbf2a 5%, #44c767 100%);
+  background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cbf2a', endColorstr='#44c767',GradientType=0);
+  background-color:#5cbf2a;
+}
+.openStream:active {
+  position:relative;
+  top:1px;
+}
+
+
+    </style>
+  </head>
+  <body>
+  	<div style="position:absolute;width:100%;height:100px;z-index:5;">
+  	<p>
+     Find tweet pairs that:
+are on same topic (KEYWORD MATCH) and
+within 200 feet (SPATIAL RANGE) and
+ and within 10 sec (TIME WINDOW)  
+    </p>
+
+    <!-- <a href="#" class="streamClosed">light red</a> -->
+
+
+    <!-- <div><button id="clearDrawings">Clear Drawings</button></div> -->
+<!-- <a href="#" class="streamOpened" id="streamSwitch">Close</a> -->
+
+
+    <div><button id="openStream" >Open Stream</button></div>
+
+    <div><button id="closeStream">Close Stream</button></div>
+  	
+  	
+  	<div style="position:relative" id="clist"></div>
+	</div>
+    <div id="map-canvas" style="poistion:absolute;top:101px;z-index:0;"></div>
+  </body>
+</html>

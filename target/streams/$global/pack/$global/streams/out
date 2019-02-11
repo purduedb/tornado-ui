@@ -1,0 +1,131 @@
+[0m[[0minfo[0m] [0mCreating a distributable package in target/pack[0m
+[0m[[0minfo[0m] [0mCopying libraries to target/pack/lib[0m
+[0m[[0minfo[0m] [0mproject jars:[0m
+[0m[[0minfo[0m] [0mtarget/scala-2.10/tornadowebui_2.10-0.1.jar[0m
+[0m[[0minfo[0m] [0mproject dependencies:[0m
+[0m[[0minfo[0m] [0mant:ant:1.6.5[0m
+[0m[[0minfo[0m] [0mch.qos.logback:logback-classic:1.0.13[0m
+[0m[[0minfo[0m] [0mch.qos.logback:logback-core:1.0.13[0m
+[0m[[0minfo[0m] [0mclj-stacktrace:clj-stacktrace:0.2.2[0m
+[0m[[0minfo[0m] [0mclj-time:clj-time:0.4.1[0m
+[0m[[0minfo[0m] [0mclout:clout:1.0.1[0m
+[0m[[0minfo[0m] [0mcom.101tec:zkclient:0.3[0m
+[0m[[0minfo[0m] [0mcom.chuusai:shapeless_2.10:1.2.4[0m
+[0m[[0minfo[0m] [0mcom.esotericsoftware.kryo:kryo:2.21[0m
+[0m[[0minfo[0m] [0mcom.esotericsoftware.minlog:minlog:1.2[0m
+[0m[[0minfo[0m] [0mcom.google.code.findbugs:jsr305:1.3.9[0m
+[0m[[0minfo[0m] [0mcom.google.guava:guava:14.0.1[0m
+[0m[[0minfo[0m] [0mcom.google.protobuf:protobuf-java:2.5.0[0m
+[0m[[0minfo[0m] [0mcom.googlecode.disruptor:disruptor:2.10.1[0m
+[0m[[0minfo[0m] [0mcom.googlecode.json-simple:json-simple:1.1[0m
+[0m[[0minfo[0m] [0mcom.twitter:carbonite:1.4.0[0m
+[0m[[0minfo[0m] [0mcom.twitter:chill-java:0.3.5[0m
+[0m[[0minfo[0m] [0mcom.twitter:hbc-core:2.2.0[0m
+[0m[[0minfo[0m] [0mcom.twitter:hbc-twitter4j:2.2.0[0m
+[0m[[0minfo[0m] [0mcom.twitter:joauth:6.0.2[0m
+[0m[[0minfo[0m] [0mcom.typesafe:config:1.2.1[0m
+[0m[[0minfo[0m] [0mcom.typesafe.akka:akka-actor_2.10:2.3.6[0m
+[0m[[0minfo[0m] [0mcom.typesafe.akka:akka-remote_2.10:2.3.6[0m
+[0m[[0minfo[0m] [0mcom.typesafe.akka:akka-slf4j_2.10:2.3.6[0m
+[0m[[0minfo[0m] [0mcom.yammer.metrics:metrics-core:2.2.0[0m
+[0m[[0minfo[0m] [0mcommons-cli:commons-cli:1.2[0m
+[0m[[0minfo[0m] [0mcommons-codec:commons-codec:1.6[0m
+[0m[[0minfo[0m] [0mcommons-el:commons-el:1.0[0m
+[0m[[0minfo[0m] [0mcommons-fileupload:commons-fileupload:1.2.1[0m
+[0m[[0minfo[0m] [0mcommons-httpclient:commons-httpclient:3.0.1[0m
+[0m[[0minfo[0m] [0mcommons-io:commons-io:2.4[0m
+[0m[[0minfo[0m] [0mcommons-lang:commons-lang:2.5[0m
+[0m[[0minfo[0m] [0mcommons-logging:commons-logging:1.1.3[0m
+[0m[[0minfo[0m] [0mcommons-net:commons-net:1.4.1[0m
+[0m[[0minfo[0m] [0mcompojure:compojure:1.1.3[0m
+[0m[[0minfo[0m] [0mhiccup:hiccup:0.3.6[0m
+[0m[[0minfo[0m] [0mhsqldb:hsqldb:1.8.0.10[0m
+[0m[[0minfo[0m] [0mio.netty:netty:3.8.0.Final[0m
+[0m[[0minfo[0m] [0mio.spray:spray-can_2.10:1.3.2[0m
+[0m[[0minfo[0m] [0mio.spray:spray-http_2.10:1.3.2[0m
+[0m[[0minfo[0m] [0mio.spray:spray-httpx_2.10:1.3.2[0m
+[0m[[0minfo[0m] [0mio.spray:spray-io_2.10:1.3.2[0m
+[0m[[0minfo[0m] [0mio.spray:spray-json_2.10:1.3.0[0m
+[0m[[0minfo[0m] [0mio.spray:spray-routing_2.10:1.3.2[0m
+[0m[[0minfo[0m] [0mio.spray:spray-util_2.10:1.3.2[0m
+[0m[[0minfo[0m] [0mjavax.servlet:servlet-api:2.5[0m
+[0m[[0minfo[0m] [0mjline:jline:2.11[0m
+[0m[[0minfo[0m] [0mjoda-time:joda-time:2.10.1[0m
+[0m[[0minfo[0m] [0mjunit:junit:4.5[0m
+[0m[[0minfo[0m] [0mlog4j:log4j:1.2.14[0m
+[0m[[0minfo[0m] [0mnet.java.dev.jets3t:jets3t:0.7.1[0m
+[0m[[0minfo[0m] [0mnet.jpountz.lz4:lz4:1.2.0[0m
+[0m[[0minfo[0m] [0mnet.sf.jopt-simple:jopt-simple:3.2[0m
+[0m[[0minfo[0m] [0mnet.sf.kosmosfs:kfs:0.3[0m
+[0m[[0minfo[0m] [0morg.apache.commons:commons-exec:1.1[0m
+[0m[[0minfo[0m] [0morg.apache.hadoop:hadoop-core:0.20.2[0m
+[0m[[0minfo[0m] [0morg.apache.httpcomponents:httpclient:4.2.5[0m
+[0m[[0minfo[0m] [0morg.apache.httpcomponents:httpcore:4.2.4[0m
+[0m[[0minfo[0m] [0morg.apache.kafka:kafka-clients:0.8.2.1[0m
+[0m[[0minfo[0m] [0morg.apache.kafka:kafka_2.10:0.8.2.1[0m
+[0m[[0minfo[0m] [0morg.apache.storm:storm-core:0.9.5[0m
+[0m[[0minfo[0m] [0morg.apache.zookeeper:zookeeper:3.4.6[0m
+[0m[[0minfo[0m] [0morg.clojure:clojure:1.5.1[0m
+[0m[[0minfo[0m] [0morg.clojure:core.incubator:0.1.0[0m
+[0m[[0minfo[0m] [0morg.clojure:math.numeric-tower:0.0.1[0m
+[0m[[0minfo[0m] [0morg.clojure:tools.cli:0.2.4[0m
+[0m[[0minfo[0m] [0morg.clojure:tools.logging:0.2.3[0m
+[0m[[0minfo[0m] [0morg.clojure:tools.macro:0.1.0[0m
+[0m[[0minfo[0m] [0morg.eclipse.jdt:core:3.1.1[0m
+[0m[[0minfo[0m] [0morg.fluttercode.datafactory:datafactory:0.8[0m
+[0m[[0minfo[0m] [0morg.jgrapht:jgrapht-core:0.9.0[0m
+[0m[[0minfo[0m] [0morg.joda:joda-convert:2.2.0[0m
+[0m[[0minfo[0m] [0morg.jvnet.mimepull:mimepull:1.9.4[0m
+[0m[[0minfo[0m] [0morg.mortbay.jetty:jetty:6.1.26[0m
+[0m[[0minfo[0m] [0morg.mortbay.jetty:jetty-util:6.1.26[0m
+[0m[[0minfo[0m] [0morg.mortbay.jetty:jsp-2.1:6.1.14[0m
+[0m[[0minfo[0m] [0morg.mortbay.jetty:jsp-api-2.1:6.1.14[0m
+[0m[[0minfo[0m] [0morg.mortbay.jetty:servlet-api:2.5-20081211[0m
+[0m[[0minfo[0m] [0morg.mortbay.jetty:servlet-api-2.5:6.1.14[0m
+[0m[[0minfo[0m] [0morg.objenesis:objenesis:1.2[0m
+[0m[[0minfo[0m] [0morg.ow2.asm:asm:4.0[0m
+[0m[[0minfo[0m] [0morg.parboiled:parboiled-core:1.1.6[0m
+[0m[[0minfo[0m] [0morg.parboiled:parboiled-scala_2.10:1.1.6[0m
+[0m[[0minfo[0m] [0morg.scala-lang:scala-library:2.10.4[0m
+[0m[[0minfo[0m] [0morg.slf4j:slf4j-api:1.7.12[0m
+[0m[[0minfo[0m] [0morg.slf4j:slf4j-log4j12:1.6.1[0m
+[0m[[0minfo[0m] [0morg.twitter4j:twitter4j-core:4.0.1[0m
+[0m[[0minfo[0m] [0morg.twitter4j:twitter4j-stream:4.0.1[0m
+[0m[[0minfo[0m] [0morg.uncommons.maths:uncommons-maths:1.2.2a[0m
+[0m[[0minfo[0m] [0morg.xerial.snappy:snappy-java:1.1.1.6[0m
+[0m[[0minfo[0m] [0morg.yaml:snakeyaml:1.11[0m
+[0m[[0minfo[0m] [0moro:oro:2.0.8[0m
+[0m[[0minfo[0m] [0mring:ring-core:1.1.5[0m
+[0m[[0minfo[0m] [0mring:ring-devel:0.3.11[0m
+[0m[[0minfo[0m] [0mring:ring-jetty-adapter:0.3.11[0m
+[0m[[0minfo[0m] [0mring:ring-servlet:0.3.11[0m
+[0m[[0minfo[0m] [0mtomcat:jasper-compiler:5.5.12[0m
+[0m[[0minfo[0m] [0mtomcat:jasper-runtime:5.5.12[0m
+[0m[[0minfo[0m] [0mxmlenc:xmlenc:0.52[0m
+[0m[[0minfo[0m] [0munmanaged dependencies:[0m
+[0m[[0minfo[0m] [0m/home/danielhu/git/webui/lib/aqwa.jar[0m
+[0m[[0minfo[0m] [0mexplicit dependencies:[0m
+[0m[[0minfo[0m] [0mCreate a bin folder: target/pack/bin[0m
+[0m[[0minfo[0m] [0mGenerating launch scripts[0m
+[0m[[0minfo[0m] [0mmain class for TornadoStormKafkaTest: examples.TornadoStormKafkaTest[0m
+[0m[[0minfo[0m] [0mGenerating target/pack/bin/TornadoStormKafkaTest[0m
+[0m[[0minfo[0m] [0mmain class for TwitterHBCExample: examples.TwitterHBCExample[0m
+[0m[[0minfo[0m] [0mGenerating target/pack/bin/TwitterHBCExample[0m
+[0m[[0minfo[0m] [0mmain class for Twitter4JExample: tornado.examples.TwitterStreamAPI[0m
+[0m[[0minfo[0m] [0mGenerating target/pack/bin/Twitter4JExample[0m
+[0m[[0minfo[0m] [0mmain class for StreamConroller: utils.StreamController[0m
+[0m[[0minfo[0m] [0mGenerating target/pack/bin/StreamConroller[0m
+[0m[[0minfo[0m] [0mmain class for WebServer: ui.Webserver[0m
+[0m[[0minfo[0m] [0mGenerating target/pack/bin/WebServer[0m
+[0m[[0minfo[0m] [0mmain class for KafkaFileProducer: utils.KafkaFileProducer[0m
+[0m[[0minfo[0m] [0mGenerating target/pack/bin/KafkaFileProducer[0m
+[0m[[0minfo[0m] [0mmain class for Playground: utils.Playground[0m
+[0m[[0minfo[0m] [0mGenerating target/pack/bin/Playground[0m
+[0m[[0minfo[0m] [0mmain class for TestRandomTextGen: tornado.ui.TestRandomTextGen[0m
+[0m[[0minfo[0m] [0mGenerating target/pack/bin/TestRandomTextGen[0m
+[0m[[0minfo[0m] [0mmain class for TornadoUI: tornado.ui.TornadoWebserver[0m
+[0m[[0minfo[0m] [0mGenerating target/pack/bin/TornadoUI[0m
+[0m[[0minfo[0m] [0mpacked resource directories = /home/danielhu/git/webui/src/pack[0m
+[0m[[0minfo[0m] [0mGenerating target/pack/Makefile[0m
+[0m[[0minfo[0m] [0mGenerating target/pack/VERSION[0m
+[0m[[0minfo[0m] [0mdone.[0m
