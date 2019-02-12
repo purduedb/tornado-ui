@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <style type="text/css">
+            html { height: 100% }
+            body { height: 100%; margin: 0; padding: 0 }
+            #map-canvas { height: 100% }
+
+            #visholder{
+                width: 42em;
+                height: 32em;
+            }
+        </style>
+
+        <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css">
+        <link type="text/css" rel="stylesheet" href="css/vis.css">
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.json.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/portal.min.js"></script>
+        <script type="text/javascript" src="js/randomColor.js"></script>
+        <script src="js/peg-0.8.0.min.js"></script>
+        <script src="js/jsDump.js" ></script>
+        <script type="text/javascript" src="js/vis.js"></script>
+
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUTsGEgrknzPi1xdS1NxH5quGucPmpZoA&v=3.exp&libraries=drawing,geometry,places"></script>
+
+        <script type="text/javascript">
+
+            var clientState = undefined;
+
+            if (typeof (Storage) !== "undefined") {
+                // Code for localStorage/sessionStorage.
+
+                if (localStorage.testarr) {
+                    console.log("found test arr");
+                }
+                else {
+                    console.log("nothing found");
+                    var o = {"content": [{"val": 1}, {"val": 2}]};
+                    localStorage.testarr = $.toJSON(o);
+                }
+
+            } else {
+                // Sorry! No Web Storage support..
+            }
+
+            var uiState = {
+                knnList: [],
+                rangeList: [],
+                getRandomColor: function () {
+                    return randomColor({luminosity: 'light'});
+                },
+                resolveRangePredVar: function (v) {
+                    var i = 0;
+                    while (i < uiState.rangeList.length) {
+                        if (v == uiState.rangeList[i].name) {
+                            return createMBR(uiState.rangeList[i].rect);
+                        }
+                        i++;
+                    }
+                    return null;
+                },
+                resolveKNNPredVar: function (v) {
+                    var i = 0;
+                    while (i < uiState.knnList.length) {
+                        if (v == uiState.knnList[i].name) {
+                            // console.log(uiState.knnList[i].marker.getPosition());
+    //        var p = uiState.knnList[i].marker.getPosition();
+                            var marker = uiState.knnList[i].marker;
+
+                            return createLatLng(marker);
+                        }
+                        i++;
+                    }
+                    return null;
+                }
+            };
+
+            /**
+             flags
+             **/
+
+            var queryvis = true;
+            var load200 = false;
+            var load800 = false;
+            ///////////////////
+
+            var queries = [];
+            var inputpoints = [];
+            var trips = [];
+            var lines = [];
+
+            var eventsources = [];
+
+            var nodes = {};
+            var edges = {};
+            var nodeSet = [];
+
+            /////////////////
+            var gmap = null;
+            var pservice = null;
+
+            var beforeColor = '#CF5656';
+            var afterColor = '#9BC150';
+
+            var polylines = [];
+
+            var drawingContext = {
+                rectangles: [],
+                rectangleMaxCount: 3
+            };
+            var drawingManager = null;
+
+            var beforeRectOptions = {
+                clickable: true,
+                draggable: true,
+                editable: true,
+                fillColor: beforeColor,
+                fillOpacity: 0.5,
+                strokeWeight: 5
+            };
+
+            // place holder object for the request
+            var request = {
+                mbr: null
+            };
+
+
+
+
+            var drawingOptions = {
+                drawingMode: null, //google.maps.drawing.OverlayType.RECTANGLE,
+                drawingControl: true,
+                drawingControlOptions: {
+                    position: google.maps.ControlPosition.TOP_CENTER,
+                    drawingModes: [
+                        // google.maps.drawing.OverlayType.CIRCLE,
+                        // google.maps.drawing.OverlayType.POLYGON,
+                        google.maps.drawing.OverlayType.MARKER,
+                        google.maps.drawing.OverlayType.RECTANGLE
+                    ]
+                },
+                markerOptions: {draggable: true},
+                rectangleOptions: beforeRectOptions
+
+            };
+
+
+            var es; // event stream handle
+
+
+            function initialize() {
+
+                var mapOptions = {
+                    // US 
+                    // 39.730255, -98.018183
+                    //24.507052, 45.371521
+
+                    // berlin
+                    // 52.520190250694526&west=13.405380249023438&south=52.51914570999911&east=13.407440185546875 
+                    // makkah : 22.473878, 40.121263
+                    center: new google.maps.LatLng(39.730255, -98.018183),
+                    zoom: 5
+                };
+                var map = new google.maps.Map(document.getElementById("map-canvas"),
+                        mapOptions);
+                gmap = map;
+                pservice = new google.maps.places.PlacesService(gmap);
+                drawingOptions.rectangleOptions = beforeRectOptions;
+
+                drawingManager = new google.maps.drawing.DrawingManager(drawingOptions);
+                drawingManager.addListener("markercomplete", function (e) {
+                    if ((uiState.knnList.length) == drawingContext.rectangleMaxCount) { //TODO change limit
+                        e.setMap(null);
+                    }
+                    else {
+                        var qid = uiState.knnList.length;
+                        var _color = uiState.getRandomColor();
+                        var _iconUrl = createColoredMarker(_color.slice(1).toUpperCase());
+                        uiState.knnList.push({show: true, name: "f" + qid, marker: e, color: _color, iconUrl: _iconUrl});
+
+                        e.addListener("position_changed", function () {
+                            updateKNNPred(qid, this);
+                        });
+                        updateKNNList();
+                    }
+                });
+                drawingManager.addListener("rectanglecomplete", function (e) {
+                    // console.log("a rectangle is completed");
+                    // console.log(e.getBounds());
+                    // console.log("current count = "+drawingContext.rectangles.length);
+                    if ((uiState.rangeList.length) == drawingContext.rectangleMaxCount) {
+                        // console.log("max count has reached which is "+drawingContext.rectangleMaxCount);
+                        e.setMap(null);
+                    }
+                    else {
+                        var qid = uiState.rangeList.length;
+                        uiState.rangeList.push({show: true, name: "r" + qid, rect: e});
+
+                        e.addListener("bounds_changed", function () {
+                            updateMBR(qid, this);
+                        });
+                        updateRangeList();
+                    }
+
+                });
+
+                drawingManager.setMap(map);
+
+            }
+
+
+    // Doc load 
+            $(document).ready(function () {
+
+                nodes = new vis.DataSet();
+                edges = new vis.DataSet();
+
+                // create a network
+                var container = document.getElementById('visholder');
+                var data = {
+                    nodes: nodes,
+                    edges: edges
+                };
+                var options = {
+                    hierarchicalLayout: true,
+                    //shape: "database",
+                    smoothCurves: false,
+                    edges: {
+                        style: 'arrow'
+                    },
+                    physics:{
+                        "hierarchicalRepulsion": {
+                          "centralGravity": 0,
+                          "springLength": 0,
+                          "springConstant": 0,
+                          "nodeDistance": 10,
+                          "damping": 0
+                        },
+                        "maxVelocity": 57,
+                        "solver": "hierarchicalRepulsion",
+                        "timestep": 0.01
+                    },
+                    interaction:{
+                        dragNodes:true,
+                        dragView: true,
+                        hideEdgesOnDrag: false,
+                        hideNodesOnDrag: false,
+                        hover: false,
+                        hoverSelectedEdges: true,
+                        keyboard: {
+                          enabled: false,
+                          speed: {x: 10, y: 10, zoom: 0.02},
+                          bindToWindow: true
+                        },
+                        multiselect: false,
+                        navigationButtons: false,
+                        selectable: true,
+                        selectConnectedEdges: true,
+                        tooltipDelay: 300,
+                        zoomView: true
+                      }
+                };
+                var network = new vis.Network(container, data, options);
+                
+                /** Parser Code **/
+
+                // var parser = PEG.buildParser($("#SyncSQLGrammar").text().trim(), uiState);
+
+                $.ajax("grammar.txt").done(function(data){
+                    //console.log(data);
+                    uiState.grammartxt = data;
+                    uiState.parser = PEG.buildParser(data, uiState);
+                })
+
+                $("#buttonPanel span").click(function (event) {
+                    $("#textData").val($(this).attr('data'));
+                });
+
+                $('#submitSQL').click(function () {
+                    // var ast = syncSQLparse(parser);
+                    var ast = syncSQLparse(uiState.parser);
+                    console.log($.toJSON(ast));
+                    $.ajax( "tornado/queries", {
+                        method: "POST",
+                        data: $.toJSON(ast),
+                        dataType: "json"
+                    }).done(function(data){
+                        console.log(data);
+                    });
+
+                    // optimizeQueryPlan(ast.plan);
+                });
+
+                $("#compileSQL").click(function () {
+                    var ast = syncSQLparse(uiState.parser);
+                    // var ast = syncSQLparse(parser);
+                    // console.log(ast);
+                    // $("#dialog-vis").toggleClass("hidden");
+                    // $("#dialog-ast").dialog({
+                    //     // resizable:false,
+                    //     height: 'auto',
+                    //     width: 'auto',
+                    //     modal: true,
+                    //     // open: function( event, ui ) {
+                    //     //   $("#tabs").tabs();
+                    //     // },
+                    //     // buttons: {
+                    //     //   "Delete all items": function() {
+                    //     //     $( this ).dialog( "close" );
+                    //     //   },
+                    //     //   Cancel: function() {
+                    //     //     $( this ).dialog( "close" );
+                    //     //   }
+                    //     // }
+                    // });
+
+
+                });
+                /**     **/
+
+                // Intialize google maps
+//                google.maps.event.addDomListener(window, 'load', initialize);
+                initialize()
+                getDemoData();
+                
+                $('#test').click(function (event) {
+                    var url = '';
+                });
+                
+                $('#addNode').click(function (event) {
+                    addNode();
+                });
+
+                $('#addEdge').click(function (event) {
+                    addEdge();
+                });
+
+
+                function addNode() {
+
+                    var i = Math.floor((Math.random() * 100) + 1);
+                    nodes.add([{id: "n" + i, label: 'Node ' + i}]);
+                    console.log("addning a node id=" + i);
+                    console.log("length = " + nodes.length);
+                }
+
+                function addEdge() {
+                    var ids = nodes.getIds()
+                    var i = Math.floor((Math.random() * ids.length));
+                    var j = Math.floor((Math.random() * ids.length));
+                    if (i == j) {
+                        if (j == ids.length - 1) {
+                            j == 0;
+                        }
+                        else {
+                            j = j + 1;
+                        }
+                    }
+
+                    edges.add({from: ids[i], to: ids[j]})
+                    console.log("adding an edge between (" + ids[i] + "," + ids[j] + ")");
+                }
+
+                function syncSQLparse(_parser) {
+                    try {
+                        var pres = _parser.parse($("#textData").val());
+                        // console.log(pres);
+                        prettyPrintAST('prettyPrint',pres);
+                        
+                        //console.log($.toJSON(pres));
+                        var plan = pres.plan;
+//                        plan = optimizeQueryPlan(plan);
+                        visualizeQueryPlan(plan);
+                        
+                        return pres;
+                    } catch (err) {
+                        //$('#prettyPrint').text(jsDump.parse(err));
+                        console.log($.toJSON(err));
+                        return null;
+                    }
+                }
+
+                function getLevels(node) {
+
+                    if (node.children != undefined) {
+                        return getLevels(node.children[0]) + 1;
+                    }
+                    else {
+                        return 1;
+                    }
+                }
+
+                function addNodeQPlan(node, parentId, k, lv) {
+                    if (node != undefined) {
+                        var nodeId = node.type + "" + (++k);
+
+                        // check if it exists
+                        if (nodes.get(nodeId) != null) {
+                            nodeId += ""+(lv);
+                        }
+
+                        var nodeLabel = node.type + " : ";
+                        if (node.attributes != undefined) {
+                            nodeLabel += $.toJSON(node.attributes);
+                        }
+
+                        if (node.conditions != undefined) {
+
+                            // var conds = $.toJSON(node.conditions);
+                            var conds = node.conditions;
+                            //console.log(conds);
+                            //should only have one??
+                            for (var i = 0; i < node.conditions.length; i++) {
+                                var cond = node.conditions[i];
+
+                                nodeLabel += "\n";
+
+                                if (i != 0) nodeLabel += " and ";
+
+                                if ($.isPlainObject(cond.lhs))
+                                    nodeLabel += cond.lhs.sourceName + "." + cond.lhs.attributeName;
+                                else nodeLabel += cond.lhs;
+
+                                nodeLabel += "  " + cond.op; 
+
+                                if (cond.argc == 3) {
+                                    nodeLabel += "(" + cond.cval + ") "; 
+                                }
+                                else {
+                                    nodeLabel += " ";
+                                }
+
+                                // nodeLabel += " , " 
+                                if ($.isPlainObject(cond.rhs))
+                                    nodeLabel += cond.rhs.sourceName + "." + cond.rhs.attributeName;
+                                else nodeLabel += "(" + cond.rhs + ") "; 
+                            };
+
+                            
+                        }
+
+                        if (node.name != undefined) {
+                            nodeLabel += node.name;
+                        }
+
+                        var n = [{id: nodeId, label: nodeLabel,shape:'text', level: (k)}];
+                        console.log($.toJSON(n));
+                        nodes.add(n);
+                        console.log("adding a node (" + nodeId + ")");
+                        edges.add({from: nodeId, to: parentId});
+                        console.log("adding an edge between (" + nodeId + "," + parentId + ")");
+                        if (node.children != undefined) {
+                            console.log("node children length of (" + nodeId + ")  = "+node.children.length);
+                            for (var i = 0; i < node.children.length; i++) {
+                                addNodeQPlan(node.children[i], nodeId, k, lv);
+                                console.log("added child #"+i+"  for (" + nodeId + ")");
+                            }
+                            console.log("finished adding all child nodes  for (" + nodeId + ")");
+                            
+                        }
+
+                    }
+
+
+                }
+                
+                function visualizeQueryPlan(plan){
+                    console.log("vizualizing : "+$.toJSON(plan));
+                    var i = 0;
+                    var rootId = plan.type + "" + (++i);
+                    // nodes.add([{id: rootId, label: plan.type+" : "+plan.attributes.toString()}]);
+                    var lv = getLevels(plan);
+                    console.log("levels = " + lv);
+
+                    nodes.clear();
+                    edges.clear();
+
+                    console.log("cleared nodes and edges");
+
+                    addNodeQPlan(plan, rootId, i, lv);
+
+                    console.log("added nodes and edges");
+
+                }
+
+            });
+
+            var markers = [];
+
+            function clearMap() {
+                while (drawingContext.rectangles.length > 0) {
+                    drawingContext.rectangles.pop().setMap(null);
+                }
+                drawingOptions.rectangleOptions = beforeRectOptions;
+                drawingManager.setOptions(drawingOptions);
+                drawingManager.setMap(gmap);
+
+                // remove all polylines
+
+                while (polylines.length > 0) {
+                    polylines.pop().setMap(null);
+                }
+
+
+            }
+
+            // place holder object for the request
+            var request = {
+                mbr: null
+            };
+
+            // This function creates the MBR (spatial predicate) for the query
+            function updateMBR(qid, rect) {
+                // console.log(qid);
+                // console.log(uiState.rangeList[qid]);
+                console.log(createMBR(rect));
+                uiState.rangeList[qid].rect = rect;
+            }
+
+            function addRangePredEntry(contId, eid, qname) {
+                $("#" + contId).append($('<li style="border:solid thin;border-color:black;"></li>').text(qname));
+            }
+
+            function updateRangeList() {
+                $("#rangeList").empty();
+                for (var i = 0; i < uiState.rangeList.length; i++) {
+                    var t = uiState.rangeList[i];
+                    addRangePredEntry("rangeList", t.name, t.name);
+
+                }
+                ;
+            }
+
+
+            function updateKNNPred(qid, marker) {
+                // console.log(marker);
+                marker.setOptions({});
+                uiState.knnList[qid].marker = marker;
+            }
+
+            function addKNNPredEntry(contId, p) {
+                $("#" + contId).append($('<li style="border:solid thin;border-color:' + p.color + ';"></li>').text(p.name));
+            }
+            function updateKNNList() {
+                $("#knnList").empty();
+                for (var i = 0; i < uiState.knnList.length; i++) {
+                    var p = uiState.knnList[i];
+                    addKNNPredEntry("knnList", p);
+                }
+                ;
+            }
+
+
+            function createLatLng(marker) {
+                return {lat: marker.getPosition().lat(), lng: marker.getPosition().lng()}
+            }
+
+            function createMBR(rect) {
+                return {
+                    north: rect.getBounds().getNorthEast().lat(),
+                    east: rect.getBounds().getNorthEast().lng(),
+                    south: rect.getBounds().getSouthWest().lat(),
+                    west: rect.getBounds().getSouthWest().lng()
+                };
+            }
+
+            function createColoredMarker(pinColor) {
+                // var pinColor = "FE7569";
+
+
+                var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+                        new google.maps.Size(21, 34),
+                        new google.maps.Point(0, 0),
+                        new google.maps.Point(10, 34));
+                return pinImage.url;
+            }
+            
+            
+            function prettyPrintAST(target,ast){
+                $('#'+target).text(jsDump.parse(ast));
+            }
+            
+            
+            function getDemoData(){
+                var skydeck = $.parseJSON('{"lng":-87.6358852,"tags":[{"k":"name","v":"SkyDeck Chicago"},{"k":"operator","v":"Willis Tower"},{"k":"tourism","v":"attraction"}],"ts":"2015-03-19T19:48:41Z","nid":"2311635030","lat":41.8786383}');
+                console.log(skydeck.lng);
+                console.log(skydeck.lat);
+                gmap.setCenter({lat: 41.8786383, lng: -87.6358852});
+                gmap.setZoom(14);
+            }
+            
+            function optimizeQueryPlan(plan){
+                console.log("optimizing : "+$.toJSON(plan));
+                var oper = plan;
+                var parent = null;
+                while (oper.type !== "stream"){
+                    //add back pointer to parent
+//                    for (var i = 0; i < oper.children.length; i++){
+//                        oper.children[i].parent = oper;
+//                    }
+                    
+//                    oper.children[0].parent = oper;
+                    console.log("parent added : "+$.toJSON(oper));
+                    
+                    if (oper.type === "select"){
+                        var leftchild = oper.children[0];
+                        if (leftchild.type === "stream" && leftchild.name === "places"){
+                            console.log("leftchild : "+$.toJSON(leftchild)+" , typeOf leftchild "+typeof(leftchild));
+                            //leftchild.parent = oper.parent;
+                            leftchild.keyword = oper.conditions[0][2];
+//                            oper.parent.children[0] = leftchild; // assume left child for now
+                            parent.children = oper.children;
+                            oper = leftchild;
+                        }
+                        else{
+                            parent = oper;
+                            oper = oper.children[0];
+                        }
+                    }
+                    else{
+                        parent = oper;
+                        oper = oper.children[0];
+                    }
+                    
+                }
+                console.log("source : "+$.toJSON(oper));
+                console.log("optimized : "+$.toJSON(plan));
+                return plan;
+            }
+            
+            function executeQueryOperator(oper){
+                var cnum = oper.children.length;
+                if (cnum === 1){
+                    // unary operator
+                    if (oper.type === "project"){
+                        var resset = executeOperator(oper.children[0]);
+                        for (i in resset) console.log(i)
+                    }
+                    
+                    if (oper.type === "select"){
+                        
+                    }
+                    
+                    if (oper.type === "stream"){
+                        if (oper.name === "places"){
+                            // use google API
+                        }
+                        else{
+                            console.log("Cannot resolve source:"+oper.name);
+                        }
+                    }
+                    
+                }
+                else if (cnum === 2){
+                    // binary
+                }
+            }
+            
+            function executeOperator(oper,callback){
+                
+            }
+
+
+
+
+
+
+        </script>
+        <style type="text/css">
+            #controlpanel {
+                position:relative;width:100%;z-index:5;
+                /*background-color:#B3D1FF;*/
+                background-color: black;
+                display: block;
+                height: 8em;
+                /*overflow: scroll;*/
+            }
+            #side {
+                padding: 1em;
+                display: block;
+                /*width:14em;*/
+                width:42em;
+                height: 100%;
+                z-index: 5;
+                float: left;
+                display: none;
+            }
+            #logo{
+                display: block;
+                width: 14em;
+                height: 100%;
+                background-color: black;
+                float: left;
+            }
+
+            #logo img {
+
+                width: 14em;
+                float:left;
+            }
+
+            .left {
+                width: 50%;
+                height: 100%;
+                /*background-color: blue;*/
+                float: left;
+            }
+
+            .right {
+                width: 50%;
+                height: 100%;
+                float: left;
+                /*background-color: red;*/
+            }
+
+
+            /* Styling code for display purposes */
+            .jsDump {
+                overflow: auto;
+                /*max-height: 20em;*/
+                margin: 0;
+                padding: .5em 1em;
+                border: 2px solid silver;
+                border-top: none;
+                background-color: #f0f0f0;
+                display: block;
+                font-family: monospace;
+                white-space: pre;
+                width:auto;
+            }
+
+            #buttonPanel {
+                /*float:left;*/
+                padding: 1em;
+                padding-bottom: 0em;  
+                padding-right: 0em;      
+            }
+
+            #buttonPanel button {
+                width:10em;
+                height: 4em;
+            }
+            #textEntry {
+                float: left;
+                width:52em;
+                padding: 1em;
+                padding-bottom: 0em;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            #buttonPanel span{
+                color: white;
+
+            }
+
+            .predicateList span {
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="controlpanel" >
+            <div id="logo">
+                <img src="images/logo-pu.png">
+            </div>
+            <div >
+
+                <div id="tabs-4">
+                    <div id="textEntry" style="">
+                        <textarea id="textData" style="width:840px;height: 100px;">REGISTER QUERY q1 AS
+SELECT * FROM OSM_Data AS O, Tweets AS T
+WHERE WITHIN_DISTANCE(O.loc,T.loc,1)
+and CONTAINS(O.tags,"attraction")
+and INSIDE(T.loc,currentView)
+and OVERLAPS(O.tags, T.text);</textarea>
+<!--                        
+                        <textarea id="textData" style="width:840px;height: 100px; font-size:larger;">run query test as
+select * 
+from places as p1
+where p1.text = 'restaurants';<textarea id="textData" style="width:840px;height: 100px; font-size:larger;">-->
+                    </div>
+                    <div id="buttonPanel">
+                        <button id="compileSQL" class="button">Parse</button>  
+                        <button id="submitSQL" class="button">Submit</button>  
+                        <span style="display:none;" data='create streamed view q1 as 
+                              select * 
+                              from s1 as stream1 sync 3,s1 as s2 sync 7
+                              where stream1.rid = "r1" and s2.RoomTemp = s1.RoomTemp and s2.kNN(5,f1);'>Join</span>
+                        <span data="create streamed view q1 as 
+                              select * 
+                              from s1 
+                              where s1.inRange(r1);">Range</span>
+                        <span data="create streamed view q1 as 
+                              select * 
+                              from s1 
+                              where s1.kNN(4,f1);">KNN</span>      
+
+                        <span data="run query test as
+                              select * 
+                              from places as p1
+                              where p1.text = 'restaurants';">Spatial Keyword</span>   
+
+                    </div>
+
+                    <!-- <button id="visQuery">Visualize</button> -->
+
+                    <div id="dialog-ast" class="hidden" title="Parse Tree">
+                        
+
+                        <!-- <div id="visholder" style="position:relative"></div> -->
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <div style="position:relative" id="clist"></div>
+        </div>
+        <div class="left">
+            <div id="visholder"></div>  
+        </div>
+        <div class="right">
+            <div id="prettyPrint" class="jsDump"></div> 
+        </div>
+
+        <div id="side">
+            <div id="queryOutput">
+                <ul id="qAnswers">
+                    <li>No points</li>
+                </ul>
+            </div>
+            <div class="predicateList">
+                <span>Focal points</span>
+                <ul id="knnList">
+                    <li>No points</li>
+                </ul>
+            </div>
+            <div class="predicateList">
+                <span>Range predicates</span>
+                <ul id="rangeList">
+                    <li>No predicates</li>
+                </ul>
+            </div>
+            <div class="predicateList">
+
+            </div>
+
+            
+            <button id="test">Test</button>
+            <div id="dialog-vis" class="hidden" >   
+                <!--         <button id="addNode">Add Node</button>
+                  <button id="addEdge">Add Edge</button>  -->
+
+            </div>  
+            <img src="images/powered-by-google-on-white.png" />
+        </div>
+        <div id="map-canvas" style="z-index:0;display:none;"></div>
+
+
+        <div id="SyncSQLGrammar" style="display:none;">
+              /*
+* Grammar for parsing SyncSQL
+* Currently Implemented:
+*  - Register Source Statement
+Example:  
+register source s2 (JsString rid, JsNumber RoomTemp, JsString RoomNotes, JsNumber phoneNumber);
+
+*  - Select Statement
+*     - With Project -
+Example:
+create streamed view q1 as 
+select * 
+from s1 as stream1 sync 3,s2
+where s1.rid = "r1" and s2.roomTemp = 3;
+
+* - Spatial Predicates inRange and kNN
+
+*/
+
+{
+//var uiState = {
+//resolveRangePredVar: function(){return null;},
+//resolveKNNPredVar:function(){return null;}
+//};
+
+   function getState(){
+      return uiState;
+   }
+
+   function bindVar(t, v){
+      //console.log(uiState);
+     if (t == "kNN"){
+      console.log(uiState.resolveKNNPredVar(v));
+      return uiState.resolveKNNPredVar(v);
+     } 
+     else if (t == "inRange"){        
+        return uiState.resolveRangePredVar(v);
+     }
+     else return null;
+   }   
+
+}
+
+start = sqls:sqlstmt spp ";" sps {return sqls}
+sqlstmt = regstmt / createviewstmt 
+
+createviewstmt = t:(("CREATE" spp "STREAMED") / ("REGISTER" / "register") / ("RUN" / "run")) spp ("VIEW" / ("QUERY" / "query")) spp cn:ident spp as spp sel:selectstmt {var res = {};
+
+if (t === "register" || t === "REGISTER") res.type = "cquery";
+if (t === "run" || t === "RUN") res.type = "squery";
+
+res.name=cn; 
+//res.pl = sel.pl; res.fc = sel.fc; res.wc = sel.wc;
+
+res.sourceNames = [];
+for (i in sel.fc){ if ($.inArray(sel.fc[i].name,res.sourceNames) === -1 ) res.sourceNames.push(sel.fc[i].name); }
+res.plan = {};
+var child;
+if (sel.fc.length == 1){
+if (sel.wc != null){
+
+child = {"type":"select","conditions":sel.wc.conditions};
+child.children = [sel.fc.pop()];
+}
+else{
+child = sel.fc[0]
+}
+sel.pl.children = [child]
+   res.plan =sel.pl;
+}
+else{
+
+if (sel.wc != null){
+
+
+// sel.fc.length == 2
+var leftleaf = sel.fc.pop();
+var rightleaf = sel.fc.pop();
+var left = leftleaf;
+var right = rightleaf;
+
+var jconds = [];
+
+var i = sel.wc.conditions.length-1;
+while (sel.wc.conditions.length && i >= 0){
+console.log(sel.wc.conditions);
+var sn = sel.wc.conditions[i].lhs.sourceName;
+var cleft = sel.wc.conditions[i].lhs;
+var cright = sel.wc.conditions[i].rhs;
+if ($.isPlainObject(cleft) && $.isPlainObject(cright)){
+
+// a join condition
+var jcond = sel.wc.conditions.splice(i,1);
+jconds.push(jcond[0]);
+}
+else if (sn === left.name ||  sn === left.alias){
+  
+   var leftselect = {};
+   leftselect.type = "select";
+   //leftselect.name = sn;
+   leftselect.conditions = sel.wc.conditions.splice(i,1);
+   leftselect.children=[left];
+   left = leftselect;
+ }
+else if (sn === right.name || sn === right.alias){
+   //alert(sn);
+   var rightselect = {};
+   rightselect.type = "select";
+   //rightselect.name = sn;
+   rightselect.conditions = sel.wc.conditions.splice(i,1);
+   rightselect.children=[right];
+   right = rightselect;
+}
+else if (right.type === "select"){
+  right.conditions.push(sel.wc.conditions.splice(i,1)[0]);
+}
+else if (left.type === "select"){
+  left.conditions.push(sel.wc.conditions.splice(i,1)[0]);
+}
+--i;
+   
+}
+var join = {"type":"join","conditions":jconds,"children":[left,right]};
+
+   sel.pl.children = [join]
+   res.plan =sel.pl;
+}
+}
+
+return res;}
+
+/****** BEGIN Select Statement *****/
+
+selectstmt = ("select" / "SELECT") spp pl:projectList spp fc:fromclause wc:(spp whereclause)?
+{var res = {};
+res.pl = pl;
+res.fc = fc;
+res.plan = {};
+if (wc != null){
+res.wc = wc[1];
+}
+return res;}
+
+projectList = pa:"*" {return {"type":"project","attributes":[pa]}}
+
+fromclause = ("from" / "FROM") sp sl:sourceList {return sl;}
+
+sourceList = s1:sourceName sps sl:(comma sps sourceList)? 
+{var res = []; 
+res.push(s1); if (sl != null) for (i in sl[2]) res.push(sl[2][i]); return res;}
+
+sourceName = n:ident  a:(sps as sp ident)? sps sync:(sps "sync" sp numVal)? {
+var res = {};
+res.type = "source";//"stream";
+res.name = n
+if (a != null) res.alias = a[3];
+if (sync != null) res.sync = sync[3];
+return res;}
+
+whereclause = ("where" / "WHERE") spp cl:condList {return {"conditions":cl};}
+
+condList = c1:scondition sps cl:("and" sp condList)? {var res = []; res.push(c1); if (cl != null){
+for (i in cl[2]) res.push(cl[2][i]);
+}; return res;}
+
+scondition = lhs:cident sp cop:coper sp rhs:cident 
+{return [lhs,cop,rhs];}
+/ lhs:cident sp cop:coper sp rhs:numVal 
+{return [lhs,cop,rhs];}
+/ lhs:cident sp cop:coper sp rhs:strVal 
+{return [lhs,cop,rhs];}
+/ obj:ident sps dot sps pname:predName1 sps op sps parg:ident  sps cp 
+{return [obj,pname,bindVar(pname,parg)];}
+/ obj:ident sps dot sps pname:predName2n sps op sps kval:numVal sps comma sps parg:ident  sps cp {return [obj,pname,kval,bindVar(pname,parg)];}
+/ pname:(func2p) sps op sps obj:cident sps comma sps parg:ident sps cp 
+{return {argc:2,jcond:false,op:pname,lhs:obj,rhs:bindVar(pname,parg)};}
+/ pname:(func2p) sps op sps obj:cident sps comma sps parg:cident sps cp 
+{return {argc:2,jcond:true,op:pname,lhs:obj,rhs:parg};}
+/ pname:(func2p) sps op sps obj:cident sps comma sps parg:strVal sps cp 
+{return {argc:2,jcond:false,op:pname,lhs:obj,rhs:parg[1]};}
+/ pname:(func3p) sps op sps obj1:cident sps comma sps obj2:cident sps comma sps parg:numVal sps cp 
+{return {argc:3,jcond:true,op:pname,lhs:obj1,rhs:obj2,cval:parg};}
+
+
+
+cident = sa:(ident ".")? ca:ident { if (sa != null) return {"sourceName":sa[0],"attributeName":ca}; else return {"attributeName":ca};}
+
+coper = "=" / ">" / "<" / ">=" / "<=" / "!="
+
+as = "as" / "AS"
+
+/****** END Select Statement *****/
+
+/****** BEGIN  Register Source Statement *****/
+regstmt = "register" sp "source" sp id:ident sp op sps schema:attrList sps cp {return {"type":"sources","id":id,"schema":schema}}
+
+attrList = a1:attribute sps comma sps an:attrList 
+{var res = []; res.push(a1); 
+for (i in an) res.push(an[i]);
+return res;}
+           / a:attribute {var res =[]; res.push(a);return res;}
+attribute = dt:data_type sps attrName:ident sps k:isKey?
+{
+var res = new Object(); 
+res = {"name":attrName,"type":dt};
+if (k != null) res["isKey"] = (k!=null);
+return res;
+}
+isKey = "key"
+
+/****** END Register Source Statement *****/
+
+
+numVal = dig:[0-9]+ {return new Number(dig.join("")).valueOf();}
+strVal = "\"" str:ident "\"" / "'" str:ident "'" {return str;}
+
+
+ident = alpha:[a-zA-Z_]+dig:[0-9]* {return alpha.join("").concat(dig.join(""));}
+data_type = "JsNumber" / "JsString" / "JsBoolean" 
+
+//omem = rel:ident sps dot sps attr:ident { return {"sourceName":rel,"attrName":attr}}
+
+predName1 = 
+"inRange" 
+
+predName2n = 
+"kNN"
+
+func1p = "1p"
+
+func2p = "INSIDE" / "CONTAINS" / "OVERLAPS"
+
+func3p = "WITHIN_DISTANCE"
+
+and = "and"/ "AND"
+or = "or" / "OR"
+
+comma = ","
+dot = "."
+
+cp = ")"
+
+op = "("
+
+nl = "\n"
+nls = nl*
+sps = sp* nls
+spp = sps nl? sps
+sp = " "
+        </div>
+    </body>
+</html>

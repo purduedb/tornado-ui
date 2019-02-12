@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+     <script type="text/javascript" src="js/jquery.json.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/portal.min.js"></script>
+    <script type="text/javascript" src="js/randomColor.js"></script>
+
+
+
+    <style type="text/css">
+
+    </style>
+  </head>
+  <body>
+  	<div style="position:absolute;width:100%;height:100px;z-index:5;">
+  	<p>
+     Find tweet pairs that:
+are on same topic (KEYWORD MATCH) and
+within 200 feet (SPATIAL RANGE) and
+ and within 10 sec (TIME WINDOW)  
+    </p>
+
+    <!-- <a href="#" class="streamClosed">light red</a> -->
+
+
+    <!-- <div><button id="clearDrawings">Clear Drawings</button></div> -->
+<!-- <a href="#" class="streamOpened" id="streamSwitch">Close</a> -->
+
+
+    <div><button id="openStream" >Open Stream</button></div>
+
+    <div><button id="closeStream">Close Stream</button></div>
+  	
+  	
+  	<div style="position:relative" id="clist"></div>
+	</div>
+    <div id="map-canvas" style="poistion:absolute;top:101px;z-index:0;"></div>
+  </body>
+</html>

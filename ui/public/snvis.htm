@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+   <script type="text/javascript" src="js/d3.v3.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.json.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+  <script type="text/javascript" src="js/randomColor.js"></script>
+  <script type="text/javascript" src="js/vis.js"></script>
+  
+
+
+  <script type="text/javascript">
+
+//     var eventsources = [];
+
+
+//     $(document).ready(function() {
+
+
+//       var width = 960,
+//       height = 500;
+
+//       var fill = d3.scale.category20();
+
+//       var force = d3.layout.force()
+//       .size([width, height])    
+//     .nodes([{}]) // initialize with a single node
+//     .linkDistance(30)
+//     .charge(-60)
+//     .on("tick", tick);
+
+//     var svg = d3.select("#vishoder").append("svg")
+//     .attr("class", 'vis')
+//     // .attr("width", width)
+//     // .attr("height", height)
+//     // .on("mousemove", mousemove)
+//     // .on("mousedown", mousedown);
+
+//     svg.append("rect")
+//     .attr("width", width)
+//     .attr("height", height);
+
+//     var nodes = force.nodes(),
+//     links = force.links(),
+//     node = svg.selectAll(".node"),
+//     link = svg.selectAll(".link");
+
+//     var cursor = svg.append("circle")
+//     .attr("r", 30)
+//     .attr("transform", "translate(-100,-100)")
+//     .attr("class", "cursor");
+
+//     restart();
+
+//     function mousemove() {
+//       cursor.attr("transform", "translate(" + d3.mouse(this) + ")");
+//     }
+
+//     function mousedown() {
+//       var point = d3.mouse(this),
+//       node = {x: point[0], y: point[1]},
+//       n = nodes.push(node);
+
+//   // add links to any nearby nodes
+//   nodes.forEach(function(target) {
+//     var x = target.x - node.x,
+//     y = target.y - node.y;
+//     if (Math.sqrt(x * x + y * y) < 30) {
+//       links.push({source: node, target: target});
+//     }
+//   });
+
+//   restart();
+// }
+
+// function tick() {
+//   link.attr("x1", function(d) { return d.source.x; })
+//   .attr("y1", function(d) { return d.source.y; })
+//   .attr("x2", function(d) { return d.target.x; })
+//   .attr("y2", function(d) { return d.target.y; });
+
+//   node.attr("cx", function(d) { return d.x; })
+//   .attr("cy", function(d) { return d.y; });
+// }
+
+// function restart() {
+//   link = link.data(links);
+
+//   link.enter().insert("line", ".node")
+//   .attr("class", "link");
+
+//   node = node.data(nodes);
+
+//   node.enter().insert("circle", ".cursor")
+//   .attr("class", "node")
+//   .attr("r", 5)
+//   .call(force.drag);
+
+//   force.start();
+// }
+
+
+// $("#openStream").click(function(event) {   
+//     var es = new EventSource("/output-stream");
+
+//        es.onmessage = function(e) {
+
+//         var sse = $.parseJSON(e.data);
+//         // console.log("received an sse : "+$.toJSON(e.data)); 
+
+//         if (sse.type === "output"){
+//           // console.log("content: "+sse.data);
+//           $("#sparkStreamingOutput").append('<p>'+$.toJSON(sse.data)+'</p>');
+//         }
+
+//      };
+
+//      eventsources.push(es);
+
+// });
+
+
+// $("#closeStream").click(function(event) {
+//   for (var i = eventsources.length - 1; i >= 0; i--) {
+//     var es = eventsources.pop();
+//     es.close();
+//   };
+// });
+
+// });
+
+
+
+// </script>
+
+<script type="text/javascript">
+var nodes = {};
+var edges = {};
+
+var nodeSet = [];
+var eventsources = [];
+
+$(document).ready(function() {
+// create an array with nodes
+  // var no
+  nodes = new vis.DataSet();
+  // nodes.on("add",function (event, properties, senderId) {
+  // console.log('event:', event, 'properties:', properties, 'senderId:', senderId);
+  // stats.node_count++;
+  // });
+  // var nodes = [
+    // {id: 1, label: 'Node 1'},
+    // {id: 2, label: 'Node 2'},
+    // {id: 3, label: 'Node 3'},
+    // {id: 4, label: 'Node 4'},
+    // {id: 5, label: 'Node 5'}
+  // ];
+
+  // for (var i = 0; i < nodeSet.length; i++) {
+  //   nodes[i] = {};
+  // };
+
+  // create an array with edges
+  edges = new vis.DataSet();
+  // edges.on("add",function (event, properties, senderId) {
+  // console.log('event:', event, 'properties:', properties, 'senderId:', senderId);
+  // stats.node_edge++;
+//  });
+  // var edges = [
+    // {from: 1, to: 2},
+    // {from: 1, to: 3},
+    // {from: 2, to: 4},
+    // {from: 2, to: 5}
+  // ];
+
+  // create a network
+  var container = document.getElementById('visholder');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    edges: {
+    style: 'arrow'
+  }
+  };
+  var network = new vis.Network(container, data, options);
+
+
+  // setInterval(function(){ addNode() }, 900);
+  // setInterval(function(){ addEdge() }, 400);
+
+  $('#addNode').click(function(event) {
+    addNode();
+  });
+
+  $('#addEdge').click(function(event) {
+    addEdge();
+  });
+
+
+  function addNode() {
+
+    var i = Math.floor((Math.random() * 100) + 1);    
+    nodes.add([{id: "n"+i, label: 'Node '+i}]);
+    console.log("addning a node id="+i);
+    console.log("length = "+nodes.length);
+  }
+
+  function addEdge() {
+    var ids = nodes.getIds()
+    var i = Math.floor((Math.random() * ids.length));
+    var j = Math.floor((Math.random() * ids.length));
+    if (i == j) {
+      if (j == ids.length-1){
+        j == 0;
+      }
+      else{
+        j = j +1;
+      }
+    }
+
+    edges.add({from: ids[i], to: ids[j]})
+    console.log("adding an edge between ("+ids[i]+","+ids[j]+")");
+  }
+
+  $('#openStream').click(function(event) {
+          var es = new EventSource("/output-stream");
+
+       es.onmessage = function(e) {
+
+        var sse = $.parseJSON(e.data);
+        // console.log("received an sse : "+$.toJSON(e.data)); 
+
+        if (sse.type === "output"){
+          console.log("content: "+$.toJSON(sse.data));
+          for (var i = 0; i < sse.data.nodes.length; i++) {
+            if (nodes.get(sse.data.nodes[i].id) == null){
+              nodes.add(sse.data.nodes[i]);
+            }
+          };          
+          edges.add(sse.data.rels);
+          // $("#sparkStreamingOutput").append('<p>'+$.toJSON(sse.data)+'</p>');
+        }
+
+     };
+
+     eventsources.push(es);
+  });
+
+  $("#closeStream").click(function(event) {
+        for (var i = eventsources.length - 1; i >= 0; i--) {
+          var es = eventsources.pop();
+          es.close();
+        };
+        //es.close();
+      });
+
+});
+  
+
+
+
+</script>
+
+
+<link type="text/css" rel="stylesheet" href="css/vis.css">
+<style type="text/css">
+  rect {
+    fill: none;
+    pointer-events: all;
+  }
+
+  .node {
+    fill: #000;
+  }
+
+  .cursor {
+    fill: none;
+    stroke: brown;
+    pointer-events: none;
+  }
+
+  .link {
+    stroke: #999;
+  }
+
+  #visholder {
+    width: 100%;
+    height: 600px;
+    border:solid black 2px;
+  }
+      #mynetwork {
+      width: 400px;
+      height: 400px;
+      border: 1px solid lightgray;
+    }
+</style>
+</head>
+<body>
+  <div id="controls">
+  <button id="addNode">Add Node</button>
+  <button id="addEdge">Add Edge</button>
+   <button id="openStream">Open Stream</button>
+   <button id="closeStream">Close Stream</button>
+ </div>
+ <div id="visholder">
+   
+ </div>
+</body>
+

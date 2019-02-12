@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <style type="text/css">
+    html { height: 100% }
+    body { height: 100%; margin: 0; padding: 0 }
+    #map-canvas { height: 100% }
+  </style>
+
+  <link href="css/jquery-ui.min.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.json.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/portal.min.js"></script>
+  <script type="text/javascript" src="js/randomColor.js"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+      // fetch all active streams and populate table
+      getAll();
+      $('#getAvailableSourceStreams').click(function(event) {
+        getAll();
+      });
+
+
+// test values
+$('#sourceName').val('test1');
+$('#sport').val('1234');
+
+
+$( "#rate-slider" ).slider({
+  value:10,
+  min: 1,
+  max: 1000,
+  step: 1,
+  slide: function( event, ui ) {
+    $( "#srate" ).val( ui.value );
+  }
+});
+
+$( "#srate" ).val( $( "#rate-slider" ).slider( "value" ) );
+
+$('#openNewSourceControls').click(function(event) {
+  $('#controls').toggleClass('hidden');
+  $('#openNewSourceControls').toggleClass('hidden');
+});
+
+$('#newsource').click(function(event) {
+  var fdata = $('#controlsForm').serialize();
+  console.log('form data: '+fdata);
+
+        //var udata = {name:"test1",scount:100};
+
+        $.post('stream-source-control', fdata, function(data, textStatus, xhr) {
+          console.log(data);
+          $('#serverMsgs').empty();
+          $('#serverMsgs').append('<p>'+data.status+'</p>')
+        });
+
+        $('#controls').toggleClass('hidden');
+        $('#openNewSourceControls').toggleClass('hidden');
+        getAll();
+      });      
+populateAvailableFiles();
+
+});
+
+
+function getAll(){
+  $.get('streamsources', function(data) {
+    $("#streamTable tbody").empty();
+if (data.length > 0){          
+    $.each(data, function(i, val) {
+      var elem = '<tr>' +
+      '<td>' +
+      data[i].name +
+      '</td>' +
+      '<td>' +
+      data[i].file +
+      '</td>' +
+      '<td>' +
+      data[i].port +
+      '</td>' +
+      '<td>' +
+      '<div class="rate-slider" id="rate-slider-'+data[i].name+'"></div>' +
+      '<span id="rate-value-'+data[i].name+'">'+data[i].rate+'</span>'
+      '</td>' +          
+      '</tr>';
+      $("#streamTable tbody").append(elem);
+      $('#rate-slider-'+data[i].name).slider({
+        value:data[i].rate,
+        min: 1,
+        max: 1000,
+        step: 1,
+        slide: function( event, ui ) {
+          // console.log('setting value for '+data[i].name);
+          $( '#rate-value-'+data[i].name).text( ui.value );
+        },
+        change: function( event, ui ) {
+          console.log('setting value for '+data[i].name+" , set to "+ui.value);
+          var udata = {name:data[i].name,scount:ui.value};
+
+            $.post('stream-source-control', udata, function(data, textStatus, xhr) {
+              console.log(data);
+              $('#serverMsgs').empty();
+              $('#serverMsgs').append('<p>'+data.status+'</p>')
+            });    
+        }
+      });             
+    });
+    }
+    else{ 
+      var elem = '<tr>' +
+      '<td colspan="4">' +
+      'No active stream sources' +
+      '</td>' +      
+      '</tr>';
+      $("#streamTable tbody").append(elem);   
+    }
+  });
+}
+
+
+
+function populateAvailableFiles(){
+  $.ajax({
+    url: 'datafiles',
+        // type: 'default GET (Other values: POST)',
+        // dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+        // data: {param1: 'value1'},
+      })
+  .done(function(data) {
+    $.each(data, function(index, val) {
+     $('#files').append('<option value='+val+'>'+val+'</option>');
+   });        
+        //console.log("success");
+      })
+  .fail(function() {
+        //console.log("error");
+      })
+  .always(function() {
+        //console.log("complete");
+      });
+
+}
+</script>
+
+<style type="text/css">
+body {
+  display: block;
+}
+
+#bodyWrap{
+  width: 80em;
+  margin: auto;
+}
+  .hidden{
+    display: none;
+  }
+
+  #streamTable {
+    border: black solid 0.2em;
+    display: block;
+    width: 60em;
+    margin: auto;
+
+  }
+  #streamTable td{
+    border-bottom: solid black 0.05em;
+    text-align: center;
+  }
+
+  #streamTable thead{
+    border-bottom: solid black 0.1em;
+  }
+
+  #streamTable tbody tr td:last-child{
+    width: 45em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  #content {
+    width: 60em;
+    margin: auto;
+  }
+
+  #streams {
+    margin-top: 3em;
+  }
+
+  #rate-slider {
+    width: 20em;
+  }
+
+  .formitem{
+    display: block;
+    width: 30em;
+    margin: 0.1em;
+    /*background: gray;*/
+  }
+
+</style>
+
+</head>
+<body>
+  <div id="bodyWrap">
+    <div id="header">
+    <h1>Stream Server Controller</h1>
+  </div>
+  <div id="nav"></div>
+  <div id="content">
+    <div id="serverMsgs"></div>
+
+  <button id="getAvailableSourceStreams">Get Available Streams</button>
+   <button id="openNewSourceControls" >Create New Source</button>
+   <div id="controls" class="hidden">
+    <form id="controlsForm">
+      <div class="formitem">
+      <label for="sourceName">Name</label>
+      <input type="text" name="name" id="sourceName">  
+      </div>
+      <div class="formitem">
+      <label for="files">Select a file</label>
+      <select name="filename" id="files">
+      </select>  
+      </div>
+      <div class="formitem">
+      <label for="sport">Port</label>
+      <input type="text" name="sport" id="sport">  
+      </div>
+      <div class="formitem">
+        <label for="srate">Stream Rate per second</label>
+      <input type="text" id="srate" name='scount' readonly style="border:0; color:#f6931f; font-weight:bold;">           
+      <div id="rate-slider" class="rate-slider"></div>  
+      </div>      
+    </form>
+    <button id="newsource">Create</button>
+  </div>
+      <div id="streams">
+      <table id="streamTable">
+        <thead>
+          <tr>  
+           <th>Stream Name</th>
+           <th>File Name</th>
+           <th>Port</th>
+           <th>Rate per second</th>
+         </tr>
+       </thead>  
+       <tbody>  
+       </tbody>
+     </table>
+   </div>
+</div>
+<div id="footer"></div>
+  </div>
+</body>
+</html>
