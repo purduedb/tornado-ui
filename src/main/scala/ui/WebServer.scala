@@ -1,3 +1,16 @@
+/*
+   Copyright 2015 - Thamir Qadah
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+       http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
+
 package ui
 
 import spray.routing.SimpleRoutingApp
@@ -53,6 +66,10 @@ import spray.routing.authentication.UserPass
 import scala.concurrent.Future
 import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
+import scala.collection.JavaConversions._
+import spray.json.JsonParser
+import com.turn.platform.cheetah.partitioning.horizontal._
+import scala.io.Source
 
 object Webserver extends App with SimpleRoutingApp {
 
@@ -86,8 +103,8 @@ object Webserver extends App with SimpleRoutingApp {
       compressible = true,
       binary = false))
 
-  case class StreamSourceMetaData(name: String, filepath: String, port: Int, var count: Int, aref: ActorRef) {    
-    def rate = count 
+  case class StreamSourceMetaData(name: String, filepath: String, port: Int, var count: Int, aref: ActorRef) {
+    def rate = count
     def getActorRef = aref
     def getJsonMap = Map("name" -> JsString(name),
       "file" -> JsString(filepath),
@@ -103,10 +120,10 @@ object Webserver extends App with SimpleRoutingApp {
     Future {
       if (userPass.exists(up => up.user == "thamir" && up.pass == "$treams")) {
         val skey = Random.nextString(10)
-//        log.info("Generated : " + skey)
-//        adminSessions += skey
+        //        log.info("Generated : " + skey)
+        //        adminSessions += skey
         Some("thamir")
-//        Some(skey)
+        //        Some(skey)
       } else None
     }
 
@@ -133,84 +150,187 @@ object Webserver extends App with SimpleRoutingApp {
   val streamSourcesControlRoute =
     sealRoute {
       path("stream-source-control") {
-//        log.info("got here before authentication")
+        //        log.info("got here before authentication")
         authenticate(BasicAuth(UPAuthenticator _, realm = "secure site")) { userName =>
           post {
-//            log.info("got here")
+            //            log.info("got here")
             formFields('name, 'filename, 'sport.as[Int], 'scount.as[Int]) { (name, fname, port, count) =>
-              {                
-               // create source stream if not exist
-                if (activeStreams.keys.toSet[String].contains(name)){
+              {
+                // create source stream if not exist
+                if (activeStreams.keys.toSet[String].contains(name)) {
                   complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
-				        JsObject("streamName"-> JsString(name),
-				        		"status" -> JsString("already exists")).toString)))   	                
-                }               
-                else{
+                    JsObject("streamName" -> JsString(name),
+                      "status" -> JsString("already exists")).toString)))
+                } else {
                   val portSet = activeStreams.values.flatMap(p => {
                     if (p.port == port) Some(port) else None
                   })
-                  if (portSet.size > 0){
+                  if (portSet.size > 0) {
                     log.info("port already in use")
-                	  complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
-				        JsObject("streamName"-> JsString(name),
-				        		"status" -> JsString("port already in use")).toString)))  
+                    complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
+                      JsObject("streamName" -> JsString(name),
+                        "status" -> JsString("port already in use")).toString)))
+                  } else {
+                    val c = system.actorOf(Props(classOf[NetworkSocketControllerServer], conf.getString("webserver.data.dir") + "/" + fname, host, port, count, 1), name = name)
+                    val ss = StreamSourceMetaData(name, fname, port.toInt, count.toInt, c)
+                    log.info("created a stream source with: " + ss.toString)
+                    activeStreams += (name -> ss)
+                    complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
+                      JsObject("streamName" -> JsString(name),
+                        "status" -> JsString("created")).toString)))
                   }
-                  else{
-                    val c = system.actorOf(Props(classOf[NetworkSocketControllerServer], conf.getString("webserver.data.dir")+"/"+fname, host, port, count, 1), name = name)                
-	                val ss = StreamSourceMetaData(name, fname, port.toInt, count.toInt, c)
-	                log.info("created a stream source with: "+ss.toString)
-	                activeStreams += (name -> ss)
-	                complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
-				        JsObject("streamName"-> JsString(name),
-				        		"status" -> JsString("created")).toString)))   
-                  }
-                  
-	            }                 
-              }
-            }~
-            formFields('name, 'scount.as[Int]) { (name, count) =>{
-              // update rate 
-              if (activeStreams.keys.toSet[String].contains(name)){
-                
-            	  val s = activeStreams.get(name)
-            	  
-            	  s.foreach(ss => {
-            	    ss.count = count
-            	    ss.aref ! utils.ChangeCount(count)
-            	  })
-                  complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
-				        JsObject("streamName"-> JsString(name),
-				        		"status" -> JsString("updated")).toString)))   	                
+
                 }
-                else{                  
-	                complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
-				        JsObject("streamName"-> JsString(name),
-				        		"status" -> JsString("does not exist")).toString)))   
-	            }
-            }
-            }
-          }~
-          delete{
-            parameters('name){ 
-              (name) => {
-                activeStreams -= name
-                complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
-			        JsObject("streamName"-> JsString(name),
-			        		"status" -> JsString("deleted")).toString)))
               }
-              
-            }                
-          }
+            } ~
+              formFields('name, 'scount.as[Int]) { (name, count) =>
+                {
+                  // update rate 
+                  if (activeStreams.keys.toSet[String].contains(name)) {
+
+                    val s = activeStreams.get(name)
+
+                    s.foreach(ss => {
+                      ss.count = count
+                      ss.aref ! utils.ChangeCount(count)
+                    })
+                    complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
+                      JsObject("streamName" -> JsString(name),
+                        "status" -> JsString("updated")).toString)))
+                  } else {
+                    complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
+                      JsObject("streamName" -> JsString(name),
+                        "status" -> JsString("does not exist")).toString)))
+                  }
+                }
+              }
+          } ~
+            delete {
+              parameters('name) {
+                (name) =>
+                  {
+                    activeStreams -= name
+                    complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
+                      JsObject("streamName" -> JsString(name),
+                        "status" -> JsString("deleted")).toString)))
+                  }
+
+              }
+            }
         }
       }
     }
 
+  // Tornado related code
+  
+  // Demo mode
+  
+  // OSM load 
+  // inverted index of tags  
+  // keys will be tags and values will be list of spatial objects
+  
+  val osm_data = scala.io.Source.fromFile("data/chicago-osm.json").getLines.map { JsonParser(_).asJsObject };
+
+  
+  val osmtags = scala.collection.mutable.Map[String, ArrayBuffer[String]]()
+  
+  //Twitter data load
+  val tweets = scala.io.Source.fromFile("data/tweet_us_2013_1_3.chicago.csv").getLines()
+  val trate = 10;
+
+  // Moving object data
+  val mod = 2;
+  
+//  val tornado_ds_map = new  
+  
+  val tornado_datasources = path("tornado/datasources"){
+    get {
+      complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
+        JsArray(JsObject("sourceName" -> JsString("Tweets")),
+            JsObject("sourceName" -> JsString("OSMData")),
+            JsObject("sourceName" -> JsString("BerlinMOD"))
+            ).toString)))
+    }
+  }
+  
+  val tornado_queries = path("tornado/queries"){
+    get {
+      complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`,
+        JsArray(activeStreams.values.map {
+          s => JsObject(s.getJsonMap)
+        }.toVector).toString)))
+    }
+  }
+
+  
+  
+  /// end Demo mode
+  
+  // adaptive index visualization test
+  import experiments._
+
+  val costEstimator = WebDemo2.getDefaultCostEstimator()
+  var solution = new Solution()
+  val k = 100
+  WebDemo2.dynamic = new DynamicPartitioning(costEstimator, k, 1000)
+  //WebDemo2.solvePartitioning(solution, WebDemo2.dynamic.initialPartitions());
+  WebDemo2.dynamic.initialPartitions()
+
+  val aqwaqueries = WebDemo2.getSerialQLoad()
+  var i: Int = 0
+  var p: Partition = aqwaqueries(i)
+
+  // mapping demo to latlng 
+  val xmap = scala.collection.mutable.Map[Int, Double]()
+  val ymap = scala.collection.mutable.Map[Int, Double]()
+
+  var cnorth: String = ""
+  var csouth: String = ""
+  var ceast: String = ""
+  var cwest: String = ""
+
+  
   startServer(interface = host, port = port) {
     getFromDirectory("ui/public") ~
-      getAvailableDataFiles ~
-      getAllStreamSourcesRoute ~
-      streamSourcesControlRoute ~
       path("data") {
+        parameters('north, 'west, 'south, 'east) { (n, w, s, e) =>
+          {
+            get {
+              complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`, """ {"key":"value"} """)))
+            }
+          }
+        }
+      } ~
+      path("chicago-osm") {
+        get {
+          //          val chiosm = Source.fromFile("data/chicago-osm.json").getLines().toArray.filter(_.contains("attraction"))
+          //          val res1 = chiosm.map{ attr => {
+          //            
+          //            val attr_obj = JsonParser(attr)
+          //            val lat = attr_obj.asJsObject.fields.get("lat").get
+          //            val lng = attr_obj.asJsObject.fields.get("lng").get
+          //            
+          //            }
+          //            
+          //          }
+
+          //          val jres =  tweets.take(trate).flatMap { tw => {
+          //              val tarr = tw.split(",")
+          //              val tlat = tarr(2)
+          //              val tlng = tarr(3)
+          //              val ttext = tarr(5)
+          //              if (ttext.contains("SkyDec")) Some(JsObject("attraction" ->  
+          //                  "tweet"))
+          //              None
+          //            } }
+          //          
+          //          val res = "["+chiosm.mkString(",")+"]"
+          //          
+
+          complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`, "")))
+        }
+      } ~
+      path("osmdata") {
         get {
           complete(HttpResponse(entity = HttpEntity(MediaTypes.`application/json`, """ {"key":"value"} """)))
         }
@@ -335,6 +455,86 @@ object Webserver extends App with SimpleRoutingApp {
 
           }
       } ~
+      path("adaptive") {
+        parameters('north, 'west, 'south, 'east) { (n, w, s, e) =>
+          {
+            ctx =>
+              {
+
+                val side = 1000
+                var recompute_mapping = false
+                if (cnorth == "") {
+                  // fisrst request
+                  recompute_mapping = true
+                } else {
+                  //view bounds changed
+                  if (cnorth != n || csouth != s || cwest != w || ceast != e) recompute_mapping = true
+                }
+
+                if (recompute_mapping) {
+                  //            println(s"got a request for $n , $w , $s , $e")
+                  val minx = w.toDouble
+                  val miny = s.toDouble
+                  val rx = (e.toDouble - minx)
+                  val ry = n.toDouble - miny
+                  //            println(s"got a request for minx($minx) , miny($miny) , rangex($rx) , rangey($ry)")
+
+                  for (i <- 0 to side) {
+                    xmap.put(i, minx + (i * (rx / side)))
+                    ymap.put(i, miny + (i * (ry / side)))
+                  }
+
+                  cnorth = n; csouth = s; cwest = w; ceast = e;
+                }
+
+                // process 
+
+                //            if (i % 100 ==0) {
+                //
+                //                WebDemo2.lines.clear()
+                //                WebDemo2.addRectangle(p);
+                //                solution = new Solution();
+                //                WebDemo2.solvePartitioning(solution, WebDemo2.dynamic.currentPartitions);
+                //                WebDemo2.updatePartitionsSolution(solution);
+                //                WebDemo2.updatePartitions(solution.toString());
+                //                
+                //            }
+                WebDemo2.dynamic.processNewQuery(aqwaqueries(i));
+
+                val ps = scala.collection.mutable.ArrayBuffer[Partition]()
+                ps ++= WebDemo2.dynamic.currentPartitions
+
+                // send query load    
+                //            val res = aqwaqueries.subList(0, 100).map{p => {
+                //              JsObject("north" -> JsNumber(ymap.get(p.getTop()).get)
+                //                       ,"south" -> JsNumber(ymap.get(p.getBottom()).get)
+                //                       ,"west" -> JsNumber(xmap.get(p.getLeft()).get)
+                //                       ,"east" -> JsNumber(xmap.get(p.getRight()).get)
+                //                       ,"color" -> JsString("#FF0000")
+                //                      )
+                //            }}
+
+                val res = ps.map { p =>
+                  {
+                    JsObject("north" -> JsNumber(ymap.get(p.getTop()).get), "south" -> JsNumber(ymap.get(p.getBottom()).get), "west" -> JsNumber(xmap.get(p.getLeft()).get), "east" -> JsNumber(xmap.get(p.getRight()).get), "color" -> JsString("#000000"))
+                  }
+                }
+                // add query here
+                res += JsObject("north" -> JsNumber(ymap.get(aqwaqueries(i).getTop()).get), "south" -> JsNumber(ymap.get(aqwaqueries(i).getBottom()).get), "west" -> JsNumber(xmap.get(aqwaqueries(i).getLeft()).get), "east" -> JsNumber(xmap.get(aqwaqueries(i).getRight()).get), "color" -> JsString("#FF0000"))
+
+                i = i + 1
+                if (i == aqwaqueries.size()) i = 0;
+                p = aqwaqueries(i)
+
+                val resp = JsArray(res.toVector)
+                //            println("sending out "+res.size+" rects")
+                //            println(resp.toString())
+                val hres = HttpResponse(entity = HttpEntity(MediaTypes.`application/json`, resp.toString()))
+                ctx.complete(hres)
+              }
+          }
+        }
+      } ~
       path("berlinmod-trip-stream") {
         ctx =>
           {
@@ -364,7 +564,9 @@ object Webserver extends App with SimpleRoutingApp {
             val aprops = Props(classOf[Streamer], ctx.responder, EventStreamType)
             val streamer = system.actorOf(aprops)
           }
-      }
-
+      }~
+      getAvailableDataFiles ~
+      getAllStreamSourcesRoute //~
+      //streamSourcesControlRoute
   }
 }

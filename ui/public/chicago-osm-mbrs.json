@@ -1,0 +1,954 @@
+{"name":"W Hotel","mbr":{"north":41.8941266,"south":41.8936002,"east":-87.61533870000001,"west":-87.61584459999997}}
+{"name":"Tremont Studios","mbr":{"north":41.8986761,"south":41.898466799999994,"east":-87.6257567,"west":-87.6260093}}
+{"name":"Concord Lane","mbr":{"north":41.91202500000001,"south":41.911789899999995,"east":-87.63493070000001,"west":-87.63655069999999}}
+{"name":"Santorini","mbr":{"north":41.879419899999995,"south":41.87927310000001,"east":-87.64740239999999,"west":-87.6478277}}
+{"name":"Lower North Center","mbr":{"north":41.901208,"south":41.9005728,"east":-87.63896510000001,"west":-87.6393386}}
+{"name":"1111 South Wabash","mbr":{"north":41.8689436,"south":41.86857249999999,"east":-87.6250987,"west":-87.62567429999999}}
+{"name":"The Regent","mbr":{"north":41.9004134,"south":41.9001307,"east":-87.62199980000001,"west":-87.62248759999999}}
+{"name":"World Market","mbr":{"north":41.911666600000004,"south":41.9113234,"east":-87.6523718,"west":-87.65302220000001}}
+{"name":"Skybridge","mbr":{"north":41.883010999999996,"south":41.882436799999994,"east":-87.64652040000001,"west":-87.646874}}
+{"name":"Faculty Hall","mbr":{"north":41.922706399999996,"south":41.9225092,"east":-87.6542101,"west":-87.6545591}}
+{"name":"Burnham Park Plaza","mbr":{"north":41.871278399999994,"south":41.87063239999999,"east":-87.6260872,"west":-87.62671129999998}}
+{"name":"Parkhomes at Lakeshore East","mbr":{"north":41.885464,"south":41.885329299999995,"east":-87.6162716,"west":-87.61723040000001}}
+{"name":"1600 Museum Park","mbr":{"north":41.8597577,"south":41.859217900000004,"east":-87.6202123,"west":-87.6206739}}
+{"name":"The Neapolitan","mbr":{"north":41.90448790000001,"south":41.90423489999999,"east":-87.63463850000001,"west":-87.63537790000001}}
+{"name":"North Town Village Ii","mbr":{"north":41.90627310000001,"south":41.905720499999994,"east":-87.6490399,"west":-87.6499142}}
+{"name":"Carl Sandburg Village","mbr":{"north":41.910732499999995,"south":41.905002100000004,"east":-87.63087240000002,"west":-87.63302}}
+{"name":"The Belvedere","mbr":{"north":41.89797929999999,"south":41.89776049999999,"east":-87.6186739,"west":-87.61906859999999}}
+{"name":"White Palace Grill","mbr":{"north":41.867631700000004,"south":41.8674157,"east":-87.63890040000003,"west":-87.6390342}}
+{"name":"Chicago Greyhound Terminal","mbr":{"north":41.87517529999999,"south":41.874504200000004,"east":-87.64279730000001,"west":-87.64352690000001}}
+{"name":"Hillard Senior Homes I","mbr":{"north":41.854009700000006,"south":41.8537357,"east":-87.6287479,"west":-87.62911550000001}}
+{"name":"Hotel Lincoln","mbr":{"north":41.915416500000006,"south":41.91517,"east":-87.63429309999998,"west":-87.63474330000001}}
+{"name":"Tower 18","mbr":{"north":41.885819600000005,"south":41.8857698,"east":-87.63397550000002,"west":-87.63405879999998}}
+{"name":"Poetry Garage","mbr":{"north":41.881835200000005,"south":41.88133520000001,"east":-87.6339663,"west":-87.634806}}
+{"name":"Old Saint Patrick Church","mbr":{"north":41.87955070000001,"south":41.879346999999996,"east":-87.6441806,"west":-87.6447606}}
+{"name":"Chicago Nails","mbr":{"north":41.896474100000006,"south":41.896283700000005,"east":-87.63310699999998,"west":-87.63318419999999}}
+{"name":"Talbott Hotel","mbr":{"north":41.8995261,"south":41.899262399999984,"east":-87.6273372,"west":-87.62763040000002}}
+{"name":"1133 North Dearborn","mbr":{"north":41.9030711,"south":41.9025869,"east":-87.62924919999999,"west":-87.62978070000001}}
+{"name":"Arkes Family Pavilion","mbr":{"north":41.89485559999999,"south":41.894255199999996,"east":-87.6229127,"west":-87.6234032}}
+{"name":"UIC","mbr":{"north":41.8785201,"south":41.8780079,"east":-87.64782920000002,"west":-87.64946040000001}}
+{"name":"Harold Washington Social Security Center","mbr":{"north":41.882892299999995,"south":41.8820094,"east":-87.6428808,"west":-87.6439099}}
+{"name":"Casa Guerrero","mbr":{"north":41.8551959,"south":41.8549038,"east":-87.65053190000002,"west":-87.6508152}}
+{"name":"345 Fullerton","mbr":{"north":41.9255236,"south":41.9250832,"east":-87.63824980000001,"west":-87.638844}}
+{"name":"Trio","mbr":{"north":41.887863100000004,"south":41.8874868,"east":-87.644464,"west":-87.64560029999998}}
+{"name":"Eugenie Terrace on the Park","mbr":{"north":41.9139597,"south":41.9136014,"east":-87.6335977,"west":-87.63407109999999}}
+{"name":"Sutton Place","mbr":{"north":41.9075695,"south":41.907500500000005,"east":-87.6308624,"west":-87.6309311}}
+{"name":"Museum Park Place 2","mbr":{"north":41.8565804,"south":41.85585110000001,"east":-87.6184311,"west":-87.6188268}}
+{"name":"Manhattan Building","mbr":{"north":41.87624610000001,"south":41.8758433,"east":-87.6288349,"west":-87.6290928}}
+{"name":"350 Mart Plaza","mbr":{"north":41.8889945,"south":41.8880596,"east":-87.6367195,"west":-87.6385377}}
+{"name":"Aloft Chicago City Center Hotel","mbr":{"north":41.89153639999999,"south":41.8909375,"east":-87.6302,"west":-87.63097290000002}}
+{"name":"Benito Juarez Community Academy","mbr":{"north":41.85415510000001,"south":41.85245880000001,"east":-87.661295,"west":-87.66583309999999}}
+{"name":"Caspian Carpets","mbr":{"north":41.895182999999996,"south":41.894907,"east":-87.632878,"west":-87.63308379999998}}
+{"name":"Sheridan Park Fieldhouse","mbr":{"north":41.8706288,"south":41.8703528,"east":-87.65449190000001,"west":-87.65488269999999}}
+{"name":"CookTek","mbr":{"north":41.904475299999994,"south":41.903779799999995,"east":-87.65063749999999,"west":-87.6514199}}
+{"name":"Graham Foundation for the Advanced Studies in the Fine Arts","mbr":{"north":41.909718999999996,"south":41.90957489999999,"east":-87.62903290000001,"west":-87.6293253}}
+{"name":"Jefferson Hall","mbr":{"north":41.874131500000004,"south":41.8738802,"east":-87.65009620000001,"west":-87.65043150000001}}
+{"name":"Sullivan Athletic Center","mbr":{"north":41.924329400000005,"south":41.923659799999996,"east":-87.6529338,"west":-87.6534843}}
+{"name":"Sheridan Park Turf Field","mbr":{"north":41.871681599999995,"south":41.870846199999995,"east":-87.6542854,"west":-87.65516599999998}}
+{"name":"The Lancaster","mbr":{"north":41.8864869,"south":41.8860034,"east":-87.61591339999998,"west":-87.6161745}}
+{"name":"Roy Boyd Gallery","mbr":{"north":41.895973100000006,"south":41.895898,"east":-87.6337485,"west":-87.63404}}
+{"name":"1212 South Michigan","mbr":{"north":41.867217600000004,"south":41.8667462,"east":-87.62431769999999,"west":-87.62452520000001}}
+{"name":"National Hellenic Museum","mbr":{"north":41.8772253,"south":41.8767656,"east":-87.64655450000001,"west":-87.64705859999998}}
+{"name":"University Hall","mbr":{"north":41.9252085,"south":41.9244121,"east":-87.6566403,"west":-87.65705690000001}}
+{"name":"Columbus Plaza","mbr":{"north":41.88774179999999,"south":41.8874874,"east":-87.6209259,"west":-87.6214316}}
+{"name":"Chicago Engine Company 14","mbr":{"north":41.89612360000001,"south":41.8958434,"east":-87.6560542,"west":-87.6564296}}
+{"name":"Fletcher Jones Automotive Enterprises","mbr":{"north":41.9033804,"south":41.9027765,"east":-87.65521959999998,"west":-87.65653089999999}}
+{"name":"South Loop Elementary School","mbr":{"north":41.8670499,"south":41.8661293,"east":-87.6285792,"west":-87.629367}}
+{"name":"Maple Tower","mbr":{"north":41.90177829999999,"south":41.901494400000004,"east":-87.62922040000001,"west":-87.62977470000001}}
+{"name":"Chicago Theatre","mbr":{"north":41.885658299999996,"south":41.8851763,"east":-87.6270068,"west":-87.62772849999999}}
+{"name":"Faulkner House","mbr":{"north":41.909797899999994,"south":41.909500200000004,"east":-87.63108230000002,"west":-87.63140190000001}}
+{"name":"Legacy at Millennium Park","mbr":{"north":41.881557400000005,"south":41.88111070000001,"east":-87.6253707,"west":-87.62599709999998}}
+{"name":"h","mbr":{"north":41.91285610000001,"south":41.912565799999996,"east":-87.66301190000001,"west":-87.66347150000001}}
+{"name":"The Buckingham","mbr":{"north":41.884961200000006,"south":41.88465670000001,"east":-87.6177068,"west":-87.6181186}}
+{"name":"Museum Park Tower 1","mbr":{"north":41.86551520000001,"south":41.8649179,"east":-87.6214834,"west":-87.62178850000001}}
+{"name":"Southeast Exelon Pavilion","mbr":{"north":41.8810693,"south":41.880989299999996,"east":-87.6213316,"west":-87.6214385}}
+{"name":"Immaculate Conception Church","mbr":{"north":41.9086387,"south":41.908098200000005,"east":-87.63570239999999,"west":-87.6362217}}
+{"name":"British School of Chicago","mbr":{"north":41.9077688,"south":41.907557700000005,"east":-87.64831419999999,"west":-87.6492799}}
+{"name":"Yu Choy","mbr":{"north":41.892285099999995,"south":41.892088799999996,"east":-87.6342327,"west":-87.63447809999998}}
+{"name":"UIC Forum","mbr":{"north":41.8670117,"south":41.8665142,"east":-87.64521629999999,"west":-87.64639190000001}}
+{"name":"Westin River North","mbr":{"north":41.8884617,"south":41.8878622,"east":-87.6297292,"west":-87.63035800000002}}
+{"name":"Thermal Chicago Cooling Plant","mbr":{"north":41.879805100000006,"south":41.8761138,"east":-87.62699810000001,"west":-87.6362202}}
+{"name":"Seward Park Field House","mbr":{"north":41.9027615,"south":41.9025712,"east":-87.63760919999999,"west":-87.6387238}}
+{"name":"Hyatt Regency Chicago","mbr":{"north":41.8879328,"south":41.886990100000006,"east":-87.62126,"west":-87.62315420000002}}
+{"name":"Midas","mbr":{"north":41.867667600000004,"south":41.867400100000005,"east":-87.63980950000001,"west":-87.6400129}}
+{"name":"Notre Dame Roman Catholic Church","mbr":{"north":41.873708500000006,"south":41.8732756,"east":-87.66035199999999,"west":-87.66074250000001}}
+{"name":"Fulton Court Townhomes","mbr":{"north":41.887386600000006,"south":41.886909100000004,"east":-87.64443690000002,"west":-87.64560059999998}}
+{"name":"PNC Bank","mbr":{"north":41.858180000000004,"south":41.8578686,"east":-87.62984709999998,"west":-87.6300818}}
+{"name":"North Avenue Beach House","mbr":{"north":41.913792,"south":41.913177000000005,"east":-87.6236825,"west":-87.62475099999999}}
+{"name":"Merle Reskin Theatre","mbr":{"north":41.873543600000005,"south":41.87323249999999,"east":-87.62516769999999,"west":-87.6254416}}
+{"name":"Levy Mayer Hall","mbr":{"north":41.89666220000001,"south":41.896319899999995,"east":-87.61766659999999,"west":-87.6184578}}
+{"name":"Tower 12","mbr":{"north":41.87698579999999,"south":41.876942799999995,"east":-87.6259617,"west":-87.62598990000001}}
+{"name":"Ritchie Tower","mbr":{"north":41.9065474,"south":41.906233300000004,"east":-87.6267474,"west":-87.6269761}}
+{"name":"Page Brothers Building","mbr":{"north":41.8856543,"south":41.8853401,"east":-87.62750589999999,"west":-87.62773290000001}}
+{"name":"Saint Agnes Health Center","mbr":{"north":41.8584561,"south":41.858035900000004,"east":-87.62486329999999,"west":-87.62543699999999}}
+{"name":"The Plaza on DeWitt","mbr":{"north":41.89879179999999,"south":41.8985526,"east":-87.61941629999998,"west":-87.61990069999999}}
+{"name":"Lake Shore Center","mbr":{"north":41.89835799999999,"south":41.8979817,"east":-87.6180789,"west":-87.61896429999999}}
+{"name":"Wyndham Blake Hotel","mbr":{"north":41.8752193,"south":41.87502020000001,"east":-87.62935639999999,"west":-87.6296002}}
+{"name":"1000 Lake Shore Plaza","mbr":{"north":41.9011746,"south":41.90091170000001,"east":-87.62437550000001,"west":-87.62488040000001}}
+{"name":"235 West Van Buren Street","mbr":{"north":41.8767385,"south":41.8764409,"east":-87.6342471,"west":-87.63502220000001}}
+{"name":"Asbury Plaza","mbr":{"north":41.8961301,"south":41.89575170000001,"east":-87.6299084,"west":-87.6304261}}
+{"name":"Goodman Theater","mbr":{"north":41.885093999999995,"south":41.884578999999995,"east":-87.62959910000002,"west":-87.63014420000002}}
+{"name":"Navy Pier","mbr":{"north":41.892216,"south":41.89120059999999,"east":-87.5990178,"west":-87.60615730000002}}
+{"name":"Werner Printing","mbr":{"north":41.884327199999994,"south":41.88403280000001,"east":-87.64223089999999,"west":-87.64258219999999}}
+{"name":"River City","mbr":{"north":41.8720628,"south":41.87073630000001,"east":-87.6336497,"west":-87.6349904}}
+{"name":"The Pearson","mbr":{"north":41.8980154,"south":41.89775110000001,"east":-87.61906339999999,"west":-87.6196401}}
+{"name":"McCormick Place West","mbr":{"north":41.8526073,"south":41.84859579999999,"east":-87.6185156,"west":-87.62205429999997}}
+{"name":"Chicago Union Station","mbr":{"north":41.879122900000006,"south":41.87824279999999,"east":-87.63993050000002,"west":-87.64086140000002}}
+{"name":"Life Storage","mbr":{"north":41.87430679999999,"south":41.8738368,"east":-87.64255890000001,"west":-87.64370199999999}}
+{"name":"Washington Franklin Self Park","mbr":{"north":41.8838093,"south":41.8832987,"east":-87.63466059999999,"west":-87.6352003}}
+{"name":"Waldorf School of Chicago","mbr":{"north":41.921249100000004,"south":41.920761600000006,"east":-87.654084,"west":-87.6545605}}
+{"name":"Amtrak Car Washing Facility","mbr":{"north":41.870737,"south":41.87000200000001,"east":-87.63798400000002,"west":-87.6381704}}
+{"name":"Chase","mbr":{"north":41.91303190000001,"south":41.9129619,"east":-87.6349261,"west":-87.6350627}}
+{"name":"Wish Field","mbr":{"north":41.9247462,"south":41.9237442,"east":-87.65163079999999,"west":-87.6525379}}
+{"name":"International College of Surgeons","mbr":{"north":41.910226,"south":41.9100781,"east":-87.62651480000001,"west":-87.6269149}}
+{"name":"KPMG Building","mbr":{"north":41.88764260000001,"south":41.886951100000005,"east":-87.61999599999999,"west":-87.6204751}}
+{"name":"Roosevelt Road Building","mbr":{"north":41.86807950000001,"south":41.867313100000004,"east":-87.64549990000002,"west":-87.64632399999998}}
+{"name":"Webster Place","mbr":{"north":41.92152170000001,"south":41.9208167,"east":-87.663478,"west":-87.6661073}}
+{"name":"Saint Chrysostoms Episcopal Church","mbr":{"north":41.908621800000006,"south":41.9084168,"east":-87.63030940000002,"west":-87.63081779999999}}
+{"name":"UIC Police Station","mbr":{"north":41.8646246,"south":41.86435770000001,"east":-87.65048300000001,"west":-87.6508548}}
+{"name":"McGrath Lexus","mbr":{"north":41.9046486,"south":41.9037661,"east":-87.65915349999999,"west":-87.66012029999999}}
+{"name":"Cosmopolitan Lofts","mbr":{"north":41.8683254,"south":41.8681517,"east":-87.62503559999999,"west":-87.62565989999999}}
+{"name":"Best Western Inn of Chicago","mbr":{"north":41.8929327,"south":41.8926564,"east":-87.62282440000001,"west":-87.6231939}}
+{"name":"Burger King","mbr":{"north":41.850458399999994,"south":41.85028960000001,"east":-87.6239028,"west":-87.62416820000001}}
+{"name":"Waldorf Astoria Chicago","mbr":{"north":41.89986520000001,"south":41.8995191,"east":-87.6270762,"west":-87.6281547}}
+{"name":"River Cottages","mbr":{"north":41.8889365,"south":41.88861,"east":-87.63958269999999,"west":-87.63977440000002}}
+{"name":"New Jackson Hotel","mbr":{"north":41.878314,"south":41.878040600000006,"east":-87.6468193,"west":-87.64712779999998}}
+{"name":"Chicago Board Options Exchange","mbr":{"north":41.8767653,"south":41.8761032,"east":-87.6318009,"west":-87.6326228}}
+{"name":"Pacific Garden Mission","mbr":{"north":41.8623812,"south":41.8615863,"east":-87.63931930000001,"west":-87.6405128}}
+{"name":"Galileo School","mbr":{"north":41.8714039,"south":41.870716200000004,"east":-87.6532966,"west":-87.6542666}}
+{"name":"340 West Superior","mbr":{"north":41.8960097,"south":41.8956459,"east":-87.63736860000002,"west":-87.6378551}}
+{"name":"40 East Cedar","mbr":{"north":41.902906200000004,"south":41.902506599999995,"east":-87.62674629999998,"west":-87.62706999999997}}
+{"name":"South Campus Operations Building","mbr":{"north":41.86466600000001,"south":41.86445529999999,"east":-87.649551,"west":-87.64967370000002}}
+{"name":"Ann Sacks","mbr":{"north":41.8911264,"south":41.8908814,"east":-87.63350040000002,"west":-87.6339169}}
+{"name":"Apple Store","mbr":{"north":41.9108086,"south":41.894694099999995,"east":-87.62346029999999,"west":-87.64859800000002}}
+{"name":"Burberry","mbr":{"north":41.8937184,"south":41.89344379999999,"east":-87.6237811,"west":-87.62395209999998}}
+{"name":"Columbia College Music Center","mbr":{"north":41.86953749999999,"south":41.8693847,"east":-87.62436120000002,"west":-87.6248406}}
+{"name":"Astor Tower","mbr":{"north":41.90608320000001,"south":41.905917099999996,"east":-87.6275155,"west":-87.6277397}}
+{"name":"Brehon Pub","mbr":{"north":41.89583220000001,"south":41.89568250000001,"east":-87.6337913,"west":-87.634051}}
+{"name":"Pure","mbr":{"north":41.881191799999996,"south":41.88087750000001,"east":-87.6521455,"west":-87.6526553}}
+{"name":"Mergenthaler Lofts","mbr":{"north":41.8749777,"south":41.874760499999994,"east":-87.62818690000002,"west":-87.62855620000002}}
+{"name":"Engine Company 103","mbr":{"north":41.880760900000006,"south":41.880687099999996,"east":-87.66398379999998,"west":-87.6642769}}
+{"name":"Evergreen Towers","mbr":{"north":41.907556299999996,"south":41.906549,"east":-87.639801,"west":-87.6407934}}
+{"name":"Comcast","mbr":{"north":41.910503,"south":41.90954229999999,"east":-87.6589627,"west":-87.65975940000001}}
+{"name":"Lewis Towers","mbr":{"north":41.8974812,"south":41.897289,"east":-87.6250019,"west":-87.62584809999998}}
+{"name":"Medical Science Building","mbr":{"north":41.893865000000005,"south":41.8935494,"east":-87.6167487,"west":-87.6176325}}
+{"name":"Special Reserve Fire Equipment","mbr":{"north":41.9019715,"south":41.9018076,"east":-87.637495,"west":-87.63786459999999}}
+{"name":"Regenstein Center for African Apes","mbr":{"north":41.9205524,"south":41.9199464,"east":-87.6315849,"west":-87.63241180000001}}
+{"name":"Chipotle Mexican Grill","mbr":{"north":41.92357679999999,"south":41.9234409,"east":-87.64638790000001,"west":-87.6468461}}
+{"name":"Chicago Transit Authority Headquarters","mbr":{"north":41.8855988,"south":41.8849479,"east":-87.64205859999998,"west":-87.6426243}}
+{"name":"Moody Church","mbr":{"north":41.91246679999999,"south":41.911527799999995,"east":-87.63218640000001,"west":-87.6329762}}
+{"name":"Prairie District Lofts","mbr":{"north":41.8587443,"south":41.8579956,"east":-87.6216151,"west":-87.62215570000001}}
+{"name":"Holy Trinity Catholic Church","mbr":{"north":41.9024893,"south":41.9021586,"east":-87.6627138,"west":-87.66341150000001}}
+{"name":"River Bend Lofts","mbr":{"north":41.8923876,"south":41.89154520000001,"east":-87.6401201,"west":-87.64135919999998}}
+{"name":"Citgo","mbr":{"north":41.8695393,"south":41.8691404,"east":-87.6439571,"west":-87.64406029999998}}
+{"name":"Glazed and Infused","mbr":{"north":41.91804129999999,"south":41.917795,"east":-87.65243279999999,"west":-87.65253870000001}}
+{"name":"The Hermitage on Huron","mbr":{"north":41.8955331,"south":41.8949522,"east":-87.63065540000001,"west":-87.63105500000002}}
+{"name":"Sanctuary Hall","mbr":{"north":41.9252704,"south":41.924509799999996,"east":-87.6537893,"west":-87.654325}}
+{"name":"Fisher Building","mbr":{"north":41.877395400000005,"south":41.876989,"east":-87.6288474,"west":-87.62913839999999}}
+{"name":"Lincoln Park Boat House","mbr":{"north":41.9242192,"south":41.923451899999996,"east":-87.6319339,"west":-87.6324971}}
+{"name":"DePaul College of Computing and Digital Media","mbr":{"north":41.87861839999999,"south":41.87833690000001,"east":-87.62525,"west":-87.6259019}}
+{"name":"Byrne Hall","mbr":{"north":41.922476399999994,"south":41.9219081,"east":-87.6541423,"west":-87.65457620000001}}
+{"name":"Saint Michael Roman Catholic Church","mbr":{"north":41.9128213,"south":41.9119812,"east":-87.64048980000001,"west":-87.64097160000001}}
+{"name":"Standard Parking","mbr":{"north":41.8774904,"south":41.87691720000001,"east":-87.6344751,"west":-87.63505309999998}}
+{"name":"Saint James Evangelical Lutheran Church","mbr":{"north":41.919886500000004,"south":41.919647700000006,"east":-87.6511066,"west":-87.65157629999997}}
+{"name":"Bellevue Place","mbr":{"north":41.9020686,"south":41.901743,"east":-87.62533160000001,"west":-87.62599870000001}}
+{"name":"Presidential Towers T1","mbr":{"north":41.8817359,"south":41.8815264,"east":-87.641346,"west":-87.6418859}}
+{"name":"Old Jerusalem","mbr":{"north":41.9081034,"south":41.90802310000001,"east":-87.634103,"west":-87.63447150000002}}
+{"name":"Dearborn Park","mbr":{"north":41.872175299999995,"south":41.8619945,"east":-87.6274842,"west":-87.6304617}}
+{"name":"50 East Chestnut","mbr":{"north":41.8987301,"south":41.8984563,"east":-87.6259365,"west":-87.6264315}}
+{"name":"The Venetian","mbr":{"north":41.9042599,"south":41.903913200000005,"east":-87.63540230000001,"west":-87.63610839999998}}
+{"name":"The Park Grill","mbr":{"north":41.8830464,"south":41.8823158,"east":-87.62303779999999,"west":-87.62355730000002}}
+{"name":"Concord City Centre","mbr":{"north":41.8838129,"south":41.88330620000001,"east":-87.6340119,"west":-87.63441650000001}}
+{"name":"Michigan Avenue Tower Ii","mbr":{"north":41.86400999999999,"south":41.8635404,"east":-87.6242426,"west":-87.62486350000002}}
+{"name":"The Art Institute of Chicago","mbr":{"north":41.8807482,"south":41.8784627,"east":-87.62106059999999,"west":-87.6240215}}
+{"name":"BP Gas Station","mbr":{"north":41.875987,"south":41.875799400000005,"east":-87.62938799999999,"west":-87.62960209999999}}
+{"name":"Pier 1 Imports","mbr":{"north":41.9076054,"south":41.9072378,"east":-87.63473819999999,"west":-87.63518609999998}}
+{"name":"Chicago Water Tower","mbr":{"north":41.897226100000005,"south":41.8970855,"east":-87.62432980000001,"west":-87.62451800000001}}
+{"name":"Jardine Water Treatment Facility","mbr":{"north":41.896073799999996,"south":41.89381660000001,"east":-87.60320730000001,"west":-87.6096499}}
+{"name":"River Plaza","mbr":{"north":41.890010700000005,"south":41.8898044,"east":-87.62540709999998,"west":-87.62610279999998}}
+{"name":"Moody Bible Institute","mbr":{"north":41.9004179,"south":41.89674409999999,"east":-87.6329436,"west":-87.63575050000001}}
+{"name":"Crowne Plaza","mbr":{"north":41.880947,"south":41.880563200000005,"east":-87.6464455,"west":-87.64720489999999}}
+{"name":"Galter Pavilion","mbr":{"north":41.8948613,"south":41.89426520000001,"east":-87.62181659999999,"west":-87.62258369999999}}
+{"name":"Kennelly Square","mbr":{"north":41.91454309999999,"south":41.9140815,"east":-87.6337615,"west":-87.63465309999998}}
+{"name":"Shell","mbr":{"north":41.911505999999996,"south":41.9114172,"east":-87.63259430000001,"west":-87.63282080000002}}
+{"name":"Windsor at Ontario Place","mbr":{"north":41.8939745,"south":41.8933895,"east":-87.62688899999999,"west":-87.6279906}}
+{"name":"12th District Police Station","mbr":{"north":41.8802369,"south":41.8625356,"east":-87.65688440000001,"west":-87.6577498}}
+{"name":"Chicago Engine Company 1","mbr":{"north":41.8763131,"south":41.876149299999994,"east":-87.6331554,"west":-87.6335282}}
+{"name":"Vetro","mbr":{"north":41.874396,"south":41.8737391,"east":-87.63314209999999,"west":-87.63352090000001}}
+{"name":"Frances Xavier Warde School","mbr":{"north":41.8802552,"south":41.8797127,"east":-87.6442026,"west":-87.6445348}}
+{"name":"Frances Xavier Ward School","mbr":{"north":41.896550399999995,"south":41.8961633,"east":-87.62714779999999,"west":-87.6280324}}
+{"name":"Dearborn Tower","mbr":{"north":41.8613004,"south":41.8607689,"east":-87.62746059999999,"west":-87.6286868}}
+{"name":"Electric Railcar Service","mbr":{"north":41.862459900000005,"south":41.8611275,"east":-87.61880459999999,"west":-87.61941879999998}}
+{"name":"The Columbian","mbr":{"north":41.8678831,"south":41.86760410000001,"east":-87.624327,"west":-87.6249489}}
+{"name":"227 East Walton","mbr":{"north":41.899958100000006,"south":41.899795700000006,"east":-87.6206616,"west":-87.62084790000002}}
+{"name":"The James Chicago","mbr":{"north":41.8932079,"south":41.89290510000001,"east":-87.62554800000001,"west":-87.626046}}
+{"name":"Mulligan School","mbr":{"north":41.915623,"south":41.91510889999999,"east":-87.6526879,"west":-87.6531524}}
+{"name":"St Michaels Parish Hall","mbr":{"north":41.9127645,"south":41.9124927,"east":-87.640252,"west":-87.64043679999999}}
+{"name":"Avenue East","mbr":{"north":41.891339699999996,"south":41.89105529999999,"east":-87.62279329999998,"west":-87.62323490000001}}
+{"name":"Cloud Gate","mbr":{"north":41.882767799999996,"south":41.8825901,"east":-87.62322940000001,"west":-87.62340050000003}}
+{"name":"Auditorium Parking","mbr":{"north":41.87559709999999,"south":41.87495059999999,"east":-87.6251903,"west":-87.6258255}}
+{"name":"Regal Apartments","mbr":{"north":41.87374389999999,"south":41.873427400000004,"east":-87.63312959999999,"west":-87.6335053}}
+{"name":"Tempo Cafe","mbr":{"north":41.898551399999995,"south":41.8984346,"east":-87.6279193,"west":-87.628133}}
+{"name":"Prada","mbr":{"north":41.9009448,"south":41.9008438,"east":-87.62708440000003,"west":-87.62748960000002}}
+{"name":"Burnham Center","mbr":{"north":41.8831147,"south":41.8826051,"east":-87.63102419999998,"west":-87.6317714}}
+{"name":"Greater Mount Sinai Baptist Church","mbr":{"north":41.865888299999995,"south":41.8656931,"east":-87.66231379999999,"west":-87.6624991}}
+{"name":"Drake Hotel","mbr":{"north":41.9007136,"south":41.9000944,"east":-87.62285670000001,"west":-87.6239462}}
+{"name":"Arnold School","mbr":{"north":41.9193966,"south":41.918618499999994,"east":-87.6461145,"west":-87.6472682}}
+{"name":"Echelon at K Station","mbr":{"north":41.8885218,"south":41.888183100000006,"east":-87.64307240000001,"west":-87.64417}}
+{"name":"Fairbanks Morse Building","mbr":{"north":41.8704515,"south":41.8703284,"east":-87.62608309999999,"west":-87.6266964}}
+{"name":"Mc Dermott Center","mbr":{"north":41.8838579,"south":41.8831949,"east":-87.65105129999999,"west":-87.6515019}}
+{"name":"Isba Mutual","mbr":{"north":41.8922654,"south":41.8919942,"east":-87.6350556,"west":-87.63514769999999}}
+{"name":"Vogue Building","mbr":{"north":41.876575700000004,"south":41.876400000000004,"east":-87.63382730000001,"west":-87.6341993}}
+{"name":"Chicago Bar Assocication Building","mbr":{"north":41.877703999999994,"south":41.87751420000001,"east":-87.6282707,"west":-87.6286194}}
+{"name":"Saint Matthew United Methodist Church","mbr":{"north":41.90022449999999,"south":41.9000549,"east":-87.63746429999999,"west":-87.6377871}}
+{"name":"Peninsula Hotel","mbr":{"north":41.8965737,"south":41.89582779999999,"east":-87.624876,"west":-87.62538269999999}}
+{"name":"Pride","mbr":{"north":41.867144700000004,"south":41.8668743,"east":-87.6250241,"west":-87.62522430000001}}
+{"name":"Belden Stratford Apartments","mbr":{"north":41.92432,"south":41.9238883,"east":-87.6367299,"west":-87.637295}}
+{"name":"The Chandler","mbr":{"north":41.887303200000005,"south":41.886984600000005,"east":-87.61509659999999,"west":-87.61575820000002}}
+{"name":"Manierre Elementary School","mbr":{"north":41.9083397,"south":41.906912299999995,"east":-87.639801,"west":-87.6408147}}
+{"name":"Donohue Building","mbr":{"north":41.8733651,"south":41.8727947,"east":-87.62873440000001,"west":-87.6290181}}
+{"name":"Astoria Tower","mbr":{"north":41.870973600000006,"south":41.87062029999999,"east":-87.6268087,"west":-87.62731279999998}}
+{"name":"West Erie Body Shop","mbr":{"north":41.894381,"south":41.894105499999995,"east":-87.6329929,"west":-87.63330640000001}}
+{"name":"Long Grove House","mbr":{"north":41.85522040000001,"south":41.8550466,"east":-87.6226773,"west":-87.62366490000001}}
+{"name":"Perimeter Gallery","mbr":{"north":41.8960453,"south":41.8956873,"east":-87.6347813,"west":-87.63505009999999}}
+{"name":"De Paul University","mbr":{"north":41.9252809,"south":41.9207603,"east":-87.6488965,"west":-87.6545633}}
+{"name":"Fine Arts Building","mbr":{"north":41.8766115,"south":41.87623239999999,"east":-87.6245421,"west":-87.62518299999999}}
+{"name":"Alta at K Station","mbr":{"north":41.8889426,"south":41.8886925,"east":-87.641806,"west":-87.64220470000001}}
+{"name":"Information Resources","mbr":{"north":41.88482170000001,"south":41.8845461,"east":-87.6420435,"west":-87.64259329999999}}
+{"name":"Pizzeria Uno","mbr":{"north":41.8923541,"south":41.892184,"east":-87.6268582,"west":-87.6269542}}
+{"name":"DePaul University","mbr":{"north":41.92627689999999,"south":41.8770433,"east":-87.62522919999999,"west":-87.65901410000001}}
+{"name":"Coleman House","mbr":{"north":41.857606100000005,"south":41.85749860000001,"east":-87.62009170000002,"west":-87.6205587}}
+{"name":"340 on the Park","mbr":{"north":41.8849245,"south":41.8846697,"east":-87.61827880000001,"west":-87.6191028}}
+{"name":"Arts and Letters Hall","mbr":{"north":41.9244384,"south":41.9236319,"east":-87.65416379999999,"west":-87.6546259}}
+{"name":"Government Center Self Park","mbr":{"north":41.8856315,"south":41.88514489999999,"east":-87.6300913,"west":-87.63081930000001}}
+{"name":"Hermon Baptist Church","mbr":{"north":41.914490799999996,"south":41.914367299999995,"east":-87.63390900000002,"west":-87.63425670000001}}
+{"name":"Kanela","mbr":{"north":41.910700799999994,"south":41.9106416,"east":-87.6348451,"west":-87.6351239}}
+{"name":"Chicago History Museum","mbr":{"north":41.91244479999999,"south":41.9115581,"east":-87.6309363,"west":-87.63204199999998}}
+{"name":"TransUnion Building","mbr":{"north":41.878054199999994,"south":41.8776528,"east":-87.6309074,"west":-87.63169330000001}}
+{"name":"Ikram","mbr":{"north":41.89478989999999,"south":41.8945051,"east":-87.6273602,"west":-87.62766140000001}}
+{"name":"Tarry Medical Research and Education Building","mbr":{"north":41.8963777,"south":41.89592170000001,"east":-87.61983029999999,"west":-87.6201886}}
+{"name":"212 East","mbr":{"north":41.85596360000001,"south":41.855607799999994,"east":-87.62157920000001,"west":-87.6221053}}
+{"name":"Fifth Third Bank","mbr":{"north":41.9183891,"south":41.874236499999995,"east":-87.6302446,"west":-87.6512371}}
+{"name":"Menomonee Club","mbr":{"north":41.914444700000004,"south":41.9141614,"east":-87.6365684,"west":-87.6366473}}
+{"name":"Smyth Elementary School","mbr":{"north":41.8655121,"south":41.8647431,"east":-87.6517522,"west":-87.65510019999999}}
+{"name":"Saint Procopius Rectory","mbr":{"north":41.85871389999999,"south":41.858437900000006,"east":-87.657093,"west":-87.65755650000001}}
+{"name":"Self Storage Complex","mbr":{"north":41.910311899999996,"south":41.9096339,"east":-87.6376748,"west":-87.63844459999999}}
+{"name":"Best Western Parking","mbr":{"north":41.8691941,"south":41.86897090000001,"east":-87.62497900000001,"west":-87.6256791}}
+{"name":"Elm Tower","mbr":{"north":41.903647199999995,"south":41.9032567,"east":-87.62953230000001,"west":-87.6298545}}
+{"name":"The Lock Up","mbr":{"north":41.889507599999995,"south":41.8892096,"east":-87.6373148,"west":-87.63791790000002}}
+{"name":"Margot and Harold Schiff Residences","mbr":{"north":41.9048696,"south":41.90441549999999,"east":-87.6408585,"west":-87.64148440000001}}
+{"name":"Presidential Towers","mbr":{"north":41.8817359,"south":41.880619800000005,"east":-87.64132559999999,"west":-87.6439436}}
+{"name":"Presidential Towers T4","mbr":{"north":41.8808294,"south":41.880619800000005,"east":-87.64340359999998,"west":-87.6439436}}
+{"name":"Flair Tower","mbr":{"north":41.8943594,"south":41.8940735,"east":-87.63486070000002,"west":-87.63553340000001}}
+{"name":"Gotham Lofts West","mbr":{"north":41.8763807,"south":41.8761032,"east":-87.64178050000001,"west":-87.6423298}}
+{"name":"Hard Rock Cafe","mbr":{"north":41.8931386,"south":41.892865,"east":-87.630253,"west":-87.63072660000002}}
+{"name":"Gleacher Center","mbr":{"north":41.8899684,"south":41.889250700000005,"east":-87.6220343,"west":-87.62254499999999}}
+{"name":"McKinlock Building","mbr":{"north":41.87800939999999,"south":41.877747600000006,"east":-87.633862,"west":-87.63442769999999}}
+{"name":"Mather Tower","mbr":{"north":41.88776779999999,"south":41.8874531,"east":-87.625198,"west":-87.6256468}}
+{"name":"ExtraSpace Storage","mbr":{"north":41.8742626,"south":41.873611700000005,"east":-87.6439933,"west":-87.64450300000001}}
+{"name":"Dearborn Plaza","mbr":{"north":41.8896328,"south":41.889345000000006,"east":-87.62845030000001,"west":-87.6293684}}
+{"name":"Hotel Sax","mbr":{"north":41.888661600000006,"south":41.8884619,"east":-87.62823440000003,"west":-87.62941140000001}}
+{"name":"Downtown Islamic Center","mbr":{"north":41.8787507,"south":41.8786439,"east":-87.62696910000001,"west":-87.62750659999999}}
+{"name":"Dwight Lofts","mbr":{"north":41.8740169,"south":41.8735045,"east":-87.6307934,"west":-87.63116400000001}}
+{"name":"Polish Consulate","mbr":{"north":41.9105446,"south":41.9104065,"east":-87.62650149999999,"west":-87.62704779999999}}
+{"name":"Jackson Language Academy","mbr":{"north":41.8752057,"south":41.87431879999999,"east":-87.65984169999999,"west":-87.66169720000002}}
+{"name":"200 East Delaware","mbr":{"north":41.8996576,"south":41.899370600000005,"east":-87.62085929999999,"west":-87.62172699999999}}
+{"name":"Lofthaus","mbr":{"north":41.87727070000001,"south":41.876874599999994,"east":-87.65020339999998,"west":-87.6506067}}
+{"name":"Jones College Prep","mbr":{"north":41.874463299999995,"south":41.872409,"east":-87.62772589999999,"west":-87.62858230000002}}
+{"name":"Marshall Field Garden Apartments","mbr":{"north":41.9091505,"south":41.9065625,"east":-87.638575,"west":-87.63961640000001}}
+{"name":"River Point Tower","mbr":{"north":41.887129900000005,"south":41.88580520000001,"east":-87.6383418,"west":-87.63981700000001}}
+{"name":"Astro Color Laboratories","mbr":{"north":41.8939411,"south":41.89366199999999,"east":-87.63037209999999,"west":-87.63057490000001}}
+{"name":"Zion Hill Missionary Baptist Church West","mbr":{"north":41.8653637,"south":41.865197,"east":-87.66576440000001,"west":-87.6661306}}
+{"name":"Sky55","mbr":{"north":41.866572700000006,"south":41.8658735,"east":-87.62326379999999,"west":-87.6239198}}
+{"name":"Wyndham Grand","mbr":{"north":41.88762089999999,"south":41.8871491,"east":-87.6253362,"west":-87.62597579999999}}
+{"name":"Carlson Cottage","mbr":{"north":41.9187311,"south":41.918572399999995,"east":-87.63395290000001,"west":-87.63411690000001}}
+{"name":"East Bank Storage Company","mbr":{"north":41.8861773,"south":41.8857899,"east":-87.64667150000001,"west":-87.6470085}}
+{"name":"Chicago Harbor Light","mbr":{"north":41.88944540000001,"south":41.889257699999995,"east":-87.59047779999999,"west":-87.59062540000001}}
+{"name":"City Cat Doctors","mbr":{"north":41.892632299999995,"south":41.89248369999999,"east":-87.63424499999999,"west":-87.63464109999998}}
+{"name":"McGowan South","mbr":{"north":41.92401339999999,"south":41.92364020000001,"east":-87.656154,"west":-87.6569882}}
+{"name":"Corcoran Hall","mbr":{"north":41.924929299999995,"south":41.92474349999999,"east":-87.65156370000001,"west":-87.6524318}}
+{"name":"The Grand Ohio Condominiums","mbr":{"north":41.8924733,"south":41.891875,"east":-87.6209709,"west":-87.6223841}}
+{"name":"Fortnightly of Chicago","mbr":{"north":41.9020234,"south":41.901754700000005,"east":-87.6249003,"west":-87.6252103}}
+{"name":"Southwest Exelon Pavilion","mbr":{"north":41.881063899999994,"south":41.880976,"east":-87.62218720000001,"west":-87.62228619999999}}
+{"name":"Paper Place","mbr":{"north":41.8721044,"south":41.87172079999999,"east":-87.63306509999998,"west":-87.633456}}
+{"name":"Soka Gakkai International Buddhist Center","mbr":{"north":41.8627197,"south":41.8622994,"east":-87.62504850000002,"west":-87.62553879999999}}
+{"name":"LaQuinta Inn","mbr":{"north":41.881827099999995,"south":41.881311399999994,"east":-87.6347967,"west":-87.6351174}}
+{"name":"Waterview Tower","mbr":{"north":41.886731,"south":41.88634929999999,"east":-87.6310853,"west":-87.63168499999999}}
+{"name":"Walter Payton College Prep","mbr":{"north":41.902012799999994,"south":41.900620700000005,"east":-87.63446400000001,"west":-87.63654910000001}}
+{"name":"Park Astor","mbr":{"north":41.910259700000005,"south":41.9099424,"east":-87.62725990000001,"west":-87.62743830000002}}
+{"name":"Mashed Potato Club","mbr":{"north":41.8943354,"south":41.89405789999999,"east":-87.63632150000001,"west":-87.6365115}}
+{"name":"Wolberg Hall","mbr":{"north":41.880486000000005,"south":41.880280299999995,"east":-87.62462190000002,"west":-87.6252951}}
+{"name":"Hillard Senior Homes II","mbr":{"north":41.85350079999999,"south":41.85322670000001,"east":-87.62804650000001,"west":-87.62841410000001}}
+{"name":"UIC Halsted Street Parking Structure","mbr":{"north":41.8712356,"south":41.869795700000005,"east":-87.64581510000001,"west":-87.6467211}}
+{"name":"Saint Josaphat Catholic Church","mbr":{"north":41.9238155,"south":41.9235125,"east":-87.662497,"west":-87.6631497}}
+{"name":"Bryant House","mbr":{"north":41.9090227,"south":41.9086769,"east":-87.63183120000001,"west":-87.63208120000002}}
+{"name":"Patten Building","mbr":{"north":41.8744016,"south":41.873949499999995,"east":-87.6326996,"west":-87.6330803}}
+{"name":"Van Buren Place","mbr":{"north":41.87692059999999,"south":41.876509,"east":-87.6644549,"west":-87.6653773}}
+{"name":"1122 North Dearborn","mbr":{"north":41.902620000000006,"south":41.9023647,"east":-87.630135,"west":-87.6305558}}
+{"name":"W Chicago City Center","mbr":{"north":41.8800006,"south":41.87948539999999,"east":-87.6329557,"west":-87.6332682}}
+{"name":"Peterson Building","mbr":{"north":41.87517959999999,"south":41.8749744,"east":-87.62819040000001,"west":-87.62855940000001}}
+{"name":"Rainforest Cafe","mbr":{"north":41.892794,"south":41.8925518,"east":-87.6305415,"west":-87.6309726}}
+{"name":"Contemporaine","mbr":{"north":41.8914847,"south":41.891262100000006,"east":-87.6342052,"west":-87.63461599999998}}
+{"name":"McCormick Bird House","mbr":{"north":41.92309229999999,"south":41.922568600000005,"east":-87.63298120000002,"west":-87.6335134}}
+{"name":"Atrium Village","mbr":{"north":41.90377020000001,"south":41.9021214,"east":-87.6344976,"west":-87.6369859}}
+{"name":"Ludington Building","mbr":{"north":41.869175100000014,"south":41.868844599999996,"east":-87.6260427,"west":-87.6266483}}
+{"name":"River View I","mbr":{"north":41.88944229999999,"south":41.889248800000004,"east":-87.61548339999999,"west":-87.61613379999999}}
+{"name":"Willoughby Tower","mbr":{"north":41.8820265,"south":41.8818037,"east":-87.6246518,"west":-87.6250726}}
+{"name":"Chinese Consulate","mbr":{"north":41.894413199999995,"south":41.8941279,"east":-87.63133839999998,"west":-87.63177920000001}}
+{"name":"Wabash Club","mbr":{"north":41.8510581,"south":41.8499126,"east":-87.62459449999999,"west":-87.6253984}}
+{"name":"Chicago Board of Trade Building","mbr":{"north":41.878044200000005,"south":41.8769458,"east":-87.63089129999999,"west":-87.6326213}}
+{"name":"Staples","mbr":{"north":41.86818420000001,"south":41.8677506,"east":-87.6398538,"west":-87.64058859999999}}
+{"name":"Aqua","mbr":{"north":41.886622100000004,"south":41.885886600000006,"east":-87.61922339999998,"west":-87.62045009999999}}
+{"name":"Congress Center","mbr":{"north":41.8766671,"south":41.8759022,"east":-87.63988269999997,"west":-87.64045540000001}}
+{"name":"Wieboldt Hall","mbr":{"north":41.8966518,"south":41.8959301,"east":-87.61858029999999,"west":-87.6189891}}
+{"name":"UIC Transportation Facility","mbr":{"north":41.86432080000001,"south":41.863783999999995,"east":-87.6505365,"west":-87.6507794}}
+{"name":"McGrath Acura","mbr":{"north":41.9054031,"south":41.904734,"east":-87.65864120000002,"west":-87.65920550000001}}
+{"name":"Best Western Grant Park Hotel","mbr":{"north":41.8692066,"south":41.868973100000005,"east":-87.62436010000002,"west":-87.6249829}}
+{"name":"Walgreens","mbr":{"north":41.911562700000005,"south":41.8531985,"east":-87.6306459,"west":-87.6471717}}
+{"name":"Chicago Building","mbr":{"north":41.8819089,"south":41.8817714,"east":-87.62793939999999,"west":-87.6283792}}
+{"name":"Dairy Barn","mbr":{"north":41.91781639999999,"south":41.91762479999999,"east":-87.6334565,"west":-87.63381849999999}}
+{"name":"ComEd Transfer Yard Building","mbr":{"north":41.8713788,"south":41.870283,"east":-87.63585929999999,"west":-87.637452}}
+{"name":"The Edge Lofts and Tower","mbr":{"north":41.8790566,"south":41.878827799999996,"east":-87.6442574,"west":-87.6448142}}
+{"name":"Embassy Suites Hotel","mbr":{"north":41.8916964,"south":41.8911186,"east":-87.61929779999998,"west":-87.62002400000002}}
+{"name":"Zanies","mbr":{"north":41.9105665,"south":41.910500400000004,"east":-87.6348424,"west":-87.6351946}}
+{"name":"435 North Park","mbr":{"north":41.89093220000001,"south":41.889593600000005,"east":-87.6187025,"west":-87.61951109999998}}
+{"name":"Engineering Building","mbr":{"north":41.88672150000001,"south":41.886289500000004,"east":-87.63409370000002,"west":-87.634492}}
+{"name":"Chicago Athletic Association","mbr":{"north":41.88180679999999,"south":41.8815517,"east":-87.62464709999998,"west":-87.625304}}
+{"name":"Chicago Household Hazardous Waste Recycling Center","mbr":{"north":41.9027425,"south":41.9021869,"east":-87.65522410000001,"west":-87.65607550000001}}
+{"name":"Skinner Classical Elementary School","mbr":{"north":41.880215899999996,"south":41.879113,"east":-87.65816589999999,"west":-87.65951279999999}}
+{"name":"DePaul University Lewis Center","mbr":{"north":41.8781451,"south":41.8778138,"east":-87.62625349999999,"west":-87.62665650000001}}
+{"name":"Lake Shore Drive Synagogue","mbr":{"north":41.90359770000001,"south":41.9033583,"east":-87.62602290000001,"west":-87.6262121}}
+{"name":"10 South Canal","mbr":{"north":41.8817512,"south":41.8812257,"east":-87.6398502,"west":-87.641019}}
+{"name":"China Club Lofts","mbr":{"north":41.8873851,"south":41.8869141,"east":-87.64352419999999,"west":-87.64414489999999}}
+{"name":"Vision on State","mbr":{"north":41.8664869,"south":41.8658098,"east":-87.6266689,"west":-87.62721690000002}}
+{"name":"900 North Michigan","mbr":{"north":41.899913500000004,"south":41.899272499999995,"east":-87.6243552,"west":-87.62693490000001}}
+{"name":"Ml And A","mbr":{"north":41.892267200000006,"south":41.89199920000001,"east":-87.63494820000003,"west":-87.63505740000001}}
+{"name":"Dragon Fly Metal Art","mbr":{"north":41.88504329999999,"south":41.8849623,"east":-87.64724269999999,"west":-87.6473301}}
+{"name":"The Parkshore","mbr":{"north":41.885769700000004,"south":41.8855433,"east":-87.6143636,"west":-87.61497140000002}}
+{"name":"Lakeside Tower","mbr":{"north":41.860173999999994,"south":41.8597715,"east":-87.6225642,"west":-87.6231582}}
+{"name":"Atlantic Bank Building","mbr":{"north":41.8851892,"south":41.88505899999999,"east":-87.6247301,"west":-87.62520070000001}}
+{"name":"Barbara Jean Wright Apartments","mbr":{"north":41.86385059999999,"south":41.863572999999995,"east":-87.65111329999999,"west":-87.65130409999999}}
+{"name":"Riverbend","mbr":{"north":41.88780319999999,"south":41.887153100000006,"east":-87.6393382,"west":-87.6397312}}
+{"name":"200 Squared","mbr":{"north":41.886248800000004,"south":41.88584039999999,"east":-87.6340899,"west":-87.63470170000001}}
+{"name":"The Park LaSalle","mbr":{"north":41.9014372,"south":41.900761700000004,"east":-87.6330831,"west":-87.63332379999999}}
+{"name":"Hubbard Place","mbr":{"north":41.8906281,"south":41.8900185,"east":-87.6379254,"west":-87.6390212}}
+{"name":"Cardiss Collins Post Office","mbr":{"north":41.8743164,"south":41.8721414,"east":-87.6364401,"west":-87.6392323}}
+{"name":"The Coast at Lakeshore East","mbr":{"north":41.887475800000004,"south":41.88698479999999,"east":-87.6183257,"west":-87.61888129999997}}
+{"name":"Target","mbr":{"north":41.8777147,"south":41.8675635,"east":-87.6306424,"west":-87.6562782}}
+{"name":"UIC Chemical Engineering Building","mbr":{"north":41.8716251,"south":41.8713453,"east":-87.6410402,"west":-87.6415293}}
+{"name":"Nickerson House","mbr":{"north":41.8945042,"south":41.894214899999994,"east":-87.62640230000001,"west":-87.626679}}
+{"name":"The Bernardin","mbr":{"north":41.8965633,"south":41.896190499999996,"east":-87.62619190000001,"west":-87.62670609999999}}
+{"name":"Iwan Ries Building","mbr":{"north":41.8817015,"south":41.88155270000001,"east":-87.62538349999998,"west":-87.62599910000002}}
+{"name":"Fago De Chao","mbr":{"north":41.89439829999999,"south":41.894114200000004,"east":-87.63177920000001,"west":-87.63246690000003}}
+{"name":"Left Bank at K Station","mbr":{"north":41.88774070000001,"south":41.8869461,"east":-87.6400259,"west":-87.64058750000001}}
+{"name":"Merchandise Mart","mbr":{"north":41.8890042,"south":41.8880538,"east":-87.63415120000002,"west":-87.63679339999999}}
+{"name":"Morningside Apartments","mbr":{"north":41.900394799999994,"south":41.9002337,"east":-87.6331926,"west":-87.63401390000001}}
+{"name":"Charter One Bank","mbr":{"north":41.85438270000001,"south":41.8542014,"east":-87.6334058,"west":-87.6337174}}
+{"name":"Lincoln Park High School","mbr":{"north":41.91998170000001,"south":41.918305200000006,"east":-87.6450447,"west":-87.6461532}}
+{"name":"UIC Art Institute Building","mbr":{"north":41.8778269,"south":41.877103999999996,"east":-87.64899940000001,"west":-87.64944899999998}}
+{"name":"Olson Pavilion","mbr":{"north":41.895688500000006,"south":41.8951051,"east":-87.6205125,"west":-87.6213795}}
+{"name":"Insurance Center Building","mbr":{"north":41.87716389999999,"south":41.8769272,"east":-87.63383400000001,"west":-87.63419209999998}}
+{"name":"Harrison Street Lofts","mbr":{"north":41.87487850000001,"south":41.8746053,"east":-87.6301518,"west":-87.63052809999996}}
+{"name":"Our Lady of Pompeii Roman Catholic Church","mbr":{"north":41.8727238,"south":41.8723629,"east":-87.6580069,"west":-87.6582455}}
+{"name":"1130 South Michigan","mbr":{"north":41.86897520000001,"south":41.868016000000004,"east":-87.62436449999998,"west":-87.62497640000001}}
+{"name":"1st District Police Station","mbr":{"north":41.8588897,"south":41.85810579999999,"east":-87.62744129999999,"west":-87.6286068}}
+{"name":"Fisk Generating Station","mbr":{"north":41.85047929999999,"south":41.84850420000001,"east":-87.65285270000001,"west":-87.65470309999998}}
+{"name":"1225 Old Town","mbr":{"north":41.9055109,"south":41.9045119,"east":-87.6337715,"west":-87.6343981}}
+{"name":"Carlington Hotel","mbr":{"north":41.9097835,"south":41.9095645,"east":-87.63329999999999,"west":-87.6338489}}
+{"name":"Sexton Lofts","mbr":{"north":41.891116,"south":41.8908196,"east":-87.63716070000001,"west":-87.63915059999997}}
+{"name":"The Whitney","mbr":{"north":41.90646879999999,"south":41.90586139999999,"east":-87.62952739999999,"west":-87.6298625}}
+{"name":"The Tides","mbr":{"north":41.8868259,"south":41.886602800000006,"east":-87.61766209999999,"west":-87.6185267}}
+{"name":"Office Depot","mbr":{"north":41.892244399999996,"south":41.891957500000004,"east":-87.6374358,"west":-87.63810659999999}}
+{"name":"Pool And Tennis Courts At 1555","mbr":{"north":41.910891199999995,"south":41.91037200000001,"east":-87.6270825,"west":-87.62747550000002}}
+{"name":"Cermak Pumping Station","mbr":{"north":41.874195400000005,"south":41.8736615,"east":-87.64517529999999,"west":-87.64541750000001}}
+{"name":"Spertus Institute of Jewish Studies","mbr":{"north":41.874127200000004,"south":41.873891300000004,"east":-87.62447230000001,"west":-87.62513499999999}}
+{"name":"880 Lake Shore Drive","mbr":{"north":41.8991801,"south":41.8988721,"east":-87.61882659999999,"west":-87.619082}}
+{"name":"Prairie Pointe","mbr":{"north":41.860164700000006,"south":41.8597163,"east":-87.6209418,"west":-87.6216009}}
+{"name":"The Streeter","mbr":{"north":41.8925368,"south":41.89225799999999,"east":-87.6186577,"west":-87.61937529999999}}
+{"name":"Jefferson Place","mbr":{"north":41.8855846,"south":41.8852182,"east":-87.64291699999998,"west":-87.6432085}}
+{"name":"Clinton Street Lofts","mbr":{"north":41.886735900000005,"south":41.88582290000001,"east":-87.6414239,"west":-87.6422001}}
+{"name":"Dearborn North Apartments","mbr":{"north":41.90259079999999,"south":41.9023775,"east":-87.62924790000001,"west":-87.62980059999998}}
+{"name":"Wm Waste Management","mbr":{"north":41.9079982,"south":41.906416899999996,"east":-87.652263,"west":-87.6537079}}
+{"name":"Two Mid City Plaza","mbr":{"north":41.8816655,"south":41.88127310000001,"east":-87.64746,"west":-87.6479134}}
+{"name":"Cantina Laredo","mbr":{"north":41.891243200000005,"south":41.890961,"east":-87.628173,"west":-87.6286758}}
+{"name":"Plymouth Building","mbr":{"north":41.87637149999999,"south":41.876243099999996,"east":-87.6288474,"west":-87.62909320000001}}
+{"name":"Printers Building","mbr":{"north":41.872801200000005,"south":41.872239500000006,"east":-87.63265609999999,"west":-87.63304250000002}}
+{"name":"The Residences at Grand Plaza","mbr":{"north":41.8923371,"south":41.892033899999994,"east":-87.6288492,"west":-87.6294125}}
+{"name":"Outpatient Care Pavilion","mbr":{"north":41.894084899999996,"south":41.8934871,"east":-87.6204104,"west":-87.62114839999998}}
+{"name":"400 North LaSalle","mbr":{"north":41.88986760000001,"south":41.8895722,"east":-87.63279709999999,"west":-87.63323800000002}}
+{"name":"ShowPlace ICON","mbr":{"north":41.869828500000004,"south":41.868746,"east":-87.63205070000001,"west":-87.63337429999999}}
+{"name":"Butler Building","mbr":{"north":41.88511079999999,"south":41.8848957,"east":-87.62811190000002,"west":-87.6285294}}
+{"name":"Flames Field","mbr":{"north":41.8646789,"south":41.8640208,"east":-87.64804779999999,"west":-87.6489356}}
+{"name":"Merrill Lynch","mbr":{"north":41.9129305,"south":41.91259889999999,"east":-87.65231320000001,"west":-87.6527573}}
+{"name":"Francis Parker High School","mbr":{"north":41.9233609,"south":41.9220658,"east":-87.6366172,"west":-87.63898800000001}}
+{"name":"Museum Park Place 1","mbr":{"north":41.8575097,"south":41.856724799999995,"east":-87.6185476,"west":-87.6191891}}
+{"name":"Symphony Center","mbr":{"north":41.879229299999984,"south":41.8787252,"east":-87.6246134,"west":-87.62558849999999}}
+{"name":"Coyne Institute","mbr":{"north":41.88819970000001,"south":41.887486100000004,"east":-87.64886240000001,"west":-87.64972180000001}}
+{"name":"pinkberry","mbr":{"north":41.9101756,"south":41.9100942,"east":-87.6339298,"west":-87.6345298}}
+{"name":"SoNo","mbr":{"north":41.9092957,"south":41.9086328,"east":-87.64952600000001,"west":-87.6509134}}
+{"name":"ChiTown Futbol","mbr":{"north":41.85016950000001,"south":41.849431800000005,"east":-87.65766640000001,"west":-87.658492}}
+{"name":"Ohio House Inn","mbr":{"north":41.892778699999994,"south":41.8926563,"east":-87.6328254,"west":-87.6334964}}
+{"name":"200 N Dearborn","mbr":{"north":41.8861984,"south":41.88586360000001,"east":-87.6296503,"west":-87.6299424}}
+{"name":"University Commons Building 3","mbr":{"north":41.86150350000001,"south":41.86123299999999,"east":-87.6509909,"west":-87.6539827}}
+{"name":"Chicago Fire Academy","mbr":{"north":41.869608500000005,"south":41.8691209,"east":-87.64136599999999,"west":-87.6420342}}
+{"name":"City Place","mbr":{"north":41.8948352,"south":41.8945974,"east":-87.62450519999999,"west":-87.62533479999999}}
+{"name":"Bock Building","mbr":{"north":41.876800200000005,"south":41.876516800000005,"east":-87.6308734,"west":-87.63124870000001}}
+{"name":"Old Town Nails","mbr":{"north":41.908660499999996,"south":41.9085988,"east":-87.63410540000001,"west":-87.63450800000001}}
+{"name":"Perspectives Charter","mbr":{"north":41.8564844,"south":41.856091299999996,"east":-87.62763320000002,"west":-87.6285971}}
+{"name":"Catalyst","mbr":{"north":41.8837998,"south":41.8832797,"east":-87.6434642,"west":-87.6440343}}
+{"name":"Mercedes Building","mbr":{"north":41.8964471,"south":41.8961532,"east":-87.6349787,"west":-87.63516089999999}}
+{"name":"Sullivan Center","mbr":{"north":41.8810855,"south":41.880870400000006,"east":-87.6263337,"west":-87.62724839999998}}
+{"name":"Store your things","mbr":{"north":41.9248237,"south":41.924468,"east":-87.6393333,"west":-87.6398064}}
+{"name":"Vue20 Condominiums","mbr":{"north":41.85673479999999,"south":41.8563379,"east":-87.623391,"west":-87.62373519999998}}
+{"name":"Parking","mbr":{"north":41.890427,"south":41.88461079999999,"east":-87.62642190000003,"west":-87.63481379999999}}
+{"name":"Kelly Frune Company","mbr":{"north":41.89387370000001,"south":41.89359900000001,"east":-87.6350986,"west":-87.63550629999997}}
+{"name":"Columbia College","mbr":{"north":41.875599799999996,"south":41.875192799999994,"east":-87.62619540000001,"west":-87.62680879999998}}
+{"name":"Best Western Plus River North","mbr":{"north":41.892314799999994,"south":41.892033600000005,"east":-87.6315816,"west":-87.6323904}}
+{"name":"Kuklai Restaurant","mbr":{"north":41.8911925,"south":41.89112389999999,"east":-87.63350699999998,"west":-87.63390919999999}}
+{"name":"Regenstein African Journey","mbr":{"north":41.92371529999999,"south":41.9225548,"east":-87.6336942,"west":-87.6344418}}
+{"name":"Old Post Office","mbr":{"north":41.87669629999999,"south":41.8744912,"east":-87.63801109999999,"west":-87.63931559999999}}
+{"name":"Traders Self Park","mbr":{"north":41.8777524,"south":41.8771838,"east":-87.633881,"west":-87.6344226}}
+{"name":"Rudy Lozano","mbr":{"north":41.8577916,"south":41.8572394,"east":-87.66071079999999,"west":-87.66117890000001}}
+{"name":"Engine Company 18","mbr":{"north":41.864804400000004,"south":41.86421320000001,"east":-87.65568029999999,"west":-87.65638879999999}}
+{"name":"Drake Tower","mbr":{"north":41.9007301,"south":41.9001263,"east":-87.62247959999999,"west":-87.6227768}}
+{"name":"Crafton On Wells","mbr":{"north":41.891912500000004,"south":41.891822299999994,"east":-87.63353059999997,"west":-87.6339457}}
+{"name":"Rock Bottom Brewery","mbr":{"north":41.891561,"south":41.8912827,"east":-87.6281721,"west":-87.6286135}}
+{"name":"Hyatt Regency McCormick Place","mbr":{"north":41.8521085,"south":41.851825899999994,"east":-87.6177206,"west":-87.61871109999998}}
+{"name":"Monadnock Building","mbr":{"north":41.8780754,"south":41.876976,"east":-87.62940660000001,"west":-87.62970570000002}}
+{"name":"Saint John Cantius Roman Catholic Church","mbr":{"north":41.8969912,"south":41.896688999999995,"east":-87.65268740000002,"west":-87.65337159999999}}
+{"name":"Soldier Field","mbr":{"north":41.863554500000006,"south":41.860867899999995,"east":-87.61539839999999,"west":-87.6179538}}
+{"name":"Park Millennium","mbr":{"north":41.8866848,"south":41.886495200000006,"east":-87.6211305,"west":-87.62182150000001}}
+{"name":"Erie on the Park","mbr":{"north":41.894586700000005,"south":41.893994400000004,"east":-87.64176089999998,"west":-87.64254170000001}}
+{"name":"Italian VIllage","mbr":{"north":41.8806186,"south":41.88010899999999,"east":-87.6300732,"west":-87.6301996}}
+{"name":"Gilchrist Marchman Center","mbr":{"north":41.866890299999994,"south":41.8662073,"east":-87.65125850000001,"west":-87.6517837}}
+{"name":"Presidential Towers T3","mbr":{"north":41.8811068,"south":41.8808972,"east":-87.6427946,"west":-87.64333459999997}}
+{"name":"Sportsmart","mbr":{"north":41.893105299999995,"south":41.8928316,"east":-87.63282910000001,"west":-87.63321739999999}}
+{"name":"The Gap","mbr":{"north":41.892445499999994,"south":41.892168600000005,"east":-87.62325220000002,"west":-87.62392150000002}}
+{"name":"1410","mbr":{"north":41.9080331,"south":41.9078519,"east":-87.6410699,"west":-87.64131730000001}}
+{"name":"Harold Washington College","mbr":{"north":41.8862577,"south":41.885867000000005,"east":-87.62643359999998,"west":-87.62722160000001}}
+{"name":"McCormick Bear Habitat","mbr":{"north":41.9239321,"south":41.9232105,"east":-87.6333448,"west":-87.6336607}}
+{"name":"Salpicon","mbr":{"north":41.9054461,"south":41.90536779999999,"east":-87.6346746,"west":-87.6350463}}
+{"name":"Chicago Engine Company 13","mbr":{"north":41.8869458,"south":41.8867472,"east":-87.6199872,"west":-87.62020709999999}}
+{"name":"Hemingway House","mbr":{"north":41.916479200000005,"south":41.9156866,"east":-87.6348404,"west":-87.6353928}}
+{"name":"Pegasus","mbr":{"north":41.87956809999999,"south":41.879418199999996,"east":-87.6474049,"west":-87.6478477}}
+{"name":"Cenacle Retreat House","mbr":{"north":41.9250862,"south":41.9249708,"east":-87.64159629999997,"west":-87.64204529999999}}
+{"name":"Esplanade Apartments I","mbr":{"north":41.899578999999996,"south":41.89937629999999,"east":-87.61914949999998,"west":-87.61996230000001}}
+{"name":"Burnham Park Yacht Club","mbr":{"north":41.86253170000001,"south":41.8621213,"east":-87.6093941,"west":-87.60966959999999}}
+{"name":"860 North Dewitt","mbr":{"north":41.8988547,"south":41.8985364,"east":-87.62036379999999,"west":-87.62079159999999}}
+{"name":"Moser Building","mbr":{"north":41.87397610000001,"south":41.8736296,"east":-87.62819499999999,"west":-87.628575}}
+{"name":"Ward Office","mbr":{"north":41.8960114,"south":41.8957821,"east":-87.66479040000002,"west":-87.6648818}}
+{"name":"Carpenter Elementary School","mbr":{"north":41.894318600000005,"south":41.8935566,"east":-87.6575692,"west":-87.65960069999998}}
+{"name":"Oriental Theater","mbr":{"north":41.8851054,"south":41.88459039999999,"east":-87.6285177,"west":-87.6290734}}
+{"name":"Lakeside Technology Center","mbr":{"north":41.85426729999999,"south":41.853092600000004,"east":-87.61752620000001,"west":-87.6189093}}
+{"name":"233 East Walton","mbr":{"north":41.8999066,"south":41.899692599999995,"east":-87.6203362,"west":-87.62057929999999}}
+{"name":"Urban Innovations","mbr":{"north":41.89465399999999,"south":41.8943752,"east":-87.6363284,"west":-87.63696339999998}}
+{"name":"Dixon Building","mbr":{"north":41.8764739,"south":41.8763341,"east":-87.63316209999999,"west":-87.63353359999999}}
+{"name":"Assumption Roman Catholic Church","mbr":{"north":41.8906528,"south":41.890370999999995,"east":-87.63623949999999,"west":-87.63650009999999}}
+{"name":"Jenner School","mbr":{"north":41.90258029999999,"south":41.9016865,"east":-87.64052559999998,"west":-87.6410234}}
+{"name":"E22","mbr":{"north":41.918119,"south":41.9177399,"east":-87.6438459,"west":-87.6441229}}
+{"name":"20 East Cedar","mbr":{"north":41.9028208,"south":41.9025019,"east":-87.62715820000001,"west":-87.62765999999999}}
+{"name":"Franklin Building","mbr":{"north":41.87531130000001,"south":41.874965499999995,"east":-87.62880480000001,"west":-87.6290593}}
+{"name":"Folio Square","mbr":{"north":41.872510399999996,"south":41.872243700000006,"east":-87.63118850000001,"west":-87.6315453}}
+{"name":"Pittsfield Building","mbr":{"north":41.8831157,"south":41.8827817,"east":-87.62541990000003,"west":-87.6260282}}
+{"name":"Church of the Epiphany","mbr":{"north":41.8788091,"south":41.8786265,"east":-87.665992,"west":-87.66650419999999}}
+{"name":"EnV","mbr":{"north":41.889065200000005,"south":41.888600600000004,"east":-87.6334134,"west":-87.6338553}}
+{"name":"Onterie Center","mbr":{"north":41.89415070000001,"south":41.8935666,"east":-87.61580040000001,"west":-87.616705}}
+{"name":"Millennium Monument","mbr":{"north":41.884070300000005,"south":41.883964,"east":-87.62364519999998,"west":-87.6239398}}
+{"name":"Cabrini Row Houses","mbr":{"north":41.9004004,"south":41.8969867,"east":-87.639994,"west":-87.64242390000001}}
+{"name":"Harris Theatre","mbr":{"north":41.8854123,"south":41.88508950000001,"east":-87.62962370000001,"west":-87.6300966}}
+{"name":"300 North Park Tower","mbr":{"north":41.91154329999999,"south":41.911398,"east":-87.6368099,"west":-87.63731220000003}}
+{"name":"Esplanade Apartments Ii","mbr":{"north":41.899971900000004,"south":41.8996576,"east":-87.6197544,"west":-87.62001980000001}}
+{"name":"Antique Warehouse","mbr":{"north":41.889068400000006,"south":41.8886065,"east":-87.63310629999998,"west":-87.63326370000001}}
+{"name":"Old Town Village West","mbr":{"north":41.90360129999999,"south":41.901534899999994,"east":-87.64435029999999,"west":-87.64642540000001}}
+{"name":"Bankers Building","mbr":{"north":41.8793223,"south":41.8788091,"east":-87.63093419999998,"west":-87.6313875}}
+{"name":"Fairmont Hotel","mbr":{"north":41.8862716,"south":41.885880799999995,"east":-87.6208699,"west":-87.6213633}}
+{"name":"One Congress Center","mbr":{"north":41.87686620000001,"south":41.8757691,"east":-87.6269111,"west":-87.6274698}}
+{"name":"Kinzie Station Tower","mbr":{"north":41.8878939,"south":41.8875471,"east":-87.64366910000001,"west":-87.64398800000001}}
+{"name":"Renaissance North","mbr":{"north":41.9109166,"south":41.9106206,"east":-87.64239690000002,"west":-87.6433271}}
+{"name":"Mc Clurg Court Center","mbr":{"north":41.8933313,"south":41.892731100000006,"east":-87.61783190000003,"west":-87.6189651}}
+{"name":"Grand Plaza","mbr":{"north":41.892348000000005,"south":41.891749399999995,"east":-87.62822190000003,"west":-87.6294733}}
+{"name":"Harrison Street Parking Structure","mbr":{"north":41.87529700000001,"south":41.8744642,"east":-87.65457920000001,"west":-87.65553750000001}}
+{"name":"2400 North Lakeview","mbr":{"north":41.92600920000001,"south":41.9257121,"east":-87.6392475,"west":-87.6395966}}
+{"name":"Mystique Night Club","mbr":{"north":41.893096299999996,"south":41.89282229999999,"east":-87.6333636,"west":-87.63350390000002}}
+{"name":"Dirksen Federal Building and US Courthouse","mbr":{"north":41.8793326,"south":41.87829489999999,"east":-87.62872,"west":-87.62916529999998}}
+{"name":"Taylor Place Apartments","mbr":{"north":41.8708483,"south":41.86949920000001,"east":-87.6653079,"west":-87.66623759999999}}
+{"name":"Mentor Building","mbr":{"north":41.8809958,"south":41.880866299999994,"east":-87.627244,"west":-87.62755870000001}}
+{"name":"Kosciuszko Elementary School","mbr":{"north":41.90825170000001,"south":41.9074265,"east":-87.66406549999999,"west":-87.66506879999997}}
+{"name":"City Center Club","mbr":{"north":41.8838093,"south":41.8833021,"east":-87.63440809999999,"west":-87.6349445}}
+{"name":"1212 North Lasalle","mbr":{"north":41.9044114,"south":41.9039514,"east":-87.6331316,"west":-87.6343447}}
+{"name":"Superior West","mbr":{"north":41.8955252,"south":41.89528920000001,"east":-87.63136470000002,"west":-87.6317691}}
+{"name":"Streeterville Centre","mbr":{"north":41.8940866,"south":41.8938589,"east":-87.62125080000001,"west":-87.6217442}}
+{"name":"Pulaski Fieldhouse","mbr":{"north":41.9069501,"south":41.9064912,"east":-87.66287150000001,"west":-87.66377220000001}}
+{"name":"Evergreen Terrace Apartments","mbr":{"north":41.906469,"south":41.90495489999999,"east":-87.63854589999998,"west":-87.6407504}}
+{"name":"Chicago Club","mbr":{"north":41.8769078,"south":41.8766815,"east":-87.624549,"west":-87.6251892}}
+{"name":"Auditorium Building","mbr":{"north":41.87631749999999,"south":41.8757839,"east":-87.6245326,"west":-87.62585500000002}}
+{"name":"Commonwealth Edison","mbr":{"north":41.918933100000004,"south":41.9186881,"east":-87.64055790000002,"west":-87.64071729999999}}
+{"name":"Saint Francis of Assisi Roman Catholic Church","mbr":{"north":41.8670031,"south":41.866553800000005,"east":-87.64755779999999,"west":-87.64781870000003}}
+{"name":"Latin School of Chicago","mbr":{"north":41.9111115,"south":41.910242000000004,"east":-87.62949669999998,"west":-87.63154940000001}}
+{"name":"Up Down Cigar","mbr":{"north":41.9106453,"south":41.9105725,"east":-87.6348434,"west":-87.635053}}
+{"name":"The Constellation","mbr":{"north":41.9111012,"south":41.910979299999994,"east":-87.62959480000002,"west":-87.63001489999999}}
+{"name":"Salazar Bilingual Center","mbr":{"north":41.901754700000005,"south":41.90142440000001,"east":-87.63350519999997,"west":-87.63425730000002}}
+{"name":"Sycamore College","mbr":{"north":41.847756100000005,"south":41.847368499999995,"east":-87.6163827,"west":-87.61694320000001}}
+{"name":"Six North Michigan","mbr":{"north":41.8824581,"south":41.8821996,"east":-87.62467640000001,"west":-87.62528949999998}}
+{"name":"Kinzie Park Tower","mbr":{"north":41.8912442,"south":41.89077,"east":-87.64176289999999,"west":-87.64266949999998}}
+{"name":"UIC Flames Athletic Center","mbr":{"north":41.86692239999999,"south":41.86627750000001,"east":-87.64807049999999,"west":-87.64863159999999}}
+{"name":"Union Station Multiplex","mbr":{"north":41.87842270000001,"south":41.878147999999996,"east":-87.63831109999998,"west":-87.6394402}}
+{"name":"Tower Self Park","mbr":{"north":41.879287399999996,"south":41.878752199999994,"east":-87.63389940000003,"west":-87.63508770000001}}
+{"name":"One Place","mbr":{"north":41.871726100000004,"south":41.870967199999996,"east":-87.62681690000002,"west":-87.62733340000001}}
+{"name":"Jay Pritzker Pavillion","mbr":{"north":41.88360329999999,"south":41.8831421,"east":-87.6212655,"west":-87.62243120000002}}
+{"name":"The Mondial","mbr":{"north":41.8954246,"south":41.8951403,"east":-87.64990279999999,"west":-87.65102540000001}}
+{"name":"The Oaks","mbr":{"north":41.87205110000001,"south":41.87144060000001,"east":-87.62968379999998,"west":-87.630387}}
+{"name":"Williams Building","mbr":{"north":41.8805691,"south":41.880217099999996,"east":-87.63392459999999,"west":-87.6342696}}
+{"name":"Brooks Building","mbr":{"north":41.8780073,"south":41.877734,"east":-87.6344976,"west":-87.63506519999999}}
+{"name":"Elm Street Plaza","mbr":{"north":41.903038699999996,"south":41.902793700000004,"east":-87.630165,"west":-87.63064990000001}}
+{"name":"Midwest Buddist Temple","mbr":{"north":41.91452070000001,"south":41.9142317,"east":-87.63973740000002,"west":-87.64007609999999}}
+{"name":"Metropolitan Tower","mbr":{"north":41.878187399999995,"south":41.8777228,"east":-87.62457019999998,"west":-87.6252389}}
+{"name":"Clinton Complex","mbr":{"north":41.8752627,"south":41.874438899999994,"east":-87.6410697,"west":-87.6423693}}
+{"name":"Chatelaine Tower Apartments","mbr":{"north":41.8983106,"south":41.898040300000005,"east":-87.62111370000002,"west":-87.62136779999999}}
+{"name":"Treasure Island","mbr":{"north":41.9214311,"south":41.9117177,"east":-87.63375199999999,"west":-87.66184790000001}}
+{"name":"One River Place","mbr":{"north":41.89484829999999,"south":41.8945504,"east":-87.64298190000002,"west":-87.6436825}}
+{"name":"55 East Erie","mbr":{"north":41.894030199999996,"south":41.8937255,"east":-87.62555879999998,"west":-87.62666879999999}}
+{"name":"Three Arts Club","mbr":{"north":41.906153700000004,"south":41.905855900000006,"east":-87.6302419,"west":-87.63074209999999}}
+{"name":"Palmolive Building","mbr":{"north":41.89990670000001,"south":41.899613699999996,"east":-87.62305730000001,"west":-87.62391300000002}}
+{"name":"The Wit Hotel","mbr":{"north":41.8862516,"south":41.8858605,"east":-87.62747809999998,"west":-87.62773100000001}}
+{"name":"Donohue Annex","mbr":{"north":41.872796799999996,"south":41.8725196,"east":-87.6287286,"west":-87.6289993}}
+{"name":"Old Colony Building","mbr":{"north":41.8768089,"south":41.876369,"east":-87.6288363,"west":-87.62913}}
+{"name":"Delaware Place on the Park","mbr":{"north":41.89901879999999,"south":41.8987394,"east":-87.6290473,"west":-87.629702}}
+{"name":"Kluczynski Federal Building","mbr":{"north":41.8786326,"south":41.8782909,"east":-87.62945440000001,"west":-87.63032530000001}}
+{"name":"Museum Pointe","mbr":{"north":41.8657608,"south":41.86551820000001,"east":-87.62061879999997,"west":-87.6213023}}
+{"name":"The Lofts at Museum Park 1","mbr":{"north":41.86570329999999,"south":41.865357200000005,"east":-87.6227777,"west":-87.62339920000001}}
+{"name":"The Warvick","mbr":{"north":41.9099623,"south":41.9095901,"east":-87.62820059999999,"west":-87.62868350000001}}
+{"name":"Silversmith Hotel","mbr":{"north":41.8817658,"south":41.8815192,"east":-87.62634829999999,"west":-87.6269404}}
+{"name":"Pumping Station","mbr":{"north":41.897487,"south":41.8969289,"east":-87.6229221,"west":-87.62399740000001}}
+{"name":"Outer Drive East","mbr":{"north":41.8852893,"south":41.8846868,"east":-87.61591080000001,"west":-87.6171918}}
+{"name":"910 Posted","mbr":{"north":41.88612579999999,"south":41.8857251,"east":-87.64995160000001,"west":-87.6504148}}
+{"name":"Marquee Michigan Avenue","mbr":{"north":41.86242610000001,"south":41.8619899,"east":-87.62420009999998,"west":-87.6248405}}
+{"name":"Midas Muffler","mbr":{"north":41.8919571,"south":41.8916986,"east":-87.6333116,"west":-87.63347780000001}}
+{"name":"Willow Creek Community Church","mbr":{"north":41.8764427,"south":41.876289699999994,"east":-87.6262163,"west":-87.6268512}}
+{"name":"James C Petrillo Music Shell","mbr":{"north":41.87899349999999,"south":41.878716000000004,"east":-87.61984,"west":-87.6202182}}
+{"name":"Tiffany Stained Glass","mbr":{"north":41.8927523,"south":41.892477500000005,"east":-87.6347759,"west":-87.63497679999998}}
+{"name":"LaSalle Court Apartments","mbr":{"north":41.9022012,"south":41.901910900000004,"east":-87.6330715,"west":-87.6334174}}
+{"name":"Marcielles Pizzeria","mbr":{"north":41.89434200000001,"south":41.894062299999995,"east":-87.6360496,"west":-87.63633680000001}}
+{"name":"University Center","mbr":{"north":41.8755369,"south":41.8744541,"east":-87.62679209999999,"west":-87.62744699999999}}
+{"name":"Metropolitan Place","mbr":{"north":41.879923,"south":41.879385600000006,"east":-87.639785,"west":-87.6409642}}
+{"name":"Randolph Place Lofts","mbr":{"north":41.8855925,"south":41.884540900000005,"east":-87.63907070000002,"west":-87.6396331}}
+{"name":"Acorn Lofts","mbr":{"north":41.8829405,"south":41.8823505,"east":-87.652634,"west":-87.65310379999998}}
+{"name":"The Lofts At Museum Park 2","mbr":{"north":41.8656113,"south":41.86511649999999,"east":-87.6234886,"west":-87.62392990000001}}
+{"name":"Old Navy Store","mbr":{"north":41.883105799999996,"south":41.8828269,"east":-87.6270166,"west":-87.6276344}}
+{"name":"Hotel Allegro","mbr":{"north":41.884359200000006,"south":41.88386339999999,"east":-87.6332328,"west":-87.6337419}}
+{"name":"Arthur Rubloff Building","mbr":{"north":41.89667589999999,"south":41.89601079999999,"east":-87.61675299999999,"west":-87.6176755}}
+{"name":"Ibew 134","mbr":{"north":41.8834951,"south":41.883275999999995,"east":-87.6428445,"west":-87.6434199}}
+{"name":"Westin Michigan Avenue","mbr":{"north":41.899629399999995,"south":41.8993174,"east":-87.6225145,"west":-87.623907}}
+{"name":"The Rookery","mbr":{"north":41.8793184,"south":41.878795100000005,"east":-87.63150149999998,"west":-87.63210900000001}}
+{"name":"Lincoln Park Conservatory","mbr":{"north":41.924975700000005,"south":41.92384020000001,"east":-87.63450379999998,"west":-87.635592}}
+{"name":"Printers Square","mbr":{"north":41.874437900000004,"south":41.8724031,"east":-87.62969459999998,"west":-87.63011429999999}}
+{"name":"NBC Tower","mbr":{"north":41.89007770000001,"south":41.8896925,"east":-87.6205183,"west":-87.62143370000001}}
+{"name":"Midwest Buddhist Temple","mbr":{"north":41.9145183,"south":41.9142237,"east":-87.6401023,"west":-87.64025519999998}}
+{"name":"Two River Place","mbr":{"north":41.895369599999995,"south":41.894957700000006,"east":-87.64303690000003,"west":-87.64367840000001}}
+{"name":"Church of the Ascension","mbr":{"north":41.9030355,"south":41.9027253,"east":-87.6321928,"west":-87.63269199999999}}
+{"name":"Northwestern University Parking","mbr":{"north":41.89412920000001,"south":41.893516,"east":-87.6189355,"west":-87.62010859999998}}
+{"name":"Holy Name Cathedral","mbr":{"north":41.896125700000006,"south":41.895811,"east":-87.62713579999999,"west":-87.6279758}}
+{"name":"JW Marriott Hotel","mbr":{"north":41.8793094,"south":41.878839299999996,"east":-87.63240800000001,"west":-87.63361370000003}}
+{"name":"Chicago Builders Supply","mbr":{"north":41.9123311,"south":41.91184929999999,"east":-87.6624055,"west":-87.66307320000001}}
+{"name":"Searle Building","mbr":{"north":41.896219200000004,"south":41.89592,"east":-87.61915640000001,"west":-87.6194839}}
+{"name":"The Mayfair Condominiums","mbr":{"north":41.90073650000001,"south":41.90040660000001,"east":-87.62204820000001,"west":-87.62249690000002}}
+{"name":"Old Town Dental Care","mbr":{"north":41.9093975,"south":41.9093357,"east":-87.63480519999999,"west":-87.63505090000001}}
+{"name":"Grant Monument","mbr":{"north":41.9176181,"south":41.917472800000006,"east":-87.63075919999999,"west":-87.63088099999999}}
+{"name":"Loyola University Water Tower Campus","mbr":{"north":41.897983800000006,"south":41.896712099999995,"east":-87.62486620000001,"west":-87.62819370000001}}
+{"name":"MDA City Apartments","mbr":{"north":41.885647000000006,"south":41.8853611,"east":-87.62565459999999,"west":-87.6260971}}
+{"name":"Silver Tower","mbr":{"north":41.8922687,"south":41.8919825,"east":-87.63572980000001,"west":-87.6363795}}
+{"name":"Hilton Garden Inn River North","mbr":{"north":41.892371100000005,"south":41.8917622,"east":-87.62757430000002,"west":-87.62794120000002}}
+{"name":"Heitman Center","mbr":{"north":41.8856324,"south":41.8851215,"east":-87.63265020000001,"west":-87.63332989999999}}
+{"name":"Alcott House","mbr":{"north":41.909386399999995,"south":41.9091303,"east":-87.63212730000001,"west":-87.6328265}}
+{"name":"Parkside of Old Town","mbr":{"north":41.9036988,"south":41.9004532,"east":-87.6391473,"west":-87.64314420000001}}
+{"name":"Douglas Dawson","mbr":{"north":41.89515709999999,"south":41.8948788,"east":-87.6349407,"west":-87.6352059}}
+{"name":"40 East Oak","mbr":{"north":41.901154399999996,"south":41.900876600000004,"east":-87.6266123,"west":-87.6269528}}
+{"name":"Northeast Exelon Pavilion","mbr":{"north":41.88416360000001,"south":41.88402829999999,"east":-87.62132629999999,"west":-87.62145910000001}}
+{"name":"Harold Washington Library Center","mbr":{"north":41.876813899999995,"south":41.8758023,"east":-87.62780230000001,"west":-87.6285922}}
+{"name":"Cole Haan","mbr":{"north":41.8945539,"south":41.8943556,"east":-87.62344900000001,"west":-87.62397949999999}}
+{"name":"Chinese American Museum Of Chicago","mbr":{"north":41.8513624,"south":41.85104460000001,"east":-87.63347610000001,"west":-87.63357359999998}}
+{"name":"Valastati","mbr":{"north":41.893877,"south":41.893604100000005,"east":-87.63472870000001,"west":-87.634984}}
+{"name":"Walton on the Park","mbr":{"north":41.899610700000004,"south":41.8992474,"east":-87.6284103,"west":-87.629126}}
+{"name":"Chabad of the Gold Coast","mbr":{"north":41.9050699,"south":41.90501210000001,"east":-87.6302856,"west":-87.63054140000001}}
+{"name":"Raffaello Hotel","mbr":{"north":41.89913829999999,"south":41.89885770000001,"east":-87.62139110000001,"west":-87.621769}}
+{"name":"Lake Point Tower","mbr":{"north":41.89181860000001,"south":41.891251399999994,"east":-87.6118402,"west":-87.6126798}}
+{"name":"Optima Center Chicago","mbr":{"north":41.891343500000005,"south":41.8910647,"east":-87.6219777,"west":-87.6225398}}
+{"name":"Cityfront Place","mbr":{"north":41.8894105,"south":41.888959899999996,"east":-87.6178072,"west":-87.6184207}}
+{"name":"Wheel True Shop","mbr":{"north":41.85894729999999,"south":41.858474799999996,"east":-87.6366943,"west":-87.6368177}}
+{"name":"1111 North Dearborn","mbr":{"north":41.902365700000004,"south":41.901959999999995,"east":-87.62909080000001,"west":-87.62977889999999}}
+{"name":"Reliance Building","mbr":{"north":41.8831175,"south":41.8829479,"east":-87.62809080000001,"west":-87.62842990000001}}
+{"name":"1237 West","mbr":{"north":41.925196500000006,"south":41.92483779999999,"east":-87.65906720000001,"west":-87.66074949999998}}
+{"name":"River North Dental Center","mbr":{"north":41.891900299999996,"south":41.8917167,"east":-87.6318705,"west":-87.6319432}}
+{"name":"Saint Joseph Roman Catholic Church","mbr":{"north":41.902387700000006,"south":41.9021494,"east":-87.6365993,"west":-87.63724760000001}}
+{"name":"Holy Trinity Croatian Catholic Church","mbr":{"north":41.856621399999995,"south":41.8564638,"east":-87.65899240000002,"west":-87.65940739999999}}
+{"name":"Baumhart Hall","mbr":{"north":41.897982700000014,"south":41.8976347,"east":-87.62702070000002,"west":-87.62737849999999}}
+{"name":"899 South Plymouth Court","mbr":{"north":41.8709209,"south":41.87069989999999,"east":-87.62767600000001,"west":-87.6281805}}
+{"name":"Hull House Dining Hall","mbr":{"north":41.8714139,"south":41.871324,"east":-87.6472793,"west":-87.6475435}}
+{"name":"The Casino","mbr":{"north":41.8991308,"south":41.89878350000001,"east":-87.62195019999999,"west":-87.62238519999998}}
+{"name":"Doubletree Hotel Magnificent Mile","mbr":{"north":41.89287399999999,"south":41.89268989999999,"east":-87.6195266,"west":-87.6200983}}
+{"name":"University Station","mbr":{"north":41.8607481,"south":41.86036190000001,"east":-87.65907159999999,"west":-87.66032080000001}}
+{"name":"451 Huron","mbr":{"north":41.894612900000006,"south":41.894331799999996,"east":-87.64013059999999,"west":-87.64081159999999}}
+{"name":"The Pinnacle","mbr":{"north":41.894787799999996,"south":41.894194000000006,"east":-87.62690769999999,"west":-87.62735209999998}}
+{"name":"Hotel Indigo","mbr":{"north":41.9052775,"south":41.9051425,"east":-87.630169,"west":-87.63072040000003}}
+{"name":"Allerton Crowne Plaza","mbr":{"north":41.895360999999994,"south":41.8950461,"east":-87.62346559999999,"west":-87.62400459999999}}
+{"name":"Prime Rib Steak House","mbr":{"north":41.893615100000005,"south":41.893375,"east":-87.6303844,"west":-87.6304891}}
+{"name":"Esquire Theater Building","mbr":{"north":41.9011669,"south":41.900844400000004,"east":-87.62573019999999,"west":-87.62619049999999}}
+{"name":"Green Street Lofts","mbr":{"north":41.87656989999999,"south":41.876005199999994,"east":-87.64846699999998,"west":-87.6489193}}
+{"name":"Wabash Campus Building","mbr":{"north":41.8738934,"south":41.8735361,"east":-87.6251747,"west":-87.6257972}}
+{"name":"Gabriel Environmental Services","mbr":{"north":41.9080945,"south":41.90768099999999,"east":-87.65974980000001,"west":-87.66020859999999}}
+{"name":"Royalton Towers","mbr":{"north":41.9090196,"south":41.9087277,"east":-87.6376424,"west":-87.63840280000001}}
+{"name":"Rehabilitation Institute of Chicago","mbr":{"north":41.895726700000004,"south":41.89515279999999,"east":-87.61815629999998,"west":-87.61850190000001}}
+{"name":"North Pier Tower","mbr":{"north":41.8910082,"south":41.890661200000004,"east":-87.6144014,"west":-87.61514220000001}}
+{"name":"16th Street Diesel Shop","mbr":{"north":41.860790099999996,"south":41.8593258,"east":-87.63565500000001,"west":-87.63649720000001}}
+{"name":"Park Newberry","mbr":{"north":41.898644299999994,"south":41.8980955,"east":-87.6299966,"west":-87.63112169999998}}
+{"name":"Waste Management","mbr":{"north":41.90874529999999,"south":41.90820270000001,"east":-87.65377720000001,"west":-87.6543535}}
+{"name":"House of Blues","mbr":{"north":41.8883774,"south":41.8881168,"east":-87.6287589,"west":-87.6293852}}
+{"name":"Printers Corner","mbr":{"north":41.8725325,"south":41.8722315,"east":-87.63309910000001,"west":-87.63348470000001}}
+{"name":"First Eagle Bank","mbr":{"north":41.8814974,"south":41.881304500000006,"east":-87.6572595,"west":-87.65771400000001}}
+{"name":"The Superior at LaSalle","mbr":{"north":41.8959825,"south":41.895714600000005,"east":-87.6328953,"west":-87.6332616}}
+{"name":"Burnham Pointe","mbr":{"north":41.873202199999994,"south":41.872294999999994,"east":-87.6307665,"west":-87.6311491}}
+{"name":"Schiller Middle School","mbr":{"north":41.906351400000005,"south":41.90505879999999,"east":-87.64395160000001,"west":-87.64594600000001}}
+{"name":"Archer Courts I","mbr":{"north":41.852281600000005,"south":41.85174870000001,"east":-87.6350055,"west":-87.6359122}}
+{"name":"Asian House of Chicago","mbr":{"north":41.889065900000006,"south":41.8888291,"east":-87.6333366,"west":-87.633422}}
+{"name":"Perez School","mbr":{"north":41.8560315,"south":41.85496020000001,"east":-87.65768299999999,"west":-87.6587021}}
+{"name":"Peoples Gas","mbr":{"north":41.902928700000004,"south":41.901843,"east":-87.65752900000001,"west":-87.65960429999998}}
+{"name":"Sultan Rugs","mbr":{"north":41.891942799999995,"south":41.8916607,"east":-87.63570660000002,"west":-87.6362566}}
+{"name":"Hilton Suites Hotel","mbr":{"north":41.899919600000004,"south":41.899332400000006,"east":-87.6219549,"west":-87.62234459999998}}
+{"name":"Fast Track","mbr":{"north":41.88555170000001,"south":41.8854053,"east":-87.64392559999999,"west":-87.6440177}}
+{"name":"FedEx Ship Center","mbr":{"north":41.9029601,"south":41.90127920000001,"east":-87.6482893,"west":-87.6498879}}
+{"name":"Public","mbr":{"north":41.9061995,"south":41.9059015,"east":-87.6280759,"west":-87.62855579999999}}
+{"name":"River East Arts Center","mbr":{"north":41.89099589999999,"south":41.890580299999996,"east":-87.61513199999999,"west":-87.61746459999998}}
+{"name":"AMLI 900","mbr":{"north":41.870681399999995,"south":41.8699543,"east":-87.63080219999999,"west":-87.6312953}}
+{"name":"Sofitel Chicago Water Tower","mbr":{"north":41.89891720000001,"south":41.898443,"east":-87.62699049999999,"west":-87.6275444}}
+{"name":"The Village Market","mbr":{"north":41.88544220000001,"south":41.8850109,"east":-87.6175447,"west":-87.61921420000002}}
+{"name":"Trattoria Roma","mbr":{"north":41.9102337,"south":41.9101764,"east":-87.6342266,"west":-87.6345089}}
+{"name":"Lake Shore Plaza","mbr":{"north":41.892566,"south":41.89228420000001,"east":-87.6157681,"west":-87.61650730000001}}
+{"name":"Near North Branch Library","mbr":{"north":41.904294500000006,"south":41.9039677,"east":-87.6363551,"west":-87.63679250000001}}
+{"name":"Gold Coast Galleria","mbr":{"north":41.901748600000005,"south":41.90075370000001,"east":-87.63151009999999,"west":-87.6320852}}
+{"name":"State Tower","mbr":{"north":41.90492270000001,"south":41.90471719999999,"east":-87.6289155,"west":-87.62919980000001}}
+{"name":"River North Park","mbr":{"north":41.8914611,"south":41.890853500000006,"east":-87.6356915,"west":-87.6368788}}
+{"name":"CITGO","mbr":{"north":41.8963321,"south":41.8961884,"east":-87.63448329999999,"west":-87.6346935}}
+{"name":"Hanner","mbr":{"north":41.891118000000006,"south":41.890869,"east":-87.6352415,"west":-87.6353508}}
+{"name":"Western Union","mbr":{"north":41.8964844,"south":41.8964006,"east":-87.63232180000001,"west":-87.6325165}}
+{"name":"Jewel Osco","mbr":{"north":41.8889211,"south":41.86582670000001,"east":-87.62597679999999,"west":-87.64561590000001}}
+{"name":"1400 Museum Park","mbr":{"north":41.864737500000004,"south":41.864224,"east":-87.6234324,"west":-87.6239229}}
+{"name":"Boston Market","mbr":{"north":41.91102120000001,"south":41.910892700000005,"east":-87.6348674,"west":-87.6351489}}
+{"name":"Dearborn Station","mbr":{"north":41.8721407,"south":41.8715038,"east":-87.6287035,"west":-87.62948990000001}}
+{"name":"Walsh Group Headquarters","mbr":{"north":41.878978,"south":41.8784385,"east":-87.65126599999999,"west":-87.65168639999999}}
+{"name":"Tutto Italiano","mbr":{"north":41.8758597,"south":41.875766899999995,"east":-87.633146,"west":-87.63351480000001}}
+{"name":"First American Bank","mbr":{"north":41.918557,"south":41.9184306,"east":-87.638294,"west":-87.6386851}}
+{"name":"Haymarket","mbr":{"north":41.885350100000004,"south":41.8851845,"east":-87.64143809999999,"west":-87.641967}}
+{"name":"Museum of Contemporary Art","mbr":{"north":41.8974759,"south":41.896962,"east":-87.62086740000001,"west":-87.6215738}}
+{"name":"Millennium Park Plaza","mbr":{"north":41.8856277,"south":41.8848289,"east":-87.62399370000003,"west":-87.62425650000002}}
+{"name":"Wyndham Hotel Blake","mbr":{"north":41.875435100000004,"south":41.8748787,"east":-87.62934510000001,"west":-87.6296034}}
+{"name":"Grant Park Skate Park","mbr":{"north":41.871517600000004,"south":41.8711612,"east":-87.62142909999999,"west":-87.6219785}}
+{"name":"Carnivale","mbr":{"north":41.887379200000005,"south":41.8869125,"east":-87.64595849999999,"west":-87.6461832}}
+{"name":"18th District Police Station","mbr":{"north":41.903514699999995,"south":41.9027321,"east":-87.6433574,"west":-87.6437248}}
+{"name":"The Fordham","mbr":{"north":41.89558579999999,"south":41.8949992,"east":-87.6269594,"west":-87.6276777}}
+{"name":"Ray Meyer Fitness and Recreation Center","mbr":{"north":41.923076300000005,"south":41.9222314,"east":-87.6529049,"west":-87.6534078}}
+{"name":"Montgomery Ward Memorial Building","mbr":{"north":41.8966329,"south":41.896067099999996,"east":-87.61911750000002,"west":-87.6202}}
+{"name":"Plaza 440","mbr":{"north":41.8907719,"south":41.89015799999999,"east":-87.62688519999999,"west":-87.62788839999999}}
+{"name":"State Parkway Condominiums","mbr":{"north":41.9093516,"south":41.909023499999996,"east":-87.62819029999999,"west":-87.62867}}
+{"name":"Haberdasher Square Lofts 2","mbr":{"north":41.8783812,"south":41.8780792,"east":-87.64414790000001,"west":-87.6446113}}
+{"name":"Loyola University Tower","mbr":{"north":41.8974243,"south":41.89682429999999,"east":-87.626968,"west":-87.62743470000001}}
+{"name":"Pearl Art and Craft Supply","mbr":{"north":41.8964441,"south":41.89608020000001,"east":-87.63515519999999,"west":-87.6355757}}
+{"name":"The Parkside","mbr":{"north":41.91047540000001,"south":41.910273,"east":-87.63038049999999,"west":-87.6308765}}
+{"name":"Embassy Suites Chicago Downtown","mbr":{"north":41.8931671,"south":41.8925766,"east":-87.62828129999998,"west":-87.62887129999999}}
+{"name":"Block 37 Shops","mbr":{"north":41.8844221,"south":41.883317999999996,"east":-87.6280434,"west":-87.62929179999999}}
+{"name":"Van Buren Building","mbr":{"north":41.87714389999999,"south":41.876924200000005,"east":-87.63418809999999,"west":-87.6344067}}
+{"name":"The Chicagoan","mbr":{"north":41.8965708,"south":41.89619689999999,"east":-87.62559370000001,"west":-87.6261371}}
+{"name":"Starbucks Coffee","mbr":{"north":41.8672686,"south":41.867171,"east":-87.6260095,"west":-87.6262684}}
+{"name":"Maggie Daley Park","mbr":{"north":41.8843038,"south":41.881072,"east":-87.61455819999999,"west":-87.62060179999999}}
+{"name":"700","mbr":{"north":41.87333420000001,"south":41.873197700000006,"east":-87.63078699999998,"west":-87.63115199999999}}
+{"name":"North Community Bank","mbr":{"north":41.910961,"south":41.89680310000001,"east":-87.6283099,"west":-87.63455809999999}}
+{"name":"Whitehall Hotel","mbr":{"north":41.899069399999995,"south":41.8988375,"east":-87.62551019999998,"west":-87.6259632}}
+{"name":"Saint Luke Church of God in Christ","mbr":{"north":41.899626000000005,"south":41.89930450000001,"east":-87.6374049,"west":-87.6378185}}
+{"name":"Lillan and Larry Goodman Center","mbr":{"north":41.8755524,"south":41.87516720000001,"east":-87.6254607,"west":-87.6258329}}
+{"name":"UIC Pavilion","mbr":{"north":41.8752496,"south":41.874420300000004,"east":-87.65560150000002,"west":-87.6567217}}
+{"name":"Saint Stanislaus Kostka Roman Catholic Church","mbr":{"north":41.9060782,"south":41.905841499999994,"east":-87.66178649999999,"west":-87.66251390000001}}
+{"name":"Prairie House","mbr":{"north":41.8621842,"south":41.861336200000004,"east":-87.6198821,"west":-87.62064209999998}}
+{"name":"Com Ed Dearborn St Substation","mbr":{"north":41.8838258,"south":41.88368440000001,"east":-87.62896859999998,"west":-87.62926640000002}}
+{"name":"Renaissance Chicago Downtown Hotel","mbr":{"north":41.88671599999999,"south":41.8858815,"east":-87.62816750000002,"west":-87.6287372}}
+{"name":"River View II","mbr":{"north":41.8894229,"south":41.8890895,"east":-87.616546,"west":-87.61736020000001}}
+{"name":"Su Casa","mbr":{"north":41.8931803,"south":41.8930613,"east":-87.626128,"west":-87.6262443}}
+{"name":"Feinberg Pavilion","mbr":{"north":41.8948803,"south":41.894287600000006,"east":-87.62045320000001,"west":-87.62183699999999}}
+{"name":"Park 1500 Lofts","mbr":{"north":41.8808029,"south":41.88028860000001,"east":-87.66451300000001,"west":-87.66537260000001}}
+{"name":"Parking Booth","mbr":{"north":41.8907559,"south":41.8907281,"east":-87.6285801,"west":-87.62865070000001}}
+{"name":"First United Methodist Church of Chicago","mbr":{"north":41.8830996,"south":41.88260229999999,"east":-87.6304285,"west":-87.6307469}}
+{"name":"Heritage Place","mbr":{"north":41.8919981,"south":41.89191989999999,"east":-87.6312782,"west":-87.63154440000002}}
+{"name":"Kingsbury Street Cafe","mbr":{"north":41.9090475,"south":41.9087776,"east":-87.65178440000003,"west":-87.65225120000001}}
+{"name":"Comfort Suites","mbr":{"north":41.887497999999994,"south":41.8873625,"east":-87.624774,"west":-87.625257}}
+{"name":"Hotel Felix","mbr":{"north":41.894729,"south":41.89453279999999,"east":-87.631345,"west":-87.6317525}}
+{"name":"Poetry Foundation","mbr":{"north":41.8955537,"south":41.895278999999995,"east":-87.62991910000001,"west":-87.6306422}}
+{"name":"LaSalle Law Center","mbr":{"north":41.8910321,"south":41.890875400000006,"east":-87.63441500000002,"west":-87.6346025}}
+{"name":"Chicago Central Carrier Annex","mbr":{"north":41.8754629,"south":41.8745201,"east":-87.6369953,"west":-87.63789440000002}}
+{"name":"Pompeii","mbr":{"north":41.86918729999999,"south":41.8689029,"east":-87.665198,"west":-87.66565309999999}}
+{"name":"Publican Quality Meats","mbr":{"north":41.8866785,"south":41.8864508,"east":-87.6484478,"west":-87.64853839999999}}
+{"name":"Selwyn Theater","mbr":{"north":41.885633,"south":41.8854087,"east":-87.62963220000002,"west":-87.6300133}}
+{"name":"The Lex","mbr":{"north":41.853383599999994,"south":41.853034300000004,"east":-87.6224278,"west":-87.62364749999999}}
+{"name":"Four Points Sheraton","mbr":{"north":41.893811799999995,"south":41.8933994,"east":-87.625545,"west":-87.62665359999998}}
+{"name":"219 East Lake Shore Drive","mbr":{"north":41.900758100000004,"south":41.900508900000005,"east":-87.62068379999998,"west":-87.62117970000001}}
+{"name":"Chicago Place","mbr":{"north":41.895647600000004,"south":41.895032099999995,"east":-87.62453339999999,"west":-87.6253719}}
+{"name":"Millennium Centre","mbr":{"north":41.893134399999994,"south":41.89258410000001,"east":-87.62890519999999,"west":-87.6295298}}
+{"name":"Les Miller Field","mbr":{"north":41.866002099999996,"south":41.86489970000001,"east":-87.6480996,"west":-87.6495392}}
+{"name":"Metropolitan Building","mbr":{"north":41.8843634,"south":41.883868,"east":-87.63262379999999,"west":-87.63284209999998}}
+{"name":"Engravers Lofts","mbr":{"north":41.8562454,"south":41.855968000000004,"east":-87.6224708,"west":-87.62305709999998}}
+{"name":"Helen Brach Primate House","mbr":{"north":41.921073400000004,"south":41.9205241,"east":-87.63224919999999,"west":-87.63268959999999}}
+{"name":"McCormick Place South Building","mbr":{"north":41.85182,"south":41.8483415,"east":-87.6137247,"west":-87.61825339999999}}
+{"name":"Capelli Hair Salon","mbr":{"north":41.890991400000004,"south":41.890867799999995,"east":-87.63511300000002,"west":-87.6351686}}
+{"name":"Doane Observatory","mbr":{"north":41.8664349,"south":41.866318,"east":-87.60578570000001,"west":-87.60594269999999}}
+{"name":"Foreman Pavilion","mbr":{"north":41.92032389999999,"south":41.919859200000005,"east":-87.63396559999998,"west":-87.6342439}}
+{"name":"Mercy Hospital","mbr":{"north":41.84743399999999,"south":41.8457399,"east":-87.62057809999999,"west":-87.62346009999999}}
+{"name":"Tokyo Hotel","mbr":{"north":41.892376600000006,"south":41.892121100000004,"east":-87.6272077,"west":-87.62740390000002}}
+{"name":"Astor House","mbr":{"north":41.90723479999998,"south":41.906865,"east":-87.62776,"west":-87.6286023}}
+{"name":"Second Presbyterian Church","mbr":{"north":41.8558734,"south":41.8555785,"east":-87.62407999999999,"west":-87.6246629}}
+{"name":"Chicago Engine Company 42","mbr":{"north":41.8907287,"south":41.8904073,"east":-87.62978099999998,"west":-87.6302964}}
+{"name":"Wells Street Tower","mbr":{"north":41.87343370000001,"south":41.8729874,"east":-87.63311970000001,"west":-87.6334995}}
+{"name":"Northern Trust Bank","mbr":{"north":41.90110940000001,"south":41.880764500000005,"east":-87.62487449999999,"west":-87.63275900000001}}
+{"name":"Amc Theater","mbr":{"north":41.8917149,"south":41.8911279,"east":-87.6178808,"west":-87.61931109999999}}
+{"name":"200 North Dearborn Apartments","mbr":{"north":41.886268,"south":41.8858573,"east":-87.6296503,"west":-87.6308295}}
+{"name":"Modernica","mbr":{"north":41.8922742,"south":41.8919909,"east":-87.63513929999999,"west":-87.6354724}}
+{"name":"Bowne Building","mbr":{"north":41.8922555,"south":41.891972599999995,"east":-87.6363699,"west":-87.636883}}
+{"name":"Chicago Tribune Freedom Center","mbr":{"north":41.8962729,"south":41.894347800000006,"east":-87.6446047,"west":-87.64663859999999}}
+{"name":"National Teachers Academy","mbr":{"north":41.8527372,"south":41.85112459999999,"east":-87.6282567,"west":-87.63006440000001}}
+{"name":"Fith Third Bank","mbr":{"north":41.9110434,"south":41.910873499999994,"east":-87.63334520000001,"west":-87.6336353}}
+{"name":"The Caravel","mbr":{"north":41.8936365,"south":41.893367899999994,"east":-87.62903829999999,"west":-87.6295607}}
+{"name":"Randolph Tower","mbr":{"north":41.88508029999999,"south":41.8845821,"east":-87.633464,"west":-87.6337734}}
+{"name":"One Magnificent Mile","mbr":{"north":41.9006909,"south":41.900094499999994,"east":-87.6243591,"west":-87.6251373}}
+{"name":"Lowell House","mbr":{"north":41.9081581,"south":41.9079976,"east":-87.6309275,"west":-87.6314034}}
+{"name":"LaSalle Street Church","mbr":{"north":41.9030178,"south":41.902885299999994,"east":-87.6331105,"west":-87.6334415}}
+{"name":"Hotel Monaco","mbr":{"north":41.886707200000004,"south":41.886329700000005,"east":-87.6258654,"west":-87.62611790000001}}
+{"name":"Adler Planetarium","mbr":{"north":41.866828,"south":41.86589320000001,"east":-87.6061354,"west":-87.60703989999999}}
+{"name":"City View Tower","mbr":{"north":41.885043800000005,"south":41.884619400000005,"east":-87.646497,"west":-87.6468195}}
+{"name":"The Bristol","mbr":{"north":41.899066899999994,"south":41.898724,"east":-87.62588029999999,"west":-87.6265804}}
+{"name":"Continental Paper Grading Company","mbr":{"north":41.8595841,"south":41.859030700000005,"east":-87.6348538,"west":-87.6358409}}
+{"name":"Glessner House","mbr":{"north":41.857825299999995,"south":41.857608600000006,"east":-87.6209202,"west":-87.62152640000001}}
+{"name":"Jenner Academy for the Arts","mbr":{"north":41.902619800000004,"south":41.9015304,"east":-87.64008109999999,"west":-87.64105230000001}}
+{"name":"State Place","mbr":{"north":41.86915889999999,"south":41.868931399999994,"east":-87.6267793,"west":-87.6273195}}
+{"name":"Parkview West","mbr":{"north":41.891391000000006,"south":41.891159900000005,"east":-87.6169929,"west":-87.6174874}}
+{"name":"Downtown Cleaners","mbr":{"north":41.87641970000001,"south":41.876284500000004,"east":-87.64897550000002,"west":-87.64941160000001}}
+{"name":"Kovler Lion House","mbr":{"north":41.92145920000001,"south":41.921211899999996,"east":-87.63293129999998,"west":-87.63372729999999}}
+{"name":"Astor Court","mbr":{"north":41.907532999999994,"south":41.9073113,"east":-87.6269825,"west":-87.62753269999999}}
+{"name":"Salvation Army Freedom Center","mbr":{"north":41.8801094,"south":41.879584699999995,"east":-87.66496540000001,"west":-87.6659693}}
+{"name":"Lincoln Park Tower","mbr":{"north":41.91815229999999,"south":41.917947000000005,"east":-87.63672470000002,"west":-87.6372867}}
+{"name":"Metropolitan Correctional Center","mbr":{"north":41.87676229999999,"south":41.8764207,"east":-87.630165,"west":-87.63056730000001}}
+{"name":"Museum of Broadcast Communications","mbr":{"north":41.889144599999995,"south":41.888853299999994,"east":-87.6282422,"west":-87.62887140000001}}
+{"name":"Survive Alive House","mbr":{"north":41.869585900000004,"south":41.86928239999999,"east":-87.6410013,"west":-87.64115020000001}}
+{"name":"Jehovah Kingdom Hall","mbr":{"north":41.906070299999996,"south":41.905758399999996,"east":-87.6413927,"west":-87.64187779999999}}
+{"name":"Federal Reserve Bank of Chicago","mbr":{"north":41.878681500000006,"south":41.8782022,"east":-87.6324026,"west":-87.63359619999999}}
+{"name":"Gotham Lofts East","mbr":{"north":41.8764178,"south":41.875908200000005,"east":-87.64114509999999,"west":-87.64170770000001}}
+{"name":"University Commons","mbr":{"north":41.8625378,"south":41.86109979999999,"east":-87.65091640000003,"west":-87.65650559999997}}
+{"name":"Field Museum of Natural History","mbr":{"north":41.8668494,"south":41.86559100000001,"east":-87.61544230000001,"west":-87.6183203}}
+{"name":"Marathon","mbr":{"north":41.8688937,"south":41.868368499999995,"east":-87.64164349999999,"west":-87.64206}}
+{"name":"Quigley Seminary Building","mbr":{"north":41.898249299999996,"south":41.8977884,"east":-87.62552699999999,"west":-87.6261693}}
+{"name":"Pasha Restaurant And Club","mbr":{"north":41.8937914,"south":41.893678699999995,"east":-87.63132499999999,"west":-87.63172410000001}}
+{"name":"253 East Delaware","mbr":{"north":41.899161199999995,"south":41.898859200000004,"east":-87.61975269999999,"west":-87.62011569999999}}
+{"name":"21 West Chestnut","mbr":{"north":41.8978483,"south":41.8975955,"east":-87.6284975,"west":-87.6291593}}
+{"name":"Tremont Hotel","mbr":{"north":41.898707,"south":41.898472899999994,"east":-87.62543699999999,"west":-87.625775}}
+{"name":"Alivio Medical Center","mbr":{"north":41.8543312,"south":41.8539947,"east":-87.6507568,"west":-87.65119870000001}}
+{"name":"Video Replay","mbr":{"north":41.8919651,"south":41.891716200000005,"east":-87.63193970000002,"west":-87.63208019999999}}
+{"name":"Red Roof Inn","mbr":{"north":41.893738,"south":41.893457500000004,"east":-87.62285990000001,"west":-87.62305}}
+{"name":"Museum Park Tower 2","mbr":{"north":41.8649744,"south":41.864379799999995,"east":-87.62047820000001,"west":-87.62082330000001}}
+{"name":"Chicago Police Academy","mbr":{"north":41.87875340000001,"south":41.878075499999994,"east":-87.6599699,"west":-87.66116400000001}}
+{"name":"Lincoln Elementary School","mbr":{"north":41.9245632,"south":41.9241765,"east":-87.6439826,"west":-87.6456628}}
+{"name":"1170 West Erie","mbr":{"north":41.89436010000001,"south":41.8941082,"east":-87.6569736,"west":-87.65732359999998}}
+{"name":"Museum Tower","mbr":{"north":41.8663771,"south":41.86591729999999,"east":-87.6211668,"west":-87.62156080000001}}
+{"name":"Water Tower Place","mbr":{"north":41.8983067,"south":41.8976784,"east":-87.62191820000001,"west":-87.62390349999998}}
+{"name":"Columbia College Chicago Media Production Center","mbr":{"north":41.860104899999996,"south":41.85941369999999,"east":-87.62744040000001,"west":-87.62801690000002}}
+{"name":"The Grant","mbr":{"north":41.86733579999999,"south":41.8555399,"east":-87.61805100000001,"west":-87.62398669999999}}
+{"name":"Academy of Sciences","mbr":{"north":41.918980399999995,"south":41.918563899999995,"east":-87.6352271,"west":-87.63565959999998}}
+{"name":"Fort Dearborn Post Office","mbr":{"north":41.8923222,"south":41.8917589,"east":-87.62993890000001,"west":-87.63097890000002}}
+{"name":"Terminals Building","mbr":{"north":41.8749691,"south":41.8747612,"east":-87.62879879999998,"west":-87.629051}}
+{"name":"Old Republic Building","mbr":{"north":41.8872926,"south":41.88690629999999,"east":-87.6240326,"west":-87.62428949999997}}
+{"name":"Sedgwick","mbr":{"north":41.91050750000001,"south":41.91030629999999,"east":-87.6386536,"west":-87.6389639}}
+{"name":"Saint Stephenson Missionary Baptist Church","mbr":{"north":41.86445110000001,"south":41.8642695,"east":-87.665741,"west":-87.6661468}}
+{"name":"John Fewkes Tower","mbr":{"north":41.8978547,"south":41.8976327,"east":-87.62999059999999,"west":-87.6302693}}
+{"name":"50 East Bellevue","mbr":{"north":41.9020519,"south":41.901743999999994,"east":-87.6263877,"west":-87.6269963}}
+{"name":"Jardine Water Filtration Plant Complex","mbr":{"north":41.8962791,"south":41.8932564,"east":-87.6056251,"west":-87.606597}}
+{"name":"Green Door Tavern","mbr":{"north":41.894659799999985,"south":41.894580299999994,"east":-87.63726199999999,"west":-87.6375424}}
+{"name":"Columbia College Chicago Plymouth Court","mbr":{"north":41.872948400000006,"south":41.872403999999996,"east":-87.62816500000001,"west":-87.62855040000001}}
+{"name":"Chinatown","mbr":{"north":41.850163300000006,"south":41.8492611,"east":-87.63159970000001,"west":-87.6318451}}
+{"name":"K2","mbr":{"north":41.888912600000005,"south":41.888482800000006,"east":-87.64593620000002,"west":-87.64744990000001}}
+{"name":"Park Community Church","mbr":{"north":41.90114320000001,"south":41.9003711,"east":-87.64319830000001,"west":-87.64427249999999}}
+{"name":"Marquette Building","mbr":{"north":41.880048699999996,"south":41.87950910000001,"east":-87.62943720000001,"west":-87.63001449999999}}
+{"name":"Athena","mbr":{"north":41.8788432,"south":41.878573100000004,"east":-87.64738269999998,"west":-87.6478436}}
+{"name":"333 West Wacker","mbr":{"north":41.88644989999999,"south":41.885822700000006,"east":-87.6355039,"west":-87.6363264}}
+{"name":"Inspection Building","mbr":{"north":41.8683027,"south":41.86531860000001,"east":-87.6360493,"west":-87.63667559999998}}
+{"name":"Engine Company 4","mbr":{"north":41.9041093,"south":41.903836600000005,"east":-87.64277589999999,"west":-87.64308349999999}}
+{"name":"McGaw Hall","mbr":{"north":41.9248167,"south":41.9242693,"east":-87.6489272,"west":-87.64926599999998}}
+{"name":"Millennium Knickerbocker Hotel","mbr":{"north":41.89991479999999,"south":41.8996238,"east":-87.62233920000001,"west":-87.62306339999999}}
+{"name":"Library Tower","mbr":{"north":41.8754586,"south":41.874711399999995,"east":-87.62775559999997,"west":-87.62815879999998}}
+{"name":"Cirrus at K Station","mbr":{"north":41.8889351,"south":41.8885171,"east":-87.64238499999999,"west":-87.64272079999998}}
+{"name":"2000 North Lincoln Park West","mbr":{"north":41.9200845,"south":41.9192776,"east":-87.6365193,"west":-87.63701209999999}}
+{"name":"Union Station Self Park","mbr":{"north":41.877644,"south":41.8768368,"east":-87.6397165,"west":-87.6408959}}
+{"name":"Alper Services Building","mbr":{"north":41.89610650000001,"south":41.8957424,"east":-87.63041820000001,"west":-87.630573}}
+{"name":"State of Illinois Offices","mbr":{"north":41.85617479999999,"south":41.855962399999996,"east":-87.6215845,"west":-87.6221096}}
+{"name":"Citicorp Center","mbr":{"north":41.882679399999994,"south":41.8820982,"east":-87.63987399999999,"west":-87.6410589}}
+{"name":"Conrad Chicago Hotel","mbr":{"north":41.89178,"south":41.891013,"east":-87.62442079999998,"west":-87.6254973}}
+{"name":"Courtyard Chicago Magnificent Mile","mbr":{"north":41.89326179999999,"south":41.89296,"east":-87.6228341,"west":-87.62334359999998}}
+{"name":"The Spice House","mbr":{"north":41.9096129,"south":41.90954309999999,"east":-87.6348103,"west":-87.6350704}}
+{"name":"Nordstrom","mbr":{"north":41.8916051,"south":41.890989000000005,"east":-87.62548379999998,"west":-87.6266009}}
+{"name":"The Standard Club","mbr":{"north":41.87794660000001,"south":41.8773924,"east":-87.62886080000001,"west":-87.62915319999999}}
+{"name":"BMO Harris Bank","mbr":{"north":41.867676100000004,"south":41.8674027,"east":-87.6401999,"west":-87.64057129999998}}
+{"name":"Rauner College Prep","mbr":{"north":41.89240670000001,"south":41.8920389,"east":-87.66092679999998,"west":-87.6615404}}
+{"name":"The Heritage at Millennium Park","mbr":{"north":41.88438749999999,"south":41.883617099999995,"east":-87.62544409999998,"west":-87.6260493}}
+{"name":"Essex Inn","mbr":{"north":41.8717661,"south":41.87134379999999,"east":-87.62441540000002,"west":-87.6250201}}
+{"name":"Santa Maria Addolorata Catholic Church","mbr":{"north":41.8923999,"south":41.892125,"east":-87.66016959999999,"west":-87.6606382}}
+{"name":"Knight Bldg","mbr":{"north":41.8843318,"south":41.883979100000005,"east":-87.6414015,"west":-87.64195959999999}}
+{"name":"Chestnut Tower","mbr":{"north":41.897879599999996,"south":41.8973265,"east":-87.6321104,"west":-87.63252759999999}}
+{"name":"Pearson on the Park","mbr":{"north":41.89803720000001,"south":41.8977209,"east":-87.62026709999998,"west":-87.6209982}}
+{"name":"UIC Physical Plant Building","mbr":{"north":41.867969099999996,"south":41.867284999999995,"east":-87.6512915,"west":-87.6521971}}
+{"name":"Sharp Building","mbr":{"north":41.88111779999999,"south":41.8808968,"east":-87.62535940000001,"west":-87.6259867}}
+{"name":"Furniture Mart","mbr":{"north":41.89497720000001,"south":41.89434810000001,"east":-87.6156489,"west":-87.6177281}}
+{"name":"James House","mbr":{"north":41.91069989999999,"south":41.910115399999995,"east":-87.63256120000003,"west":-87.632834}}
+{"name":"McCormick Place Lakeside Center","mbr":{"north":41.855104999999995,"south":41.8510912,"east":-87.61048190000001,"west":-87.61400900000001}}
+{"name":"Plymouth Court Garage","mbr":{"north":41.87336260000001,"south":41.8729442,"east":-87.628178,"west":-87.6285615}}
+{"name":"Regenstein Birds of Prey Exhibit","mbr":{"north":41.9224543,"south":41.9223726,"east":-87.6333859,"west":-87.63352929999999}}
+{"name":"770 Lofts","mbr":{"north":41.877862199999996,"south":41.877393299999994,"east":-87.64664609999997,"west":-87.64697550000001}}
+{"name":"Cummings House","mbr":{"north":41.9076081,"south":41.9073419,"east":-87.6320717,"west":-87.6327634}}
+{"name":"Schatz Building","mbr":{"north":41.893295499999994,"south":41.892916299999996,"east":-87.62040620000002,"west":-87.6209067}}
+{"name":"Saint Teresa of Avila Roman Catholic Church","mbr":{"north":41.91797619999999,"south":41.917634799999995,"east":-87.6545278,"west":-87.65484099999998}}
+{"name":"CTA Substation","mbr":{"north":41.886252999999996,"south":41.86648139999999,"east":-87.62669700000001,"west":-87.62748290000002}}
+{"name":"Greenway Self Park","mbr":{"north":41.88961260000001,"south":41.8893253,"east":-87.6300683,"west":-87.63091990000001}}
+{"name":"The Container Store","mbr":{"north":41.911291199999994,"south":41.910931299999994,"east":-87.6516958,"west":-87.65248009999999}}
+{"name":"Warstenair","mbr":{"north":41.8920665,"south":41.8919916,"east":-87.6336996,"west":-87.633949}}
+{"name":"Lake Shore Park Fieldhouse","mbr":{"north":41.8973471,"south":41.897062500000004,"east":-87.6176866,"west":-87.618065}}
+{"name":"IIT Downtown Campus","mbr":{"north":41.8791877,"south":41.8787374,"east":-87.64180970000001,"west":-87.64240709999999}}
+{"name":"Art Institute Dormitory","mbr":{"north":41.88490110000001,"south":41.884597,"east":-87.62810440000001,"west":-87.62852440000003}}
+{"name":"Phillips Towing","mbr":{"north":41.9035451,"south":41.903476500000004,"east":-87.6481997,"west":-87.6484325}}
+{"name":"Mercy Medical Center Residences","mbr":{"north":41.8466453,"south":41.8464542,"east":-87.61837559999998,"west":-87.61876999999998}}
+{"name":"Majestic Building","mbr":{"north":41.881326,"south":41.88079760000001,"east":-87.62841270000001,"west":-87.6287334}}
+{"name":"Eckhart Park Field House","mbr":{"north":41.896722499999996,"south":41.8964229,"east":-87.66105230000001,"west":-87.66178459999999}}
+{"name":"Huron Pointe","mbr":{"north":41.8946225,"south":41.8943396,"east":-87.6392967,"west":-87.63988249999998}}
+{"name":"Cityview","mbr":{"north":41.890943799999995,"south":41.889701200000005,"east":-87.617819,"west":-87.6184945}}
+{"name":"Chicago SInai Congregation","mbr":{"north":41.8990208,"south":41.898765100000006,"east":-87.62854559999998,"west":-87.62899650000001}}
+{"name":"Poder Learning Center","mbr":{"north":41.8589061,"south":41.858822499999995,"east":-87.65726599999998,"west":-87.65755050000001}}
+{"name":"CTA","mbr":{"north":41.86332470000001,"south":41.862518,"east":-87.6267038,"west":-87.62711569999999}}
+{"name":"Lurie Medical Research Building","mbr":{"north":41.895723600000004,"south":41.8951051,"east":-87.6193379,"west":-87.6201467}}
+{"name":"Illinois Department of Transportation Dan Ryan Field Office","mbr":{"north":41.870334400000004,"south":41.86980570000001,"east":-87.64389489999999,"west":-87.6441515}}
+{"name":"Madison Manor 2","mbr":{"north":41.88212310000001,"south":41.8818315,"east":-87.6498433,"west":-87.65080890000002}}
+{"name":"Eugenie Square","mbr":{"north":41.9128209,"south":41.912398100000004,"east":-87.6334266,"west":-87.63371129999999}}
+{"name":"Palace Grill Restaurant","mbr":{"north":41.8817542,"south":41.8816122,"east":-87.66238249999999,"west":-87.66264599999998}}
+{"name":"Trowbridge Gallery","mbr":{"north":41.895081499999996,"south":41.895011499999995,"east":-87.63362,"west":-87.6340119}}
+{"name":"Marina City","mbr":{"north":41.8884038,"south":41.88778270000001,"east":-87.62820400000001,"west":-87.6293852}}
+{"name":"Presidential Towers T2","mbr":{"north":41.881443899999994,"south":41.881234299999996,"east":-87.641966,"west":-87.642506}}
+{"name":"North Harbor Tower","mbr":{"north":41.88565189999999,"south":41.885212100000004,"east":-87.6153022,"west":-87.6156017}}
+{"name":"Bank of America Building","mbr":{"north":41.8800166,"south":41.879500300000004,"east":-87.6309462,"west":-87.63213090000002}}
+{"name":"Senior Suites Central Station","mbr":{"north":41.8639944,"south":41.86362579999999,"east":-87.62266480000001,"west":-87.6232431}}
+{"name":"LaSalle Language Academy","mbr":{"north":41.9141413,"south":41.9128964,"east":-87.6375477,"west":-87.63855740000001}}
+{"name":"Antiquarians Building","mbr":{"north":41.88906660000001,"south":41.8886052,"east":-87.63325529999999,"west":-87.63341679999999}}
+{"name":"Parking Garage","mbr":{"north":41.8941605,"south":41.8825522,"east":-87.61679379999998,"west":-87.64463269999999}}
+{"name":"Sutton Place Hotel","mbr":{"north":41.9014642,"south":41.9012425,"east":-87.62722540000001,"west":-87.62771339999999}}
+{"name":"Saint Pius Church","mbr":{"north":41.85590620000001,"south":41.8556215,"east":-87.6653595,"west":-87.66592370000002}}
+{"name":"South Central Bank","mbr":{"north":41.867036500000005,"south":41.86672229999999,"east":-87.6401593,"west":-87.64050599999999}}
+{"name":"American Towers","mbr":{"north":41.9125442,"south":41.9120855,"east":-87.63488450000001,"west":-87.63527630000002}}
+{"name":"Haberdasher Square Lofts 1","mbr":{"north":41.8785297,"south":41.878070400000006,"east":-87.6446043,"west":-87.64527089999999}}
+{"name":"City Of Chicago Bureau Of Electricity","mbr":{"north":41.8503281,"south":41.84918879999999,"east":-87.6662117,"west":-87.6666697}}
+{"name":"Peerless Building","mbr":{"north":41.8791413,"south":41.8788502,"east":-87.64738529999998,"west":-87.647914}}
+{"name":"840 North Lake Shore Drive","mbr":{"north":41.8980144,"south":41.8977656,"east":-87.617965,"west":-87.61868209999999}}
+{"name":"Jewel","mbr":{"north":41.90499279999999,"south":41.9043276,"east":-87.63160679999999,"west":-87.63218019999998}}
+{"name":"Michigan Avenue Tower 1","mbr":{"north":41.8661106,"south":41.8658536,"east":-87.6242862,"west":-87.62487940000001}}
+{"name":"Hudson Club","mbr":{"north":41.891262399999995,"south":41.8910318,"east":-87.63419669999999,"west":-87.63461029999999}}
+{"name":"US Bank","mbr":{"north":41.89558190000001,"south":41.89532229999999,"east":-87.653709,"west":-87.65396969999999}}
+{"name":"The Pierre","mbr":{"north":41.9207597,"south":41.92026779999999,"east":-87.63655800000001,"west":-87.6370458}}
+{"name":"Northwestern Memorial Hospital","mbr":{"north":41.8967203,"south":41.8942047,"east":-87.62037919999999,"west":-87.6226933}}
+{"name":"Burnham Station","mbr":{"north":41.8614132,"south":41.860744499999996,"east":-87.629811,"west":-87.6301256}}
+{"name":"Chicago Engine Company 5","mbr":{"north":41.87725329999999,"south":41.877103399999996,"east":-87.6441107,"west":-87.64447790000001}}
+{"name":"2 East Erie","mbr":{"north":41.8945028,"south":41.8941765,"east":-87.6273949,"west":-87.6280177}}
+{"name":"Holy Family Church","mbr":{"north":41.86779489999999,"south":41.8671726,"east":-87.65444379999997,"west":-87.6549599}}
+{"name":"Cta Station","mbr":{"north":41.9255702,"south":41.910491300000004,"east":-87.63869040000002,"west":-87.65284729999999}}
+{"name":"Insurance Exchange Building","mbr":{"north":41.8780402,"south":41.87693979999999,"east":-87.6327474,"west":-87.63357620000001}}
+{"name":"Ping Tom Memorial Park Boat House","mbr":{"north":41.85804589999999,"south":41.8578997,"east":-87.6342604,"west":-87.63444650000001}}
+{"name":"Richwell Market","mbr":{"north":41.856770000000004,"south":41.856183,"east":-87.63800690000001,"west":-87.6387475}}
+{"name":"Carbit Paint","mbr":{"north":41.908016100000005,"south":41.906928,"east":-87.6511774,"west":-87.65241129999998}}
+{"name":"The Grand on Grand","mbr":{"north":41.8920916,"south":41.89168289999999,"east":-87.63422440000002,"west":-87.63462949999999}}
+{"name":"Rowe Building","mbr":{"north":41.873094,"south":41.8729321,"east":-87.6293,"west":-87.62952440000002}}
+{"name":"Evergreen Tower II","mbr":{"north":41.906811600000005,"south":41.906556599999995,"east":-87.64029779999998,"west":-87.64063920000001}}
+{"name":"Old Town Aquarium","mbr":{"north":41.9103075,"south":41.9102397,"east":-87.634895,"west":-87.6351757}}
+{"name":"Pilsen","mbr":{"north":41.8564829,"south":41.85608450000001,"east":-87.66546279999999,"west":-87.6659074}}
+{"name":"LaSalle Center","mbr":{"north":41.896477100000006,"south":41.896227100000004,"east":-87.6329077,"west":-87.63311279999998}}
+{"name":"JJ Fish","mbr":{"north":41.8798125,"south":41.8796028,"east":-87.62666750000001,"west":-87.62679449999999}}
+{"name":"The Sterling","mbr":{"north":41.8889944,"south":41.8886297,"east":-87.6319499,"west":-87.63228809999997}}
+{"name":"Family Planning","mbr":{"north":41.883054800000004,"south":41.8825425,"east":-87.64462959999999,"west":-87.64507099999999}}
+{"name":"Affinia Chicago Hotel","mbr":{"north":41.896158799999995,"south":41.8958653,"east":-87.62262550000001,"west":-87.62291699999999}}
+{"name":"Theater District Self Park","mbr":{"north":41.885639299999994,"south":41.8851382,"east":-87.62873230000001,"west":-87.62933489999999}}
+{"name":"Joffco Square","mbr":{"north":41.867076100000006,"south":41.866640100000005,"east":-87.64083430000001,"west":-87.6420527}}
+{"name":"New Franklin Building","mbr":{"north":41.8729344,"south":41.8726071,"east":-87.6292933,"west":-87.62952290000001}}
+{"name":"Ontario Street Substation","mbr":{"north":41.893146099999996,"south":41.8928675,"east":-87.6298357,"west":-87.6301817}}
+{"name":"Holiday Inn","mbr":{"north":41.8752495,"south":41.87449,"east":-87.6398417,"west":-87.64005039999999}}
+{"name":"I Am Temple","mbr":{"north":41.8835945,"south":41.88330510000001,"east":-87.6332787,"west":-87.63344709999998}}
+{"name":"One East Delaware","mbr":{"north":41.8990487,"south":41.89844370000001,"east":-87.62757580000002,"west":-87.62814620000002}}
+{"name":"Lakeside Bank","mbr":{"north":41.8669074,"south":41.866381999999994,"east":-87.65310390000002,"west":-87.6537231}}
+{"name":"William Culbertson Hall","mbr":{"north":41.89703670000001,"south":41.89673380000001,"east":-87.63336190000003,"west":-87.6340684}}
+{"name":"Bank of America Center","mbr":{"north":41.8787374,"south":41.878228199999995,"east":-87.6309113,"west":-87.63208879999999}}
+{"name":"Volare","mbr":{"north":41.8916587,"south":41.891375100000005,"east":-87.6224422,"west":-87.62254279999999}}
+{"name":"Chicago Stock Exchange","mbr":{"north":41.875767399999994,"south":41.8754139,"east":-87.6317791,"west":-87.63256519999999}}
+{"name":"Roosevelt University Dormitory","mbr":{"north":41.87652070000001,"south":41.876220200000006,"east":-87.6251747,"west":-87.62586449999999}}
+{"name":"Park Tower","mbr":{"north":41.8972991,"south":41.89685179999999,"east":-87.6249777,"west":-87.62575419999999}}
+{"name":"Chicago Engine Company 98","mbr":{"north":41.8971946,"south":41.8969448,"east":-87.62254800000001,"west":-87.6226685}}
+{"name":"Palmer House Hilton","mbr":{"north":41.88069379999999,"south":41.879951199999994,"east":-87.62630720000001,"west":-87.62757260000001}}
+{"name":"Southgate Market","mbr":{"north":41.8696247,"south":41.8680538,"east":-87.63807359999998,"west":-87.63905259999999}}
+{"name":"AMLI River North","mbr":{"north":41.889933899999996,"south":41.8896505,"east":-87.630476,"west":-87.63092569999999}}
+{"name":"UIC Utilities Building","mbr":{"north":41.8690641,"south":41.86829820000001,"east":-87.6513655,"west":-87.6519595}}
+{"name":"Garibaldi Square","mbr":{"north":41.8741306,"south":41.8729413,"east":-87.66430480000001,"west":-87.6657877}}
+{"name":"The Farallon","mbr":{"north":41.8928205,"south":41.89254340000001,"east":-87.62983179999999,"west":-87.6304845}}
+{"name":"Pizzeria Due","mbr":{"north":41.8931782,"south":41.8930586,"east":-87.6263345,"west":-87.62657670000002}}
+{"name":"Streeter Place","mbr":{"north":41.892444700000006,"south":41.891961099999996,"east":-87.6178968,"west":-87.6182722}}
+{"name":"Newberry Plaza","mbr":{"north":41.901770799999994,"south":41.90140170000001,"east":-87.62861390000002,"west":-87.62917030000001}}
+{"name":"Bank Note Place","mbr":{"north":41.8557341,"south":41.8555959,"east":-87.62246209999999,"west":-87.6230568}}
+{"name":"Robert McCormick Hall","mbr":{"north":41.8963237,"south":41.896000900000004,"east":-87.6176611,"west":-87.6184339}}
+{"name":"Avenue Hotel","mbr":{"north":41.8953766,"south":41.8950566,"east":-87.62288499999998,"west":-87.6234356}}
+{"name":"Harris Theater For Music And Dance","mbr":{"north":41.8841788,"south":41.8835937,"east":-87.62145720000001,"west":-87.6222799}}
+{"name":"Saint Ignatius College Preparatory School","mbr":{"north":41.8692679,"south":41.8671396,"east":-87.65144620000001,"west":-87.65658090000001}}
+{"name":"B","mbr":{"north":41.8689141,"south":41.8688365,"east":-87.66173870000003,"west":-87.6623678}}
+{"name":"The Fairbanks at Cityfront Place","mbr":{"north":41.8914898,"south":41.891243200000005,"east":-87.6204145,"west":-87.62116129999998}}
+{"name":"Bryant Building","mbr":{"north":41.91012570000001,"south":41.9094924,"east":-87.63220059999998,"west":-87.63291940000002}}
+{"name":"Lakeshore Athletic Club","mbr":{"north":41.890498600000015,"south":41.88588239999999,"east":-87.6217392,"west":-87.62655529999999}}
+{"name":"Residence Inn","mbr":{"north":41.899954799999996,"south":41.899648,"east":-87.621048,"west":-87.6217349}}
+{"name":"China Doll","mbr":{"north":41.9052917,"south":41.9052211,"east":-87.63467269999998,"west":-87.63490949999999}}
+{"name":"Congress Plaza Hotel","mbr":{"north":41.875601399999994,"south":41.87461260000001,"east":-87.62448779999998,"west":-87.6251579}}
+{"name":"Burton Place Bar and Grill","mbr":{"north":41.9090665,"south":41.90900170000001,"east":-87.63412720000002,"west":-87.63449779999999}}
+{"name":"Seven","mbr":{"north":41.8954787,"south":41.8951986,"east":-87.6349587,"west":-87.6354577}}
+{"name":"Capitol Hill Lofts","mbr":{"north":41.8779055,"south":41.877621,"east":-87.64328069999999,"west":-87.64384}}
+{"name":"911 Communications Center","mbr":{"north":41.881384100000005,"south":41.880774,"east":-87.6621504,"west":-87.66297119999999}}
+{"name":"Delaware Towers","mbr":{"north":41.8990529,"south":41.898911299999995,"east":-87.6270023,"west":-87.62754720000001}}
+{"name":"River East Center","mbr":{"north":41.891659399999995,"south":41.8911881,"east":-87.61789420000001,"west":-87.6185238}}
+{"name":"Park Place","mbr":{"north":41.8930667,"south":41.892679599999994,"east":-87.640906,"west":-87.64190849999999}}
+{"name":"William W Kimball House","mbr":{"north":41.8578319,"south":41.85760479999999,"east":-87.6200928,"west":-87.6205824}}
+{"name":"Grand Plaza Apartments","mbr":{"north":41.892067499999996,"south":41.8917644,"east":-87.62826989999999,"west":-87.6288331}}
+{"name":"University of Illinois at Chicago","mbr":{"north":41.875312900000004,"south":41.8623697,"east":-87.6450831,"west":-87.65974559999998}}
+{"name":"Pope Building","mbr":{"north":41.873633500000004,"south":41.8733587,"east":-87.62819040000001,"west":-87.62856870000002}}
+{"name":"River North Marriott Suites","mbr":{"north":41.8899368,"south":41.8893372,"east":-87.6297395,"west":-87.62999779999998}}
+{"name":"Franklin Elementary School","mbr":{"north":41.9062172,"south":41.906051399999996,"east":-87.6361981,"west":-87.63645379999998}}
+{"name":"Getz Theater","mbr":{"north":41.8697041,"south":41.869377,"east":-87.62487720000001,"west":-87.6252739}}
+{"name":"Lakeside on the Park","mbr":{"north":41.86657429999999,"south":41.865894600000004,"east":-87.6227584,"west":-87.6232707}}
+{"name":"Kingsbury Plaza","mbr":{"north":41.891295400000004,"south":41.890676299999996,"east":-87.63956590000001,"west":-87.64047629999999}}
+{"name":"MoMo","mbr":{"north":41.885091200000005,"south":41.884607599999995,"east":-87.6272155,"west":-87.6276727}}
+{"name":"Near North Career High School","mbr":{"north":41.9090395,"south":41.9078344,"east":-87.64351339999999,"west":-87.64488730000001}}
+{"name":"Galleria Liquors","mbr":{"north":41.9108965,"south":41.910835299999995,"east":-87.6342377,"west":-87.6345568}}
+{"name":"McCormick Building","mbr":{"north":41.877590600000005,"south":41.8770999,"east":-87.62455,"west":-87.62522059999999}}
+{"name":"Wrigley Global Innovation Center","mbr":{"north":41.9088766,"south":41.9080955,"east":-87.6555936,"west":-87.65733479999999}}
+{"name":"Access Living","mbr":{"north":41.89648630000001,"south":41.8961129,"east":-87.63181990000001,"west":-87.63211559999999}}
+{"name":"USPS Vehicle Maintenance Facility","mbr":{"north":41.8731346,"south":41.8721393,"east":-87.63955089999999,"west":-87.64074020000001}}
+{"name":"Bistrot Margot","mbr":{"north":41.90880010000001,"south":41.9087363,"east":-87.63422,"west":-87.6344956}}
+{"name":"Lake Street Tower","mbr":{"north":41.8860323,"south":41.885875500000004,"east":-87.6404383,"west":-87.6405308}}
+{"name":"Whole Foods Market","mbr":{"north":41.90930839999999,"south":41.9079411,"east":-87.6520158,"west":-87.65352589999999}}
+{"name":"Skytech Lofts","mbr":{"north":41.881394,"south":41.8807126,"east":-87.6645029,"west":-87.66511709999999}}
+{"name":"Cadillac Palace Theatre","mbr":{"north":41.884361999999996,"south":41.883865,"east":-87.63283589999999,"west":-87.63327070000001}}
+{"name":"Northwest Exelon Pavilion","mbr":{"north":41.8841522,"south":41.884016,"east":-87.6222788,"west":-87.62241780000001}}
+{"name":"Dryer Hall","mbr":{"north":41.900111300000006,"south":41.89967200000001,"east":-87.6330482,"west":-87.63326140000001}}
+{"name":"John Paul II Roman Catholic Center","mbr":{"north":41.87280079999999,"south":41.872395999999995,"east":-87.65137449999999,"west":-87.65172140000001}}
+{"name":"Starbucks","mbr":{"north":41.8964344,"south":41.896071,"east":-87.6358184,"west":-87.63610179999999}}
+{"name":"DePaul Center","mbr":{"north":41.8780297,"south":41.8770433,"east":-87.62693300000001,"west":-87.62748940000002}}
+{"name":"Hubbard Street Dance Center","mbr":{"north":41.8777113,"south":41.876948600000006,"east":-87.65635140000002,"west":-87.6568952}}
+{"name":"Worcester House","mbr":{"north":41.898022600000004,"south":41.89775579999999,"east":-87.61973699999999,"west":-87.6201072}}
+{"name":"The Shoreham","mbr":{"north":41.88680310000001,"south":41.886614099999996,"east":-87.6164087,"west":-87.61722300000001}}
+{"name":"Car Washer","mbr":{"north":41.86029570000001,"south":41.8597194,"east":-87.6365991,"west":-87.63683379999999}}
+{"name":"Harbor Point","mbr":{"north":41.8851749,"south":41.884646700000005,"east":-87.6144007,"west":-87.6151145}}
+{"name":"Wacker Tower","mbr":{"north":41.887189,"south":41.886907599999994,"east":-87.62533720000002,"west":-87.62554229999999}}
+{"name":"E8","mbr":{"north":41.8532568,"south":41.853030000000004,"east":-87.6322725,"west":-87.63245359999999}}
+{"name":"The Grand Orleans","mbr":{"north":41.8919221,"south":41.8916497,"east":-87.63645190000001,"west":-87.6368861}}
+{"name":"Student Recreation Facility","mbr":{"north":41.8730621,"south":41.872046600000004,"east":-87.6459612,"west":-87.64680429999999}}
+{"name":"John Marshall College of Law","mbr":{"north":41.8780932,"south":41.87778960000001,"east":-87.62784559999997,"west":-87.62822660000002}}
+{"name":"McCormick Place North Building","mbr":{"north":41.85570729999999,"south":41.85135899999999,"east":-87.6145412,"west":-87.61812029999999}}
+{"name":"Franklin Fine Arts Cente

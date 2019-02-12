@@ -103,7 +103,7 @@
 [0m[[0minfo[0m] [0mtomcat:jasper-runtime:5.5.12[0m
 [0m[[0minfo[0m] [0mxmlenc:xmlenc:0.52[0m
 [0m[[0minfo[0m] [0munmanaged dependencies:[0m
-[0m[[0minfo[0m] [0m/home/danielhu/git/webui/lib/aqwa.jar[0m
+[0m[[0minfo[0m] [0m/home/danielhu/git/tornado-ui/lib/aqwa.jar[0m
 [0m[[0minfo[0m] [0mexplicit dependencies:[0m
 [0m[[0minfo[0m] [0mCreate a bin folder: target/pack/bin[0m
 [0m[[0minfo[0m] [0mGenerating launch scripts[0m
@@ -125,7 +125,7 @@
 [0m[[0minfo[0m] [0mGenerating target/pack/bin/TestRandomTextGen[0m
 [0m[[0minfo[0m] [0mmain class for TornadoUI: tornado.ui.TornadoWebserver[0m
 [0m[[0minfo[0m] [0mGenerating target/pack/bin/TornadoUI[0m
-[0m[[0minfo[0m] [0mpacked resource directories = /home/danielhu/git/webui/src/pack[0m
+[0m[[0minfo[0m] [0mpacked resource directories = /home/danielhu/git/tornado-ui/src/pack[0m
 [0m[[0minfo[0m] [0mGenerating target/pack/Makefile[0m
 [0m[[0minfo[0m] [0mGenerating target/pack/VERSION[0m
 [0m[[0minfo[0m] [0mdone.[0m

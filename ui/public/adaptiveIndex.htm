@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <style type="text/css">
+  html { height: 100% }
+  body { height: 100%; margin: 0; padding: 0 }
+  #map-canvas { height: 100% }
+
+  #visholder{
+    width: 22em;
+    height: 22em;
+  }
+  </style>
+
+  <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css">
+  <link type="text/css" rel="stylesheet" href="css/vis.css">
+  
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.json.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/portal.min.js"></script>
+  <script type="text/javascript" src="js/randomColor.js"></script>
+  <script src="js/peg-0.8.0.min.js"></script>
+  <script src="js/jsDump.js" ></script>
+  <script type="text/javascript" src="js/vis.js"></script>
+  
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUTsGEgrknzPi1xdS1NxH5quGucPmpZoA&v=3.exp&libraries=drawing"></script>
+
+  <script type="text/javascript">
+  var gmap = null;
+
+  function initializeMap() {
+
+    var mapOptions = {
+
+        // US 
+        // 39.730255, -98.018183
+      		//24.507052, 45.371521
+
+      		// berlin
+      		// 52.520190250694526&west=13.405380249023438&south=52.51914570999911&east=13.407440185546875 
+          // makkah : 22.473878, 40.121263
+        // center: new google.maps.LatLng(39.730255, -98.018183),
+        center: new google.maps.LatLng(0,0),
+        panControl:false,
+        zoomControl:false,
+        mapTypeControl:false,
+        streetViewControl:false,
+        // minZoom:10,
+        // maxZoom:10,
+        // draggable: false,
+        zoom: 4
+      };
+      var map = new google.maps.Map(document.getElementById("map-canvas"),
+        mapOptions);
+      gmap = map;
+
+    }
+
+    var runningvis = {
+      timer:null,
+      uilines:[],
+      restart:true
+    };
+// Doc load 
+$(document).ready(function() {
+
+  initializeMap();
+
+  gmap.addListener("click",function(data){
+    console.log(data.latLng.lat());
+    console.log(typeof data);
+    var p = {};
+    p.lat = data.latLng.lat();
+    p.lng = data.latLng.lng();
+
+    $.ajax( "hotspot", {
+      method: "POST",
+      data: $.toJSON(p),
+      dataType: "json"
+    }).done(function(data){
+      console.log(data);
+    });
+  });
+
+  gmap.setZoom(10);
+  gmap.fitBounds(new google.maps.LatLngBounds(new google.maps.LatLng(20.0,-130.0),new google.maps.LatLng(50.0,-60.0)));
+
+
+// $("#title").click(function(){
+
+  if (runningvis.restart){
+    clearInterval(runningvis.timer);
+
+    for (i in runningvis.uilines){
+      runningvis.uilines[i].setMap(null);
+    }
+
+    var urate = getParameterByName("urate");
+
+    runningvis.timer = setInterval(function(){
+
+          // $.getJSON( "kafka/adaptiveIndex", gmbr,function( data ) {
+          //   console.log(data);
+          // });
+
+    $.getJSON( "adaptiveIndex",function( data ) {
+      while (runningvis.uilines.length > 0){
+        runningvis.uilines.pop().setMap(null);
+      }
+
+      for (i in data){
+       runningvis.uilines.push(drawMBR(data[i],data[i].color));          
+     }
+
+   });
+  }, urate);
+
+  }
+
+// });
+
+
+});
+
+
+function buildRect(rcolor){
+  var viewMBr = createMBR(gmap);
+  var viewBounds = gmap.getBounds();
+}
+
+    // place holder object for the request
+    var request = {
+      mbr:null
+    };
+
+    // This function creates the MBR (spatial predicate) for the query
+    function updateMBR(qid, rect){
+      // console.log(qid);
+      // console.log(uiState.rangeList[qid]);
+      console.log(createMBR(rect));
+      uiState.rangeList[qid].rect = rect;
+    }
+
+
+    function createMBR(rect){
+      return {
+        north:rect.getBounds().getNorthEast().lat(),
+        east:rect.getBounds().getNorthEast().lng(),
+        south:rect.getBounds().getSouthWest().lat(),
+        west:rect.getBounds().getSouthWest().lng()
+      };
+    }
+
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    function Overlaps(s1,e1,s2,e2){
+      if (s1 < s2 && e1 > s2) return true;
+      if (s1 < s2 && e1 > e2) return true;
+      if (s1 > s2 && s1 < e2) return true;
+      if (s1 > s2 && e1 < e2) return true;
+
+      return false;    
+    }
+
+    function drawMBR(mbr, rcolor){
+      var cellbounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(mbr.south, mbr.west),
+        new google.maps.LatLng(mbr.north, mbr.east));
+
+      var cell =  new google.maps.Rectangle({
+        strokeColor: rcolor,
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+//        fillColor: rcolor,
+fillOpacity: 0,
+map: gmap,
+bounds: cellbounds
+});
+      
+      // designate a rectangle as hotspot
+    // cell.addListener("click", function(){
+    //   console.log(mbr);
+    //   $.ajax( "hotspot", {
+    //         method: "POST",
+    //         data: $.toJSON(mbr),
+    //         dataType: "json"
+    //     }).done(function(data){
+    //         console.log(data);
+    //     });
+
+    // });
+
+return cell;
+}
+</script>
+<style type="text/css">
+#map-canvas{
+  width:100%;
+  margin: auto;      
+
+}
+
+#controlpanel {
+  position:relative;width:100%;z-index:5;
+  /*background-color:#B3D1FF;*/
+  background-color: black;
+  display: block;
+  height: 6em;
+  /*overflow: scroll;*/
+}
+
+#logo{
+  display: block;
+  width: 14em;
+  height: 100%;
+  background-color: black;
+  float: left;
+}
+
+#logo img {
+
+ width: 14em;
+ flaot:left;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+.title{
+  color:white;
+  font-family: fantasy;
+  font-size: -webkit-xxx-large;
+  top: 0.5em;
+  left: 2em;
+  position: relative;
+}
+
+.page{
+  height: 100%;
+  /*padding-top: 0.5em;*/
+  background: #E5E3DF;
+}
+</style>
+</head>
+<body>
+ <div id="controlpanel" >
+  <div id="logo">
+    <img src="images/logo-pu.png">
+  </div>            
+  <div style="position:relative" id="clist"></div>
+  <span id="title" class="title">Tornado: Adaptive Index Visualization</span>
+</div>
+<div class="page">
+  <div id="map-canvas" style="z-index:0;"></div>
+</div>
+
+</body>
+</html>

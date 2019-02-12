@@ -1,0 +1,273 @@
+/*
+* Grammar for parsing SyncSQL
+* Currently Implemented:
+*  - Register Source Statement
+Example:  
+register source s2 (JsString rid, JsNumber RoomTemp, JsString RoomNotes, JsNumber phoneNumber);
+
+*  - Select Statement
+*     - With Project -
+Example:
+create streamed view q1 as 
+select * 
+from s1 as stream1 sync 3,s2
+where s1.rid = "r1" and s2.roomTemp = 3;
+
+* - Spatial Predicates inRange and kNN
+
+*/
+
+{
+// Need to comment in production
+//var uiState = {
+//resolveRangePredVar: function(){return null;},
+//resolveKNNPredVar:function(){return null;}
+//};
+
+   
+
+   function bindVar(t, v){
+//      console.log(uiState);
+      console.log(t);
+      console.log(v);
+     var res = null;
+
+     if (t == "KNN"){
+      //console.log(uiState.resolveKNNPredVar(v));
+      //if (uiState == undefined) return null;
+
+      res = uiState.resolveKNNPredVar(v);
+     } 
+     else if (t == "inRange"){ 
+        res = uiState.resolveRangePredVar(v);        
+     }
+     else if (t == "INSIDE"){      
+      res = uiState.resolveRangePredVar(v);
+     }
+
+     if (res === null) {
+      error("cannot resolve argument variable: "+v)      
+        
+     }
+     return res;
+
+   }   
+
+}
+
+start = sqls:sqlstmt spp ";" sps {return sqls}
+sqlstmt = regstmt / createviewstmt 
+
+createviewstmt = t:(("CREATE" spp "STREAMED") / ("REGISTER" / "register") / ("RUN" / "run")) spp ("VIEW" / ("QUERY" / "query")) spp cn:ident spp as spp sel:selectstmt {var res = {};
+
+if (t === "register" || t === "REGISTER") res.type = "cquery";
+if (t === "run" || t === "RUN") res.type = "squery";
+
+res.name=cn; 
+//res.pl = sel.pl; res.fc = sel.fc; res.wc = sel.wc;
+
+res.sourceNames = [];
+for (i in sel.fc){ if ($.inArray(sel.fc[i].name,res.sourceNames) === -1 ) res.sourceNames.push(sel.fc[i].name); }
+res.plan = {};
+var child;
+if (sel.fc.length == 1){
+if (sel.wc != null){
+
+child = {"type":"select","conditions":sel.wc.conditions};
+child.children = [sel.fc.pop()];
+}
+else{
+child = sel.fc[0]
+}
+sel.pl.children = [child]
+   res.plan =sel.pl;
+}
+else{
+
+if (sel.wc != null){
+
+
+// sel.fc.length == 2
+var leftleaf = sel.fc.pop();
+var rightleaf = sel.fc.pop();
+var left = leftleaf;
+var right = rightleaf;
+
+var jconds = [];
+
+var i = sel.wc.conditions.length-1;
+while (sel.wc.conditions.length && i >= 0){
+console.log(sel.wc.conditions);
+//console.log(sel.wc.conditions[i].lhs);
+var sn = sel.wc.conditions[i].lhs.sourceName;
+var cleft = sel.wc.conditions[i].lhs;
+var cright = sel.wc.conditions[i].rhs;
+if ($.isPlainObject(cleft) && $.isPlainObject(cright)){
+
+// a join condition
+var jcond = sel.wc.conditions.splice(i,1);
+jconds.push(jcond[0]);
+}
+else if (sn === left.name ||  sn === left.alias){
+  
+   var leftselect = {};
+   leftselect.type = "select";
+   //leftselect.name = sn;
+   leftselect.conditions = sel.wc.conditions.splice(i,1);
+   leftselect.children=[left];
+   left = leftselect;
+ }
+else if (sn === right.name || sn === right.alias){
+   //alert(sn);
+   var rightselect = {};
+   rightselect.type = "select";
+   //rightselect.name = sn;
+   rightselect.conditions = sel.wc.conditions.splice(i,1);
+   rightselect.children=[right];
+   right = rightselect;
+}
+else if (right.type === "select"){
+  right.conditions.push(sel.wc.conditions.splice(i,1)[0]);
+}
+else if (left.type === "select"){
+  left.conditions.push(sel.wc.conditions.splice(i,1)[0]);
+}
+--i;
+   
+}
+var join = {"type":"join","conditions":jconds,"children":[left,right]};
+
+   sel.pl.children = [join]
+   res.plan =sel.pl;
+}
+}
+
+return res;}
+
+/****** BEGIN Select Statement *****/
+
+selectstmt = ("select" / "SELECT") spp pl:projectList spp fc:fromclause wc:(spp whereclause)?
+{var res = {};
+res.pl = pl;
+res.fc = fc;
+res.plan = {};
+if (wc != null){
+res.wc = wc[1];
+}
+return res;}
+
+projectList = pa:"*" {return {"type":"project","attributes":[pa]}}
+
+fromclause = ("from" / "FROM") sp sl:sourceList {return sl;}
+
+sourceList = s1:sourceName sps sl:(comma sps sourceList)? 
+{var res = []; 
+res.push(s1); if (sl != null) for (i in sl[2]) res.push(sl[2][i]); return res;}
+
+sourceName = n:ident  a:(sps as sp ident)? sps sync:(sps "sync" sp numVal)? {
+var res = {};
+res.type = "source";//"stream";
+res.name = n
+if (a != null) res.alias = a[3];
+if (sync != null) res.sync = sync[3];
+return res;}
+
+whereclause = ("where" / "WHERE") spp cl:condList {return {"conditions":cl};}
+
+condList = c1:scondition sps cl:("and" sp condList)? {var res = []; res.push(c1); if (cl != null){
+for (i in cl[2]) res.push(cl[2][i]);
+}; return res;}
+
+scondition = lhs:cident sp cop:coper sp rhs:cident 
+{return [lhs,cop,rhs];}
+/ lhs:cident sp cop:coper sp rhs:numVal 
+{return [lhs,cop,rhs];}
+/ lhs:cident sp cop:coper sp rhs:strVal 
+{return [lhs,cop,rhs];}
+/ obj:ident sps dot sps pname:predName1 sps op sps parg:ident  sps cp 
+{return [obj,pname,bindVar(pname,parg)];}
+/ obj:ident sps dot sps pname:predName2n sps op sps kval:numVal sps comma sps parg:ident  sps cp {return [obj,pname,kval,bindVar(pname,parg)];}
+/ pname:(func2p) sps op sps obj:cident sps comma sps parg:aident sps cp 
+{return {argc:2,jcond:false,op:pname,lhs:obj,rhs:bindVar(pname,parg)};}
+/ pname:(func2p) sps op sps obj:cident sps comma sps parg:cident sps cp 
+{return {argc:2,jcond:true,op:pname,lhs:obj,rhs:parg};}
+/ pname:(func2p) sps op sps obj:cident sps comma sps parg:strVal sps cp 
+{return {argc:2,jcond:false,op:pname,lhs:obj,rhs:parg[1]};}
+/ pname:(func3p) sps op sps obj1:cident sps comma sps obj2:cident sps comma sps parg:numVal sps cp 
+{return {argc:3,jcond:true,op:pname,lhs:obj1,rhs:obj2,cval:parg};}
+/ pname:(func3p) sps op sps obj1:cident sps comma sps obj2:aident sps comma sps parg:numVal sps cp 
+{ 
+//console.log(obj2);
+if (pname == "KNN") 
+return {argc:3,jcond:false,op:pname,kval:parg,lhs:obj1,rhs:{name:"focal", val:bindVar(pname,obj2)}};
+else 
+return {argc:3,jcond:true,op:pname,lhs:obj1,rhs:obj2,cval:parg};}
+
+
+aident = "@" n:ident {return n;}
+cident = sa:(ident ".")? ca:ident { if (sa != null) return {"sourceName":sa[0],"attributeName":ca}; else return {"attributeName":ca};}
+
+coper = "=" / ">" / "<" / ">=" / "<=" / "!="
+
+as = "as" / "AS"
+
+/****** END Select Statement *****/
+
+/****** BEGIN  Register Source Statement *****/
+regstmt = "register" sp "source" sp id:ident sp op sps schema:attrList sps cp {return {"type":"sources","id":id,"schema":schema}}
+
+attrList = a1:attribute sps comma sps an:attrList 
+{var res = []; res.push(a1); 
+for (i in an) res.push(an[i]);
+return res;}
+           / a:attribute {var res =[]; res.push(a);return res;}
+attribute = dt:data_type sps attrName:ident sps k:isKey?
+{
+var res = new Object(); 
+res = {"name":attrName,"type":dt};
+if (k != null) res["isKey"] = (k!=null);
+return res;
+}
+isKey = "key"
+
+/****** END Register Source Statement *****/
+
+
+numVal = dig:[0-9]+ {return new Number(dig.join("")).valueOf();}
+strVal = "\"" str:strLitv "\"" / "'" str:strLitv+ "'" {return str;}
+
+strLitv = strl:strLit+ {return strl;}
+strLit = av:[a-zA-z_0-9]+ sp?
+{return av.join("");}
+ident = alpha:[a-zA-Z_]+dig:[0-9]* {return alpha.join("").concat(dig.join(""));}
+data_type = "JsNumber" / "JsString" / "JsBoolean" 
+
+//omem = rel:ident sps dot sps attr:ident { return {"sourceName":rel,"attrName":attr}}
+
+predName1 = 
+"inRange" 
+
+predName2n = 
+"kNN"
+
+func1p = "1p"
+
+func2p = "INSIDE" / "CONTAINS" / "OVERLAPS" / "SEMANTIC"
+
+func3p = "WITHIN_DISTANCE" / "KNN"
+
+and = "and"/ "AND"
+or = "or" / "OR"
+
+comma = ","
+dot = "."
+
+cp = ")"
+
+op = "("
+
+nl = "\n"
+nls = nl*
+sps = sp* nls
+spp = sps nl? sps
+sp = " "

@@ -149,7 +149,7 @@ var es; // event stream handle
         
     	$("#openStream").click(function(event) {
     		
-		 es = new EventSource("/output-stream");
+		  es = new EventSource("/output-stream");
 
     	 es.onmessage = function(e) {
     	 	var sse = $.parseJSON(e.data);
@@ -165,7 +165,7 @@ var es; // event stream handle
           var iconUrl = createColoredMarker(color);
           console.log("generated color : "+color);
 
-          var myLatlng1 = new google.maps.LatLng(sse.data.lat1,sse.data.lng1);
+         var myLatlng1 = new google.maps.LatLng(sse.data.lat1,sse.data.lng1);
          var marker1 = new google.maps.Marker({
               position: myLatlng1,
               map: gmap,

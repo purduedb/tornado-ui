@@ -20,6 +20,7 @@ import spray.json.JsNumber
 import spray.json.DefaultJsonProtocol
 import spray.json.RootJsonFormat
 import spray.json.DeserializationException
+import spray.json.JsonParser
 
 class OutputHelper[T] {
 
@@ -302,6 +303,10 @@ object Helper {
     sb.append(s"data: $text \n\n")
 
     HttpData(sb.toString())
+  }
+  
+  def stringToJsObject(in:String) : JsValue = {
+    JsonParser(in).asJsObject
   }
   
   def stringObject(in:String) :JsValue = {
