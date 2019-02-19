@@ -34,3 +34,10 @@ $ ./sbt eclipse
 ```
 
 Then import project from the Eclipse menu (i.e. File -> Import...)
+
+
+## How to consume queries in Kafka
+ - In TornadoUI/application.conf, Set enabled = true for kafka
+ - Submit queries from UI and consume in kafka topic queries
+ - Use port 9092 to produce and consume messages 
+ - Create topics "output" and "queries"

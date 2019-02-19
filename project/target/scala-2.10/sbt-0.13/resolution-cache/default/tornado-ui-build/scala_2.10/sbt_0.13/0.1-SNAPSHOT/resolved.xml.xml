@@ -4,7 +4,7 @@
 		module="tornado-ui-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20190211190735"
+		publication="20190219171526"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

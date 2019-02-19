@@ -4,7 +4,7 @@
 		module="tornadowebui_2.10"
 		revision="0.1"
 		status="integration"
-		publication="20190211190756"
+		publication="20190219171533"
 	>
 		<description>
 		TornadoWebUI
