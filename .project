@@ -1,5 +1,5 @@
 <projectDescription>
-  <name>TornadoWebUI</name>
+  <name>PurdueDB-TornadoWebUI</name>
   <buildSpec>
     <buildCommand>
       <name>org.scala-ide.sdt.core.scalabuilder</name>
