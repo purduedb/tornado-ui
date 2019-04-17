@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="webui_2.10"
+		revision="0.1"
+		conf="test"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20190129125211"/>
+	<dependencies>
+		<module organisation="com.hp.hpl.jena" name="arq">
+			<revision name="2.8.8" status="release" pubdate="20110421051411" resolver="public" artresolver="public" homepage="http://openjena.org/ARQ" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="29">
+				<license name="BSD-style license" url="http://openjena.org/license.html"/>
+				<metadata-artifact status="successful" details="" size="13425" time="46" location="/Users/peytonpuckett/.ivy2/cache/com.hp.hpl.jena/arq/ivy-2.8.8.xml" searched="true" original-local-location="/Users/peytonpuckett/.ivy2/cache/com.hp.hpl.jena/arq/ivy-2.8.8.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/hp/hpl/jena/arq/2.8.8/arq-2.8.8.pom"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="2.8.8" rev-constraint-default="2.8.8" rev-constraint-dynamic="2.8.8" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="arq" type="jar" ext="jar" status="successful" details="" size="2247124" time="466" location="/Users/peytonpuckett/.ivy2/cache/com.hp.hpl.jena/arq/jars/arq-2.8.8.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/hp/hpl/jena/arq/2.8.8/arq-2.8.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.lucene" name="lucene-core">
+			<revision name="2.3.1" status="release" pubdate="20080222180242" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="32">
+				<metadata-artifact status="successful" details="" size="1472" time="53" location="/Users/peytonpuckett/.ivy2/cache/org.apache.lucene/lucene-core/ivy-2.3.1.xml" searched="true" original-local-location="/Users/peytonpuckett/.ivy2/cache/org.apache.lucene/lucene-core/ivy-2.3.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/2.3.1/lucene-core-2.3.1.pom"/>
+				<caller organisation="com.hp.hpl.jena" name="arq" conf="default, compile, runtime, master" rev="2.3.1" rev-constraint-default="2.3.1" rev-constraint-dynamic="2.3.1" callerrev="2.8.8"/>
+				<artifacts>
+					<artifact name="lucene-core" type="jar" ext="jar" status="successful" details="" size="665064" time="130" location="/Users/peytonpuckett/.ivy2/cache/org.apache.lucene/lucene-core/jars/lucene-core-2.3.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/lucene/lucene-core/2.3.1/lucene-core-2.3.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.woodstox" name="wstx-asl">
+			<revision name="3.2.9" status="release" pubdate="20090507233014" resolver="public" artresolver="public" homepage="http://woodstox.codehaus.org" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="30">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="1254" time="78" location="/Users/peytonpuckett/.ivy2/cache/org.codehaus.woodstox/wstx-asl/ivy-3.2.9.xml" searched="true" original-local-location="/Users/peytonpuckett/.ivy2/cache/org.codehaus.woodstox/wstx-asl/ivy-3.2.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/codehaus/woodstox/wstx-asl/3.2.9/wstx-asl-3.2.9.pom"/>
+				<caller organisation="com.hp.hpl.jena" name="arq" conf="default, compile, runtime, master" rev="3.2.9" rev-constraint-default="3.2.9" rev-constraint-dynamic="3.2.9" callerrev="2.8.8"/>
+				<artifacts>
+					<artifact name="wstx-asl" type="jar" ext="jar" status="successful" details="" size="524224" time="116" location="/Users/peytonpuckett/.ivy2/cache/org.codehaus.woodstox/wstx-asl/jars/wstx-asl-3.2.9.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/codehaus/woodstox/wstx-asl/3.2.9/wstx-asl-3.2.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="stax" name="stax-api">
+			<revision name="1.0.1" status="release" pubdate="20060831133914" resolver="public" artresolver="public" homepage="http://stax.codehaus.org/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="31">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="1526" time="82" location="/Users/peytonpuckett/.ivy2/cache/stax/stax-api/ivy-1.0.1.xml" searched="true" original-local-location="/Users/peytonpuckett/.ivy2/cache/stax/stax-api/ivy-1.0.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/stax/stax-api/1.0.1/stax-api-1.0.1.pom"/>
+				<caller organisation="org.codehaus.woodstox" name="wstx-asl" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="3.2.9"/>
+				<artifacts>
+					<artifact name="stax-api" type="jar" ext="jar" status="successful" details="" size="26514" time="42" location="/Users/peytonpuckett/.ivy2/cache/stax/stax-api/jars/stax-api-1.0.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/stax/stax-api/1.0.1/stax-api-1.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.hp.hpl.jena" name="jena">
+			<revision name="2.6.4" status="release" pubdate="20101212115800" resolver="public" artresolver="public" homepage="http://www.openjena.org/" downloaded="true" searched="true" default="false" conf="default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master" position="24">
+				<license name="BSD" url="http://jena.sourceforge.net/license.html"/>
+				<metadata-artifact status="successful" details="" size="14806" time="167" location="/Users/peytonpuckett/.ivy2/cache/com.hp.hpl.jena/jena/ivy-2.6.4.xml" searched="true" original-local-location="/Users/peytonpuckett/.ivy2/cache/com.hp.hpl.jena/jena/ivy-2.6.4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/hp/hpl/jena/jena/2.6.4/jena-2.6.4.pom"/>
+				<caller organisation="com.hp.hpl.jena" name="arq" conf="default, compile, runtime, master" rev="2.6.4" rev-constraint-default="2.6.4" rev-constraint-dynamic="2.6.4" callerrev="2.8.8"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="2.6.4" rev-constraint-default="2.6.4" rev-constraint-dynamic="2.6.4" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="jena" type="jar" ext="jar" status="successful" details="" size="1903761" time="305" location="/Users/peytonpuckett/.ivy2/cache/com.hp.hpl.jena/jena/jars/jena-2.6.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/hp/hpl/jena/jena/2.6.4/jena-2.6.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-log4j12">
+			<revision name="1.5.8" status="release" pubdate="20090611075814" resolver="public" artresolver="public" homepage="http://www.slf4j.org" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="28">
+				<metadata-artifact status="successful" details="" size="1644" time="45" location="/Users/peytonpuckett/.ivy2/cache/org.slf4j/slf4j-log4j12/ivy-1.5.8.xml" searched="true" original-local-location="/Users/peytonpuckett/.ivy2/cache/org.slf4j/slf4j-log4j12/ivy-1.5.8.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-log4j12/1.5.8/slf4j-log4j12-1.5.8.pom"/>
+				<caller organisation="com.hp.hpl.jena" name="jena" conf="default, compile, runtime, master" rev="1.5.8" rev-constraint-default="1.5.8" rev-constraint-dynamic="1.5.8" callerrev="2.6.4"/>
+				<artifacts>
+					<artifact name="slf4j-log4j12" type="jar" ext="jar" status="successful" details="" size="9679" time="41" location="/Users/peytonpuckett/.ivy2/cache/org.slf4j/slf4j-log4j12/jars/slf4j-log4j12-1.5.8.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-log4j12/1.5.8/slf4j-log4j12-1.5.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="xerces" name="xercesImpl">
+			<revision name="2.7.1" status="release" pubdate="20051108165133" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="27">
+				<metadata-artifact status="successful" details="" size="150" time="41" location="/Users/peytonpuckett/.ivy2/cache/xerces/xercesImpl/ivy-2.7.1.xml" searched="true" original-local-location="/Users/peytonpuckett/.ivy2/cache/xerces/xercesImpl/ivy-2.7.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xerces/xercesImpl/2.7.1/xercesImpl-2.7.1.pom"/>
+				<caller organisation="com.hp.hpl.jena" name="jena" conf="default, compile, runtime, master" rev="2.7.1" rev-constraint-default="2.7.1" rev-constraint-dynamic="2.7.1" callerrev="2.6.4"/>
+				<artifacts>
+					<artifact name="xercesImpl" type="jar" ext="jar" status="successful" details="" size="1203860" time="203" location="/Users/peytonpuckett/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.7.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/xerces/xercesImpl/2.7.1/xercesImpl-2.7.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.hp.hpl.jena" name="iri">
+			<revision name="0.8" status="release" pubdate="20091113151711" resolver="public" artresolver="public" homepage="http://jena.sf.net/iri" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="25">
+				<license name="BSD-style license" url="http://jena.sourceforge.net/iri/license.html"/>
+				<metadata-artifact status="successful" details="" size="5236" time="48" location="/Users/peytonpuckett/.ivy2/cache/com.hp.hpl.jena/iri/ivy-0.8.xml" searched="true" original-local-location="/Users/peytonpuckett/.ivy2/cache/com.hp.hpl.jena/iri/ivy-0.8.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/hp/hpl/jena/iri/0.8/iri-0.8.pom"/>
+				<caller organisation="com.hp.hpl.jena" name="jena" conf="default, compile, runtime, master" rev="0.8" rev-constraint-default="0.8" rev-constraint-dynamic="0.8" callerrev="2.6.4"/>
+				<caller organisation="com.hp.hpl.jena" name="arq" conf="default, compile, runtime, master" rev="0.8" rev-constraint-default="0.8" rev-constraint-dynamic="0.8" callerrev="2.8.8"/>
+				<artifacts>
+					<artifact name="iri" type="jar" ext="jar" status="successful" details="" size="151589" time="70" location="/Users/peytonpuckett/.ivy2/cache/com.hp.hpl.jena/iri/jars/iri-0.8.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/hp/hpl/jena/iri/0.8/iri-0.8.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.ibm.icu" name="icu4j">
+			<revision name="3.4.4" status="release" pubdate="20060424155338" resolver="public" artresolver="public" homepage="http://www-306.ibm.com/software/globalization/icu/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="26">
+				<license name="ICU License" url="http://www-306.ibm.com/software/globalization/icu/license.jsp"/>
+				<metadata-artifact status="successful" details="" size="1009" time="44" location="/Users/peytonpuckett/.ivy2/cache/com.ibm.icu/icu4j/ivy-3.4.4.xml" searched="true" original-local-location="/Users/peytonpuckett/.ivy2/cache/com.ibm.icu/icu4j/ivy-3.4.4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/ibm/icu/icu4j/3.4.4/icu4j-3.4.4.pom"/>
+				<caller organisation="com.hp.hpl.jena" name="jena" conf="default, compile, runtime, master" rev="3.4.4" rev-constraint-default="3.4.4" rev-constraint-dynamic="3.4.4" callerrev="2.6.4"/>
+				<caller organisation="com.hp.hpl.jena" name="iri" conf="compile, runtime" rev="3.4.4" rev-constraint-default="3.4.4" rev-constraint-dynamic="3.4.4" callerrev="0.8"/>
+				<artifacts>
+					<artifact name="icu4j" type="jar" ext="jar" status="successful" details="" size="3233439" time="634" location="/Users/peytonpuckett/.ivy2/cache/com.ibm.icu/icu4j/jars/icu4j-3.4.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/ibm/icu/icu4j/3.4.4/icu4j-3.4.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.postgresql" name="postgresql">
+			<revision name="9.3-1102-jdbc41" status="release" pubdate="20140718103917" resolver="public" artresolver="public" homepage="http://jdbc.postgresql.org" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="23">
+				<license name="BSD License" url="http://jdbc.postgresql.org/license.html"/>
+				<metadata-artifact status="successful" details="" size="1481" time="47" location="/Users/peytonpuckett/.ivy2/cache/org.postgresql/postgresql/ivy-9.3-1102-jdbc41.xml" searched="true" original-local-location="/Users/peytonpuckett/.ivy2/cache/org.postgresql/postgresql/ivy-9.3-1102-jdbc41.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/postgresql/postgresql/9.3-1102-jdbc41/postgresql-9.3-1102-jdbc41.pom"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="9.3-1102-jdbc41" rev-constraint-default="9.3-1102-jdbc41" rev-constraint-dynamic="9.3-1102-jdbc41" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="postgresql" type="jar" ext="jar" status="successful" details="" size="592322" time="243" location="/Users/peytonpuckett/.ivy2/cache/org.postgresql/postgresql/jars/postgresql-9.3-1102-jdbc41.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/postgresql/postgresql/9.3-1102-jdbc41/postgresql-9.3-1102-jdbc41.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="log4j" name="log4j">
+			<revision name="1.2.14" status="release" pubdate="20061201012721" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://logging.apache.org/log4j/docs/" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master" position="22">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2352" time="0" location="/Users/peytonpuckett/.ivy2/cache/log4j/log4j/ivy-1.2.14.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/log4j/log4j/1.2.14/log4j-1.2.14.pom"/>
+				<caller organisation="org.slf4j" name="slf4j-log4j12" conf="compile, runtime" rev="1.2.14" rev-constraint-default="1.2.14" rev-constraint-dynamic="1.2.14" callerrev="1.5.8"/>
+				<caller organisation="com.hp.hpl.jena" name="jena" conf="default, compile, runtime, master" rev="1.2.14" rev-constraint-default="1.2.14" rev-constraint-dynamic="1.2.13" callerrev="2.6.4"/>
+				<caller organisation="com.hp.hpl.jena" name="arq" conf="default, compile, runtime, master" rev="1.2.14" rev-constraint-default="1.2.14" rev-constraint-dynamic="1.2.14" callerrev="2.8.8"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="1.2.14" rev-constraint-default="1.2.14" rev-constraint-dynamic="1.2.14" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="log4j" type="jar" ext="jar" status="no" details="" size="367444" time="0" location="/Users/peytonpuckett/.ivy2/cache/log4j/log4j/jars/log4j-1.2.14.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/log4j/log4j/1.2.14/log4j-1.2.14.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.2.13" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="master(*), compile, runtime(*), runtime, compile(*), master, default, default(compile)" position="-1">
+				<evicted-by rev="1.2.14"/>
+				<caller organisation="org.slf4j" name="slf4j-log4j12" conf="compile, runtime" rev="1.2.14" rev-constraint-default="1.2.14" rev-constraint-dynamic="1.2.14" callerrev="1.5.8"/>
+				<caller organisation="com.hp.hpl.jena" name="jena" conf="default, compile, runtime, master" rev="1.2.13" rev-constraint-default="1.2.13" rev-constraint-dynamic="1.2.13" callerrev="2.6.4"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="1.2.14" rev-constraint-default="1.2.14" rev-constraint-dynamic="1.2.14" callerrev="0.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.joda" name="joda-convert">
+			<revision name="2.2.0" status="release" pubdate="20190116120155" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://www.joda.org/${joda.artifactId}/" downloaded="false" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="21">
+				<metadata-artifact status="no" details="" size="7787" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.joda/joda-convert/ivy-2.2.0.xml" searched="true" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/joda/joda-convert/2.2.0/joda-convert-2.2.0.pom"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="latest.integration" rev-constraint-default="latest.integration" rev-constraint-dynamic="latest.integration" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="joda-convert" type="jar" ext="jar" status="no" details="" size="145596" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-2.2.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/joda/joda-convert/2.2.0/joda-convert-2.2.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="joda-time" name="joda-time">
+			<revision name="2.10.1" status="release" pubdate="20181027145121" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://www.joda.org/joda-time/" downloaded="false" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="20">
+				<license name="Apache 2" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6742" time="0" location="/Users/peytonpuckett/.ivy2/cache/joda-time/joda-time/ivy-2.10.1.xml" searched="true" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/joda-time/joda-time/2.10.1/joda-time-2.10.1.pom"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="latest.integration" rev-constraint-default="latest.integration" rev-constraint-dynamic="latest.integration" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="joda-time" type="jar" ext="jar" status="no" details="" size="640724" time="0" location="/Users/peytonpuckett/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.10.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/joda-time/joda-time/2.10.1/joda-time-2.10.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-routing_2.10">
+			<revision name="1.3.2" status="release" pubdate="20141008095217" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="15">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3576" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-routing_2.10/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/spray/spray-routing_2.10/1.3.2/spray-routing_2.10-1.3.2.pom"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="spray-routing_2.10" type="bundle" ext="jar" status="no" details="" size="1093684" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-routing_2.10/bundles/spray-routing_2.10-1.3.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/spray/spray-routing_2.10/1.3.2/spray-routing_2.10-1.3.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.chuusai" name="shapeless_2.10">
+			<revision name="1.2.4" status="release" pubdate="20130226145121" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/milessabin/shapeless" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="18">
+				<license name="Apache License" url="http://www.apache.org/licenses/"/>
+				<metadata-artifact status="no" details="" size="2634" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.chuusai/shapeless_2.10/ivy-1.2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/chuusai/shapeless_2.10/1.2.4/shapeless_2.10-1.2.4.pom"/>
+				<caller organisation="io.spray" name="spray-routing_2.10" conf="default, compile, runtime, master" rev="1.2.4" rev-constraint-default="1.2.4" rev-constraint-dynamic="1.2.4" callerrev="1.3.2"/>
+				<artifacts>
+					<artifact name="shapeless_2.10" type="jar" ext="jar" status="no" details="" size="1280423" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.chuusai/shapeless_2.10/jars/shapeless_2.10-1.2.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/chuusai/shapeless_2.10/1.2.4/shapeless_2.10-1.2.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-httpx_2.10">
+			<revision name="1.3.2" status="release" pubdate="20141008095359" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master" position="16">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4278" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-httpx_2.10/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/spray/spray-httpx_2.10/1.3.2/spray-httpx_2.10-1.3.2.pom"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="0.1"/>
+				<caller organisation="io.spray" name="spray-routing_2.10" conf="default, compile, runtime, master" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="1.3.2"/>
+				<artifacts>
+					<artifact name="spray-httpx_2.10" type="bundle" ext="jar" status="no" details="" size="463573" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-httpx_2.10/bundles/spray-httpx_2.10-1.3.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/spray/spray-httpx_2.10/1.3.2/spray-httpx_2.10-1.3.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-json_2.10">
+			<revision name="1.3.0" status="release" pubdate="20140922050535" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spray/spray-json" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="19">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2804" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-json_2.10/ivy-1.3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/spray/spray-json_2.10/1.3.0/spray-json_2.10-1.3.0.pom"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="1.3.0" rev-constraint-default="1.3.0" rev-constraint-dynamic="1.3.0" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="spray-json_2.10" type="bundle" ext="jar" status="no" details="" size="282114" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-json_2.10/bundles/spray-json_2.10-1.3.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/spray/spray-json_2.10/1.3.0/spray-json_2.10-1.3.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.jvnet.mimepull" name="mimepull">
+			<revision name="1.9.4" status="release" pubdate="20131112054917" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://mimepull.java.net" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="17">
+				<license name="CDDL 1.1" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
+				<license name="GPL2 w/ CPE" url="https://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
+				<metadata-artifact status="no" details="" size="3821" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.jvnet.mimepull/mimepull/ivy-1.9.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jvnet/mimepull/mimepull/1.9.4/mimepull-1.9.4.pom"/>
+				<caller organisation="io.spray" name="spray-httpx_2.10" conf="compile, runtime" rev="1.9.4" rev-constraint-default="1.9.4" rev-constraint-dynamic="1.9.4" callerrev="1.3.2"/>
+				<artifacts>
+					<artifact name="mimepull" type="jar" ext="jar" status="no" details="" size="63134" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.jvnet.mimepull/mimepull/jars/mimepull-1.9.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/jvnet/mimepull/mimepull/1.9.4/mimepull-1.9.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-can_2.10">
+			<revision name="1.3.2" status="release" pubdate="20141008095135" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="9">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3381" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-can_2.10/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/spray/spray-can_2.10/1.3.2/spray-can_2.10-1.3.2.pom"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="spray-can_2.10" type="bundle" ext="jar" status="no" details="" size="734369" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-can_2.10/bundles/spray-can_2.10-1.3.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/spray/spray-can_2.10/1.3.2/spray-can_2.10-1.3.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-io_2.10">
+			<revision name="1.3.2" status="release" pubdate="20141008095459" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="10">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3154" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-io_2.10/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/spray/spray-io_2.10/1.3.2/spray-io_2.10-1.3.2.pom"/>
+				<caller organisation="io.spray" name="spray-can_2.10" conf="default, compile, runtime, master" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="1.3.2"/>
+				<artifacts>
+					<artifact name="spray-io_2.10" type="bundle" ext="jar" status="no" details="" size="194129" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-io_2.10/bundles/spray-io_2.10-1.3.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/spray/spray-io_2.10/1.3.2/spray-io_2.10-1.3.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-http_2.10">
+			<revision name="1.3.2" status="release" pubdate="20141008095331" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="12">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3135" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-http_2.10/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/spray/spray-http_2.10/1.3.2/spray-http_2.10-1.3.2.pom"/>
+				<caller organisation="io.spray" name="spray-routing_2.10" conf="default, compile, runtime, master" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="1.3.2"/>
+				<caller organisation="io.spray" name="spray-can_2.10" conf="default, compile, runtime, master" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="1.3.2"/>
+				<caller organisation="io.spray" name="spray-httpx_2.10" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="1.3.2"/>
+				<caller organisation="io.spray" name="spray-io_2.10" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="1.3.2"/>
+				<artifacts>
+					<artifact name="spray-http_2.10" type="bundle" ext="jar" status="no" details="" size="1525741" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-http_2.10/bundles/spray-http_2.10-1.3.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/spray/spray-http_2.10/1.3.2/spray-http_2.10-1.3.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.parboiled" name="parboiled-scala_2.10">
+			<revision name="1.1.6" status="release" pubdate="20130826065413" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://parboiled.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="13">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2946" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.parboiled/parboiled-scala_2.10/ivy-1.1.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/parboiled/parboiled-scala_2.10/1.1.6/parboiled-scala_2.10-1.1.6.pom"/>
+				<caller organisation="io.spray" name="spray-http_2.10" conf="compile, runtime" rev="1.1.6" rev-constraint-default="1.1.6" rev-constraint-dynamic="1.1.6" callerrev="1.3.2"/>
+				<artifacts>
+					<artifact name="parboiled-scala_2.10" type="bundle" ext="jar" status="no" details="" size="237780" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.parboiled/parboiled-scala_2.10/bundles/parboiled-scala_2.10-1.1.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/parboiled/parboiled-scala_2.10/1.1.6/parboiled-scala_2.10-1.1.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.parboiled" name="parboiled-core">
+			<revision name="1.1.6" status="release" pubdate="20130822113221" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://parboiled.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="14">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2654" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.parboiled/parboiled-core/ivy-1.1.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/parboiled/parboiled-core/1.1.6/parboiled-core-1.1.6.pom"/>
+				<caller organisation="org.parboiled" name="parboiled-scala_2.10" conf="compile, runtime" rev="1.1.6" rev-constraint-default="1.1.6" rev-constraint-dynamic="1.1.6" callerrev="1.1.6"/>
+				<artifacts>
+					<artifact name="parboiled-core" type="bundle" ext="jar" status="no" details="" size="187091" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.parboiled/parboiled-core/bundles/parboiled-core-1.1.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/parboiled/parboiled-core/1.1.6/parboiled-core-1.1.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.spray" name="spray-util_2.10">
+			<revision name="1.3.2" status="release" pubdate="20141008095156" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://spray.io" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="11">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3122" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-util_2.10/ivy-1.3.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/spray/spray-util_2.10/1.3.2/spray-util_2.10-1.3.2.pom"/>
+				<caller organisation="io.spray" name="spray-routing_2.10" conf="default, compile, runtime, master" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="1.3.2"/>
+				<caller organisation="io.spray" name="spray-can_2.10" conf="default, compile, runtime, master" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="1.3.2"/>
+				<caller organisation="io.spray" name="spray-httpx_2.10" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="1.3.2"/>
+				<caller organisation="io.spray" name="spray-io_2.10" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="1.3.2"/>
+				<caller organisation="io.spray" name="spray-http_2.10" conf="compile, runtime" rev="1.3.2" rev-constraint-default="1.3.2" rev-constraint-dynamic="1.3.2" callerrev="1.3.2"/>
+				<artifacts>
+					<artifact name="spray-util_2.10" type="bundle" ext="jar" status="no" details="" size="129242" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.spray/spray-util_2.10/bundles/spray-util_2.10-1.3.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/spray/spray-util_2.10/1.3.2/spray-util_2.10-1.3.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-remote_2.10">
+			<revision name="2.3.6" status="release" pubdate="20140905023606" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="5">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3768" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.typesafe.akka/akka-remote_2.10/ivy-2.3.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-remote_2.10/2.3.6/akka-remote_2.10-2.3.6.pom"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="2.3.6" rev-constraint-default="2.3.6" rev-constraint-dynamic="2.3.6" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="akka-remote_2.10" type="jar" ext="jar" status="no" details="" size="1345259" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.typesafe.akka/akka-remote_2.10/jars/akka-remote_2.10-2.3.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-remote_2.10/2.3.6/akka-remote_2.10-2.3.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.uncommons.maths" name="uncommons-maths">
+			<revision name="1.2.2a" status="release" pubdate="20110408095605" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://maths.uncommons.org/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="8">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2738" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.uncommons.maths/uncommons-maths/ivy-1.2.2a.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/uncommons/maths/uncommons-maths/1.2.2a/uncommons-maths-1.2.2a.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-remote_2.10" conf="default, compile, runtime, master" rev="1.2.2a" rev-constraint-default="1.2.2a" rev-constraint-dynamic="1.2.2a" callerrev="2.3.6"/>
+				<artifacts>
+					<artifact name="uncommons-maths" type="jar" ext="jar" status="no" details="" size="49019" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.uncommons.maths/uncommons-maths/jars/uncommons-maths-1.2.2a.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/uncommons/maths/uncommons-maths/1.2.2a/uncommons-maths-1.2.2a.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.netty" name="netty">
+			<revision name="3.8.0.Final" status="release" pubdate="20131107042312" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://netty.io/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="6">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="6425" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.netty/netty/ivy-3.8.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty/3.8.0.Final/netty-3.8.0.Final.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-remote_2.10" conf="default, compile, runtime, master" rev="3.8.0.Final" rev-constraint-default="3.8.0.Final" rev-constraint-dynamic="3.8.0.Final" callerrev="2.3.6"/>
+				<artifacts>
+					<artifact name="netty" type="bundle" ext="jar" status="no" details="" size="1230201" time="0" location="/Users/peytonpuckett/.ivy2/cache/io.netty/netty/bundles/netty-3.8.0.Final.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty/3.8.0.Final/netty-3.8.0.Final.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.protobuf" name="protobuf-java">
+			<revision name="2.5.0" status="release" pubdate="20130307191811" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/protobuf" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="7">
+				<license name="New BSD license" url="http://www.opensource.org/licenses/bsd-license.php"/>
+				<metadata-artifact status="no" details="" size="2995" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.google.protobuf/protobuf-java/ivy-2.5.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-remote_2.10" conf="default, compile, runtime, master" rev="2.5.0" rev-constraint-default="2.5.0" rev-constraint-dynamic="2.5.0" callerrev="2.3.6"/>
+				<artifacts>
+					<artifact name="protobuf-java" type="bundle" ext="jar" status="no" details="" size="533455" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.google.protobuf/protobuf-java/bundles/protobuf-java-2.5.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-slf4j_2.10">
+			<revision name="2.3.6" status="release" pubdate="20140905023534" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="3">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3043" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/ivy-2.3.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.pom"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="2.3.6" rev-constraint-default="2.3.6" rev-constraint-dynamic="2.3.6" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="akka-slf4j_2.10" type="jar" ext="jar" status="no" details="" size="15535" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.10/jars/akka-slf4j_2.10-2.3.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-slf4j_2.10/2.3.6/akka-slf4j_2.10-2.3.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.5" status="release" pubdate="20130325165215" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="4">
+				<metadata-artifact status="no" details="" size="4469" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.pom"/>
+				<caller organisation="org.slf4j" name="slf4j-log4j12" conf="compile, runtime" rev="1.5.8" rev-constraint-default="1.5.8" rev-constraint-dynamic="1.5.8" callerrev="1.5.8"/>
+				<caller organisation="com.hp.hpl.jena" name="jena" conf="default, compile, runtime, master" rev="1.5.8" rev-constraint-default="1.5.8" rev-constraint-dynamic="1.5.8" callerrev="2.6.4"/>
+				<caller organisation="com.hp.hpl.jena" name="arq" conf="default, compile, runtime, master" rev="1.5.8" rev-constraint-default="1.5.8" rev-constraint-dynamic="1.5.8" callerrev="2.8.8"/>
+				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.10" conf="default, compile, runtime, master" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="2.3.6"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="26084" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.5.8" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="-1">
+				<evicted-by rev="1.7.5"/>
+				<caller organisation="org.slf4j" name="slf4j-log4j12" conf="compile, runtime" rev="1.5.8" rev-constraint-default="1.5.8" rev-constraint-dynamic="1.5.8" callerrev="1.5.8"/>
+				<caller organisation="com.hp.hpl.jena" name="jena" conf="default, compile, runtime, master" rev="1.5.8" rev-constraint-default="1.5.8" rev-constraint-dynamic="1.5.8" callerrev="2.6.4"/>
+				<caller organisation="com.hp.hpl.jena" name="arq" conf="default, compile, runtime, master" rev="1.5.8" rev-constraint-default="1.5.8" rev-constraint-dynamic="1.5.8" callerrev="2.8.8"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-actor_2.10">
+			<revision name="2.3.6" status="release" pubdate="20140905023344" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master" position="1">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2654" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/ivy-2.3.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.10/2.3.6/akka-actor_2.10-2.3.6.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-remote_2.10" conf="default, compile, runtime, master" rev="2.3.6" rev-constraint-default="2.3.6" rev-constraint-dynamic="2.3.6" callerrev="2.3.6"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="2.3.6" rev-constraint-default="2.3.6" rev-constraint-dynamic="2.3.6" callerrev="0.1"/>
+				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.10" conf="default, compile, runtime, master" rev="2.3.6" rev-constraint-default="2.3.6" rev-constraint-dynamic="2.3.6" callerrev="2.3.6"/>
+				<artifacts>
+					<artifact name="akka-actor_2.10" type="jar" ext="jar" status="no" details="" size="2583959" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.3.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.10/2.3.6/akka-actor_2.10-2.3.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe" name="config">
+			<revision name="1.2.1" status="release" pubdate="20140502105416" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/config" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="2">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2734" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.typesafe/config/ivy-1.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-actor_2.10" conf="default, compile, runtime, master" rev="1.2.1" rev-constraint-default="1.2.1" rev-constraint-dynamic="1.2.1" callerrev="2.3.6"/>
+				<artifacts>
+					<artifact name="config" type="bundle" ext="jar" status="no" details="" size="219554" time="0" location="/Users/peytonpuckett/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.4" status="release" pubdate="20140318174629" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.4/" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master" position="0">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2487" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.pom"/>
+				<caller organisation="org.parboiled" name="parboiled-scala_2.10" conf="compile, runtime" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="1.1.6"/>
+				<caller organisation="io.spray" name="spray-util_2.10" conf="compile, runtime" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="1.3.2"/>
+				<caller organisation="default" name="webui_2.10" conf="test, compile, runtime" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="0.1"/>
+				<caller organisation="io.spray" name="spray-can_2.10" conf="default, compile, runtime, master" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="1.3.2"/>
+				<caller organisation="io.spray" name="spray-httpx_2.10" conf="compile, runtime" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="1.3.2"/>
+				<caller organisation="io.spray" name="spray-json_2.10" conf="default, compile, runtime, master" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="1.3.0"/>
+				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.10" conf="default, compile, runtime, master" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="2.3.6"/>
+				<caller organisation="io.spray" name="spray-io_2.10" conf="compile, runtime" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="1.3.2"/>
+				<caller organisation="io.spray" name="spray-http_2.10" conf="compile, runtime" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="1.3.2"/>
+				<caller organisation="com.typesafe.akka" name="akka-actor_2.10" conf="default, compile, runtime, master" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="2.3.6"/>
+				<caller organisation="com.typesafe.akka" name="akka-remote_2.10" conf="default, compile, runtime, master" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="2.3.6"/>
+				<caller organisation="com.chuusai" name="shapeless_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="1.2.4"/>
+				<caller organisation="io.spray" name="spray-routing_2.10" conf="default, compile, runtime, master" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="1.3.2"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="7126372" time="0" location="/Users/peytonpuckett/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.4.jar">
+						<origin-location is-local="false" location="UNKNOWN"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.10.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="-1">
+				<evicted-by rev="2.10.4"/>
+				<caller organisation="com.chuusai" name="shapeless_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="1.2.4"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+			<revision name="2.10.2" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="-1">
+				<evicted-by rev="2.10.4"/>
+				<caller organisation="org.parboiled" name="parboiled-scala_2.10" conf="compile, runtime" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="1.1.6"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
